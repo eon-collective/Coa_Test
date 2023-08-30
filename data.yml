@@ -19,7 +19,7 @@ locations:
         schema: ""
 macros:
   Macro-equal_rowcount:
-    id: equal_rowcount
+    id: "equal_rowcount"
     macroString: |-
         {% macro equal_rowcount(node, compare_node, group_by_columns=[]) %}
 
