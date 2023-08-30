@@ -19,7 +19,7 @@ steps:
             description: ""
             name: equal_rowcount
             runOrder: After
-            templateString: "{{equal_rowcount('\"CUSTOMER\"', '\"STG_CUSTOMER\"')}}"
+            templateString: "{{equal_rowcount('\"SNOWFLAKE_SAMPLE_DATA\".\"TPCH_SF1\".\"CUSTOMER\"', '\"ANALYTICS\".\"COATEST\".\"STG_CUSTOMER\"')}}"
         columns:
           - columnReference:
               columnCounter: 73c22c5f-3aba-40c3-900d-85ca39fd47fb
