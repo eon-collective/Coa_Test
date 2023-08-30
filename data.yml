@@ -24,7 +24,7 @@ macros:
   Macro-equal_rowcount:
     id: equal_rowcount
     macroString: |-
-      {% macro equal_rowcount(model, compare_model, group_by_columns=[]) %}
+      {% macro equal_rowcount(node, compare_node, group_by_columns=[]) %}
       
       {% if group_by_columns %}
         {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
@@ -49,7 +49,7 @@ macros:
             {{ select_gb_cols }}
             1 as id_equal_rowcount,
             count(*) as count_a 
-          from {{ model }}
+          from {{ node }}
           {{ groupby_gb_cols }}
       ),
       
@@ -58,7 +58,7 @@ macros:
             {{ select_gb_cols }}
             1 as id_equal_rowcount,
             count(*) as count_b 
-          from {{ compare_model }}
+          from {{ compare_node }}
           {{ groupby_gb_cols }}
       ),
       

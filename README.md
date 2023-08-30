@@ -10,17 +10,17 @@
 
 ####  Purpose
 
-`equal_rowcount` helps ensure that two tables, `model` and `compare_model`, have the same number of rows. This test is useful during data validation tasks, like verifying data transformations or ensuring consistency between source and target tables.
+`equal_rowcount` helps ensure that two tables, `node` and `compare_node`, have the same number of rows. This test is useful during data validation tasks, like verifying data transformations or ensuring consistency between source and target tables.
 
 #### 📝 Syntax
 
 ```jinja
-{{ equal_rowcount('<model>', '<compare_model>', ['<group_by_column1>', '<group_by_column2>', ...]) }}
+{{ equal_rowcount('<node>', '<compare_node>', ['<group_by_column1>', '<group_by_column2>', ...]) }}
 ```
 
 **Parameters:**
-- `<model>`: The first table you wish to compare.
-- `<compare_model>`: The second table you wish to compare.
+- `<node>`: The first table you wish to compare.
+- `<compare_node>`: The second table you wish to compare.
 - `['<group_by_column1>', '<group_by_column2>', ...]`: (Optional) Columns to group by.
 
 #### 🚀 Usage Example
