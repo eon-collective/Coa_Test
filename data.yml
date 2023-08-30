@@ -26,23 +26,16 @@ macros:
     macroString: |-
       {%- macro equal_rowcount(model, compare_model, group_by_columns=[]) -%}
       
+      {% set select_gb_cols = '' %}
+      {% set join_gb_cols = '' %}
+      {% set groupby_gb_cols = '' %}
+      
       {% if group_by_columns %}
         {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
-        {% set join_gb_cols = [] %}
-        {% for c in group_by_columns %}
-          {% set join_gb_cols = join_gb_cols + ["and a." + c + " = b." + c] %}
-        {% endfor %}
-        {% set join_gb_cols = join_gb_cols|join(' ') %}
+        {% set join_gb_cols_list = ["and a." + c + " = b." + c for c in group_by_columns] %}
+        {% set join_gb_cols = join_gb_cols_list|join(' ') %}
         {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
-      {% else %}
-        {% set select_gb_cols = '' %}
-        {% set join_gb_cols = '' %}
-        {% set groupby_gb_cols = '' %}
       {% endif %}
-      
-      {# We must add a fake join key in case additional grouping variables are not provided #}
-      {% set group_by_columns = ['id_test_equal_rowcount'] + group_by_columns %}
-      {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
       
       WITH a AS (
           SELECT 
@@ -64,19 +57,16 @@ macros:
       
       final AS (
           SELECT
-              {% for c in group_by_columns %}
-                a.{{ c }} AS {{ c }}_a,
-                b.{{ c }} AS {{ c }}_b,
-              {% endfor %}
+              a.id_test_equal_rowcount AS id_a,
+              b.id_test_equal_rowcount AS id_b,
               count_a,
               count_b,
               ABS(count_a - count_b) AS diff_count
           FROM a
-          FULL JOIN b
-          ON
-          a.id_test_equal_rowcount = b.id_test_equal_rowcount
+          FULL JOIN b ON a.id_test_equal_rowcount = b.id_test_equal_rowcount
           {{ join_gb_cols }}
       )
+      
       SELECT * FROM final;
       
       {%- endmacro %}
