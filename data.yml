@@ -25,7 +25,7 @@ macros:
     id: equal_rowcount
     macroString: |-
       {% macro equal_rowcount(node, compare_node, group_by_columns=[]) %}
-      
+
       {% if group_by_columns %}
         {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
         {% set join_gb_cols = [] %}
@@ -39,11 +39,11 @@ macros:
         {% set join_gb_cols = '' %}
         {% set groupby_gb_cols = '' %}
       {% endif %}
-      
+
       {# We must add a fake join key in case additional grouping variables are not provided #}
       {% set group_by_columns = ['id_equal_rowcount'] + group_by_columns %}
       {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
-      
+
       with a as (
           select 
             {{ select_gb_cols }}
@@ -52,7 +52,7 @@ macros:
           from {{ node }}
           {{ groupby_gb_cols }}
       ),
-      
+
       b as (
           select 
             {{ select_gb_cols }}
@@ -61,7 +61,7 @@ macros:
           from {{ compare_node }}
           {{ groupby_gb_cols }}
       ),
-      
+
       final as (
           select
               {% for c in group_by_columns %}
@@ -78,6 +78,73 @@ macros:
           {{ join_gb_cols }}
       )
       select * from final
+
+      {% endmacro %}
+  Macro-fewer_rows_than:
+    id: fewer_rows_than
+    macroString: |-
+      {% macro fewer_rows_than(node, compare_node, group_by_columns=[]) %}
+      
+      {% if group_by_columns %}
+      {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
+      {% set join_gb_cols = [] %}
+      {% for c in group_by_columns %}
+          {% set join_gb_cols = join_gb_cols + ["and a." + c + " = b." + c] %}
+      {% endfor %}
+      {% set join_gb_cols = join_gb_cols|join(' ') %}
+      {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
+      {% else %}
+      {% set select_gb_cols = '' %}
+      {% set join_gb_cols = '' %}
+      {% set groupby_gb_cols = '' %}
+      {% endif %}
+      
+      {# We must add a fake join key in case additional grouping variables are not provided #}
+      {% set group_by_columns = ['id_test_fewer_rows_than'] + group_by_columns %}
+      {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
+      
+      WITH a AS (
+          SELECT 
+          {{ select_gb_cols }}
+          1 AS id_test_fewer_rows_than,
+          COUNT(*) AS count_our_node 
+          FROM {{ node }}
+          {{ groupby_gb_cols }}
+      ),
+      
+      b AS (
+          SELECT 
+          {{ select_gb_cols }}
+          1 AS id_test_fewer_rows_than,
+          COUNT(*) AS count_comparison_node 
+          FROM {{ compare_node }}
+          {{ groupby_gb_cols }}
+      ),
+      
+      counts AS (
+          SELECT
+              {% for c in group_by_columns %}
+              a.{{ c }} AS {{ c }}_a,
+              b.{{ c }} AS {{ c }}_b,
+              {% endfor %}
+              count_our_node,
+              count_comparison_node
+          FROM a
+          FULL JOIN b ON a.id_test_fewer_rows_than = b.id_test_fewer_rows_than
+          {{ join_gb_cols }}
+      ),
+      
+      final AS (
+          SELECT *,
+              CASE
+                  WHEN count_our_node > count_comparison_node THEN (count_our_node - count_comparison_node)
+                  WHEN count_our_node = count_comparison_node THEN 1
+                  ELSE 0
+              END AS row_count_delta
+          FROM counts
+      )
+      
+      SELECT * FROM final
       
       {% endmacro %}
 packages: {}
