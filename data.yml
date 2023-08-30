@@ -147,6 +147,46 @@ macros:
       SELECT * FROM final
       
       {% endmacro %}
+  Macro-equality:
+    id: equality
+    macroString: |-
+        {% macro equality(node, compare_node, compare_columns=None) %}
+
+        {%- if not compare_columns -%}
+            {%- set compare_columns = adapter.get_columns_in_relation(node) %}
+        {%- endif %}
+
+        {% set compare_cols_csv = compare_columns | join(', ') %}
+
+        WITH a AS (
+            SELECT * FROM {{ node }}
+        ),
+
+        b AS (
+            SELECT * FROM {{ compare_node }}
+        ),
+
+        a_minus_b AS (
+            SELECT {{compare_cols_csv}} FROM a
+            EXCEPT
+            SELECT {{compare_cols_csv}} FROM b
+        ),
+
+        b_minus_a AS (
+            SELECT {{compare_cols_csv}} FROM b
+            EXCEPT
+            SELECT {{compare_cols_csv}} FROM a
+        ),
+
+        unioned AS (
+            SELECT 'a_minus_b' AS which_diff, a_minus_b.* FROM a_minus_b
+            UNION ALL
+            SELECT 'b_minus_a' AS which_diff, b_minus_a.* FROM b_minus_a
+        )
+
+        SELECT * FROM unioned
+
+        {% endmacro %}
 packages: {}
 projects: {}
 stepTypes:
