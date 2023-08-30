@@ -14,7 +14,12 @@ steps:
       locationName: WORK
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: fewer_rows_than
+            runOrder: After
+            templateString: "{{ fewer_rows_than('\"SNOWFLAKE_SAMPLE_DATA\".\"TPCH_SF1\".\"CUSTOMER\"', '\"ANALYTICS\".\"COATEST\".\"STG_CUSTOMER\"') }}"
         columns:
           - columnReference:
               columnCounter: b7129a4c-776b-4450-a135-b2ba05f50540
