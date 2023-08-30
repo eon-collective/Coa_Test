@@ -1,8 +1,8 @@
 ## Table of Contents
 1. [equal_rowcount](#equal_rowcount)
 2. [row_count_delta](#row_count_delta)
-3. [test_name_3](#test_name_3) *(Placeholder for your next test)*
-... *(continue as needed)*
+3. [equality](#equality)
+4. ... *(continue as needed)*
 
 ---
 
@@ -190,7 +190,72 @@ SELECT * FROM final;
 
 </details>  
 
-### [test_name_3](#test_name_3)
+### [equality](#equality)
 
-... *(Details about this test will go here)*
+#### Purpose
+
+The `equality` macro asserts the equality of two relations. This test can be beneficial in scenarios where you expect two tables to have identical rows, potentially after a transformation. Optionally, you can specify a subset of columns to compare.
+
+#### Syntax
+
+```jinja
+{{ equality('<node>', '<compare_node>', ['<compare_column1>', '<compare_column2>', ...]) }}
+```
+
+**Parameters:**
+- `<node>`: The first table you wish to compare.
+- `['<compare_column1>, '<compare_column2>', ...]`: The second table you wish to compare.
+- `['<group_by_column1>', '<group_by_column2>', ...]`: (Optional) Specific columns to compare.
+
+#### Usage Example
+
+```jinja
+{{ equality('"SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."CUSTOMER"', '"ANALYTICS"."COATEST"."STG_CUSTOMER"', ['O_ORDERKEY', 'O_CUSTKEY']) }}
+```
+<details> 
+<summary>🌏 Source</summary>
+
+```sql
+{% macro equality(node, compare_node, compare_columns=None) %}
+
+{%- if not compare_columns -%}
+    {%- set compare_columns = adapter.get_columns_in_relation(node) %}
+{%- endif %}
+
+{% set compare_cols_csv = compare_columns | join(', ') %}
+
+WITH a AS (
+    SELECT * FROM {{ node }}
+),
+
+b AS (
+    SELECT * FROM {{ compare_node }}
+),
+
+a_minus_b AS (
+    SELECT {{compare_cols_csv}} FROM a
+    EXCEPT
+    SELECT {{compare_cols_csv}} FROM b
+),
+
+b_minus_a AS (
+    SELECT {{compare_cols_csv}} FROM b
+    EXCEPT
+    SELECT {{compare_cols_csv}} FROM a
+),
+
+unioned AS (
+    SELECT 'a_minus_b' AS which_diff, a_minus_b.* FROM a_minus_b
+    UNION ALL
+    SELECT 'b_minus_a' AS which_diff, b_minus_a.* FROM b_minus_a
+)
+
+SELECT * FROM unioned
+
+{% endmacro %}
+
+
+```
+
+</details>  
 
