@@ -80,11 +80,51 @@ macros:
       select * from final
 
       {% endmacro %}
+  Macro-equality:
+    id: equality
+    macroString: |-
+      {% macro equality(node, compare_node, compare_columns=None) %}
+
+      {%- if not compare_columns -%}
+          {%- set compare_columns = adapter.get_columns_in_relation(node) %}
+      {%- endif %}
+
+      {% set compare_cols_csv = compare_columns | join(', ') %}
+
+      WITH a AS (
+          SELECT * FROM {{ node }}
+      ),
+
+      b AS (
+          SELECT * FROM {{ compare_node }}
+      ),
+
+      a_minus_b AS (
+          SELECT {{compare_cols_csv}} FROM a
+          EXCEPT
+          SELECT {{compare_cols_csv}} FROM b
+      ),
+
+      b_minus_a AS (
+          SELECT {{compare_cols_csv}} FROM b
+          EXCEPT
+          SELECT {{compare_cols_csv}} FROM a
+      ),
+
+      unioned AS (
+          SELECT 'a_minus_b' AS which_diff, a_minus_b.* FROM a_minus_b
+          UNION ALL
+          SELECT 'b_minus_a' AS which_diff, b_minus_a.* FROM b_minus_a
+      )
+
+      SELECT * FROM unioned
+
+      {% endmacro %}
   Macro-fewer_rows_than:
     id: fewer_rows_than
     macroString: |-
       {% macro fewer_rows_than(node, compare_node, group_by_columns=[]) %}
-      
+
       {% if group_by_columns %}
       {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
       {% set join_gb_cols = [] %}
@@ -98,11 +138,11 @@ macros:
       {% set join_gb_cols = '' %}
       {% set groupby_gb_cols = '' %}
       {% endif %}
-      
+
       {# We must add a fake join key in case additional grouping variables are not provided #}
       {% set group_by_columns = ['id_test_fewer_rows_than'] + group_by_columns %}
       {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
-      
+
       WITH a AS (
           SELECT 
           {{ select_gb_cols }}
@@ -111,7 +151,7 @@ macros:
           FROM {{ node }}
           {{ groupby_gb_cols }}
       ),
-      
+
       b AS (
           SELECT 
           {{ select_gb_cols }}
@@ -120,7 +160,7 @@ macros:
           FROM {{ compare_node }}
           {{ groupby_gb_cols }}
       ),
-      
+
       counts AS (
           SELECT
               {% for c in group_by_columns %}
@@ -133,7 +173,7 @@ macros:
           FULL JOIN b ON a.id_test_fewer_rows_than = b.id_test_fewer_rows_than
           {{ join_gb_cols }}
       ),
-      
+
       final AS (
           SELECT *,
               CASE
@@ -143,9 +183,9 @@ macros:
               END AS row_count_delta
           FROM counts
       )
-      
+
       SELECT * FROM final
-      
+
       {% endmacro %}
 packages: {}
 projects: {}
