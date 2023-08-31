@@ -25,6 +25,11 @@ steps:
             name: equality
             runOrder: After
             templateString: "{{ equality('\"SNOWFLAKE_SAMPLE_DATA\".\"TPCH_SF1\".\"ORDERS\"', '\"ANALYTICS\".\"COATEST\".\"STG_ORDERS\"', ['O_ORDERKEY', 'O_CUSTKEY']) }}"
+          - continueOnFailure: true
+            description: ""
+            name: cardinality_equality
+            runOrder: After
+            templateString: "{{ cardinality_equality('\"ANALYTICS\".\"COATEST\".\"STG_CUSTOMER\"', '\"C_CUSTKEY\"', '\"ANALYTICS\".\"COATEST\".\"STG_ORDERS\"', '\"O_ORDERKEY\"') }}"
         columns:
           - columnReference:
               columnCounter: b7129a4c-776b-4450-a135-b2ba05f50540

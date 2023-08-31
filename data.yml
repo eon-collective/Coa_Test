@@ -49,6 +49,55 @@ macros:
       HAVING COUNT({{ column_name }}) = 0
 
       {% endmacro %}
+  Macro-cardinality_equality:
+    id: cardinality_equality
+    macroString: |-
+      {% macro cardinality_equality(node, column_name, to_node, field) %}
+
+      WITH table_a AS (
+          SELECT
+              {{ column_name }},
+              COUNT(*) AS num_rows
+          FROM {{ node }}
+          GROUP BY {{ column_name }}
+      ),
+
+      table_b AS (
+          SELECT
+              {{ field }},
+              COUNT(*) AS num_rows
+          FROM {{ to_node }}
+          GROUP BY {{ field }}
+      ),
+
+      except_a AS (
+          SELECT *
+          FROM table_a
+          EXCEPT
+          SELECT *
+          FROM table_b
+      ),
+
+      except_b AS (
+          SELECT *
+          FROM table_b
+          EXCEPT
+          SELECT *
+          FROM table_a
+      ),
+
+      unioned AS (
+          SELECT *
+          FROM except_a
+          UNION ALL
+          SELECT *
+          FROM except_b
+      )
+
+      SELECT *
+      FROM unioned
+
+      {% endmacro %}
   Macro-equal_rowcount:
     id: equal_rowcount
     macroString: |-
@@ -255,7 +304,7 @@ macros:
     id: not_empty_string
     macroString: |-
       {% macro not_empty_string(node, column_name, trim_whitespace=True) %}
-      
+
       WITH all_values AS (
           SELECT 
               {% if trim_whitespace %}
@@ -265,15 +314,15 @@ macros:
               {% endif %}
           FROM {{ node }}
       ),
-      
+
       errors AS (
           SELECT * 
           FROM all_values
           WHERE {{ column_name }} = ''
       )
-      
+
       SELECT * FROM errors
-      
+
       {% endmacro %}
   Macro-recency:
     id: recency
