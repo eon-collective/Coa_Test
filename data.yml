@@ -324,6 +324,35 @@ macros:
       SELECT * FROM errors
 
       {% endmacro %}
+  Macro-not_null_proportion:
+    id: not_null_proportion
+    macroString: |-
+      {% macro not_null_proportion(node, column_name, at_least=0, at_most=1.0, group_by_columns=[]) %}
+
+      {% if group_by_columns|length() > 0 %}
+      {% set select_gb_cols = group_by_columns|join(' ,') + ', ' %}
+      {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
+      {% endif %}
+
+      with validation as (
+      select
+          {{select_gb_cols}}
+          sum(case when {{ column_name }} is null then 0 else 1 end) / cast(count(*) as numeric) as not_null_proportion
+      from {{ node }}
+      {{groupby_gb_cols}}
+      ),
+      validation_errors as (
+      select
+          {{select_gb_cols}}
+          not_null_proportion
+      from validation
+      where not_null_proportion < {{ at_least }} or not_null_proportion > {{ at_most }}
+      )
+      select
+      *
+      from validation_errors
+
+      {% endmacro %}
   Macro-recency:
     id: recency
     macroString: |-
@@ -363,35 +392,6 @@ macros:
       WHERE most_recent < {{ threshold }}
 
       {% endmacro %}
-  Macro-not_null_proportion:
-    id: not_null_proportion
-    macroString: |-
-        {% macro not_null_proportion(node, column_name, at_least=0, at_most=1.0, group_by_columns=[]) %}
-
-        {% if group_by_columns|length() > 0 %}
-        {% set select_gb_cols = group_by_columns|join(' ,') + ', ' %}
-        {% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
-        {% endif %}
-
-        with validation as (
-        select
-            {{select_gb_cols}}
-            sum(case when {{ column_name }} is null then 0 else 1 end) / cast(count(*) as numeric) as not_null_proportion
-        from {{ node }}
-        {{groupby_gb_cols}}
-        ),
-        validation_errors as (
-        select
-            {{select_gb_cols}}
-            not_null_proportion
-        from validation
-        where not_null_proportion < {{ at_least }} or not_null_proportion > {{ at_most }}
-        )
-        select
-        *
-        from validation_errors
-
-        {% endmacro %}
 packages: {}
 projects: {}
 stepTypes:

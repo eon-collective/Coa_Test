@@ -25,6 +25,11 @@ steps:
             name: recency
             runOrder: After
             templateString: "{{ recency('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_SHIPDATE\"', 'day', 7, True) }}"
+          - continueOnFailure: true
+            description: ""
+            name: not_null_proportion
+            runOrder: After
+            templateString: "{{ not_null_proportion('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_SHIPDATE\"', at_least=0.8, at_most=1.0) }}"
         columns:
           - columnReference:
               columnCounter: 54c99a04-f5f8-4602-81ac-d150c65920ab
