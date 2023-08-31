@@ -9,6 +9,7 @@
 8. [not_empty_string](#not_empty_string)
 9. [cardinality_equality](#cardinality_equality)
 10. [not_null_proportion](#not_null_proportion)
+11. [not_accepted_values](#not_accepted_values)
 
 ---
 
@@ -639,6 +640,9 @@ The `test_not_null_proportion` macro asserts that the proportion of non-null val
 ```
 This example checks if the proportion of non-null values in the L_SHIPDATE column from the STG_LINEITEM table is between 0.8 (or 80%) and 1.0 (or 100%).
 
+<details>
+<summary>🌏 Source</summary>
+  
 ```sql
 {% macro not_null_proportion(node, column_name, at_least=0, at_most=1.0, group_by_columns=[]) %}
 
@@ -670,3 +674,63 @@ from validation_errors
 
 ```
 </details> 
+
+### [not_accepted_values](#not_accepted_values)
+
+#### Purpose
+
+The `not_accepted_values` macro asserts that there are no rows in a specified column of a table that match a list of provided values. This is particularly useful in data validation tasks where certain values are deemed unacceptable or incorrect.
+
+#### Syntax
+
+```jinja
+{{ not_accepted_values('<node>', '<column_name>', ['<value1>', '<value2>', ...], <quote=True/False>) }}
+```
+
+📘 Parameters:
+- `<node>`: The table you wish to evaluate.
+- `<column_name>`: The column name to check for unacceptable values.
+- `['<value1>', '<value2>', ...]`: List of values you want to ensure are not present in the column.
+- `<quote>`: (Optional) A boolean indicating whether the values in the list should be treated as strings (quoted). Default is `True`.
+
+#### 🚀 Usage Example
+
+```jinja
+{{ not_accepted_values('"ANALYTICS"."COATEST"."STG_LINEITEM"', '"L_SHIPMODE"', ['EXPRESS', 'AIR'], True) }}
+```
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro not_accepted_values(node, column_name, values, quote=True) %}
+
+with all_values as (
+    select distinct
+        {{ column_name }} as value_field
+    from {{ node }}
+),
+
+validation_errors as (
+    select
+        value_field
+    from all_values
+    where value_field in (
+        {% for value in values -%}
+            {% if quote -%}
+            '{{ value }}'
+            {%- else -%}
+            {{ value }}
+            {%- endif -%}
+            {%- if not loop.last -%},{%- endif %}
+        {%- endfor %}
+    )
+)
+
+select *
+from validation_errors
+
+{% endmacro %}
+```
+
+</details>
