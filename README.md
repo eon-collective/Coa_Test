@@ -3,6 +3,7 @@
 2. [row_count_delta](#row_count_delta)
 3. [equality](#equality)
 4. [expression_is_true](#expression_is_true)
+5. [recency](#recency)
 
 ---
 
@@ -259,7 +260,7 @@ SELECT * FROM unioned
 
 </details>  
 
-### expression_is_true
+### [expression_is_true](#expression_is_true)
 
 #### Purpose
 
@@ -297,6 +298,75 @@ WHERE NOT ({{ expression }})
 {%- else %}
 WHERE NOT ({{ column_name }} {{ expression }})
 {%- endif %}
+
+{% endmacro %}
+
+
+```
+
+</details> 
+
+### [recency](#recency)
+
+#### Purpose
+The `recency` macro checks if the most recent date in a given column is within a specified interval. This can be useful to ensure data freshness or to validate that new records are being added as expected within a certain timeframe.
+
+### Syntax
+```jinja
+{{ recency('<node>', '<field>', '<datepart>', <interval>, <ignore_time_component>, ['<group_by_column1>', '<group_by_column2>', ...]) }}
+```
+**Parameters:**
+- `<node>`:  The table you wish to evaluate.
+- `<field>`:  The timestamp or date column you want to check.
+- `<datepart>`: The date part you want to use for the interval (e.g., 'day', 'month', 'year', etc.).
+- - `<interval>`:  The interval value you want to subtract from the current date or timestamp.
+- `<ignore_time_component>`:  If set to `True`, only the date part of the timestamp will be considered, otherwise the full timestamp is used.
+- `['<group_by_column1>', '<group_by_column2>', ...]`: (Optional) Columns to group by.
+
+#### Usage Example
+
+```jinja
+{{ recency('"ANALYTICS"."COATEST"."STG_LINEITEM"', '"L_SHIPDATE"', 'day', 7, True) }}
+```
+This checks if the most recent L_SHIPDATE in the STG_LINEITEM table is within the last 7 days.  
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro recency(node, field, datepart, interval, ignore_time_component=False, group_by_columns=[]) %}
+
+{% set threshold = 'DATEADD(' ~ datepart ~ ', -' ~ interval ~ ', CURRENT_TIMESTAMP())' %}
+
+{% if ignore_time_component %}
+  {% set threshold = 'DATE(' ~ threshold ~ ')' %}
+{% endif %}
+
+{% if group_by_columns %}
+  {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
+  {% set groupby_gb_cols = 'GROUP BY ' + group_by_columns|join(', ') %}
+{% else %}
+  {% set select_gb_cols = '' %}
+  {% set groupby_gb_cols = '' %}
+{% endif %}
+
+WITH recency AS (
+    SELECT 
+      {{ select_gb_cols }}
+      {% if ignore_time_component %}
+        CAST(MAX({{ field }}) AS DATE) AS most_recent
+      {%- else %}
+        MAX({{ field }}) AS most_recent
+      {%- endif %}
+    FROM {{ node }}
+    {{ groupby_gb_cols }}
+)
+
+SELECT
+    {{ select_gb_cols }}
+    most_recent,
+    {{ threshold }} AS threshold
+FROM recency
+WHERE most_recent < {{ threshold }}
 
 {% endmacro %}
 

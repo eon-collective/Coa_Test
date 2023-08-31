@@ -20,6 +20,11 @@ steps:
             name: expression_is_true
             runOrder: After
             templateString: "{{ expression_is_true('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '>= 1', '\"L_EXTENDEDPRICE\"') }}"
+          - continueOnFailure: true
+            description: ""
+            name: recency
+            runOrder: After
+            templateString: "{{ recency('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_SHIPDATE\"', 'day', 7, True) }}"
         columns:
           - columnReference:
               columnCounter: 54c99a04-f5f8-4602-81ac-d150c65920ab
