@@ -30,6 +30,11 @@ steps:
             name: not_null_proportion
             runOrder: After
             templateString: "{{ not_null_proportion('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_SHIPDATE\"', at_least=0.8, at_most=1.0) }}"
+          - continueOnFailure: true
+            description: ""
+            name: not_accepted_values
+            runOrder: After
+            templateString: "{{ not_accepted_values('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_SHIPMODE\"', ['EXPRESS', 'AIR'], True) }}"
         columns:
           - columnReference:
               columnCounter: 54c99a04-f5f8-4602-81ac-d150c65920ab
