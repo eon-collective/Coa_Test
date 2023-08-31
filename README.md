@@ -6,6 +6,7 @@
 5. [recency](#recency)
 6. [at_least_one](#at_least_one)
 7. [not_constant](#not_constant)
+8. [not_empty_string](#not_empty_string)
 
 ---
 
@@ -473,6 +474,57 @@ SELECT
 FROM {{ node }}
 {{ groupby_gb_cols }}
 HAVING COUNT(DISTINCT {{ column_name }}) = 1
+
+{% endmacro %}
+
+
+```
+</details> 
+
+### [not_empty_string](#not_empty_string)
+
+#### Purpose
+The `not_empty_string` macro checks if a given column in a table contains any empty string values. This test is useful to ensure that important columns don't contain blank values which might lead to erroneous analyses.
+
+#### Syntax
+```jinja
+{{ not_empty_string('<node>', '<column_name>', trim_whitespace=True) }}
+```
+**Parameters:**
+- `<node>`:  The table you wish to evaluate.
+- `<column_name>`:  The column you want to check for empty string values.
+- `trim_whitespace`: (Optional) If set to True, the macro will trim leading and trailing whitespaces from the values before checking for emptiness. Default is `True`.
+
+#### Usage Example
+
+```jinja
+{{ not_empty_string('"ANALYTICS"."COATEST"."STG_PARTSUPP"', '"PS_COMMENT"') }}
+```
+This checks if the `PS_COMMENT` in the `STG_PARTSUPP` table contains any rows with empty string values.
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro not_empty_string(node, column_name, trim_whitespace=True) %}
+
+WITH all_values AS (
+    SELECT 
+        {% if trim_whitespace %}
+            TRIM({{ column_name }}) AS {{ column_name }}
+        {% else %}
+            {{ column_name }}
+        {% endif %}
+    FROM {{ node }}
+),
+
+errors AS (
+    SELECT * 
+    FROM all_values
+    WHERE {{ column_name }} = ''
+)
+
+SELECT * FROM errors
 
 {% endmacro %}
 
