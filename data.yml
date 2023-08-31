@@ -120,6 +120,21 @@ macros:
       SELECT * FROM unioned
 
       {% endmacro %}
+  Macro-expression_is_true:
+    id: expression_is_true
+    macroString: |-
+      {% macro expression_is_true(node, expression, column_name=None) %}
+
+      SELECT
+          *
+      FROM {{ node }}
+      {% if column_name is none %}
+      WHERE NOT ({{ expression }})
+      {%- else %}
+      WHERE NOT ({{ column_name }} {{ expression }})
+      {%- endif %}
+
+      {% endmacro %}
   Macro-fewer_rows_than:
     id: fewer_rows_than
     macroString: |-
