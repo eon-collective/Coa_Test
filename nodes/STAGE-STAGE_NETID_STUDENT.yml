@@ -1,0 +1,191 @@
+steps:
+  STAGE_NETID_STUDENT-59099993-b01b-4378-baab-75f007bb2396:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 37ad8237-e843-4a70-abad-939e51385b70
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 123249bf-262c-4602-8e96-4ced20e55d25
+                stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+              - columnCounter: 3f7327e0-dcaa-4723-ae4c-8d97ef2071bc
+                stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            name: NETID_STUDENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 123249bf-262c-4602-8e96-4ced20e55d25
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: d2ce6851-adca-49a2-a75b-124fad9f2720
+                stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            name: STUDENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3f7327e0-dcaa-4723-ae4c-8d97ef2071bc
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: aac3172c-042d-4d8d-a8df-78a58e4c9121
+                stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            name: NETID_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d2ce6851-adca-49a2-a75b-124fad9f2720
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: EMPL_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7797a4e4-74d0-41f5-b92e-4c0dcd62c837
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: aac3172c-042d-4d8d-a8df-78a58e4c9121
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20ca26e2-e2ee-4af9-93e1-fba6b2c51b64
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: 441c6ad5-db1d-48b0-a1cd-63fd72b7b83a
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9741e26-87e4-46df-8de1-b891f111219d
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: 3bf3963f-bf55-48b7-8e41-72425b4d407d
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: aac3172c-042d-4d8d-a8df-78a58e4c9121
+                stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+              - columnCounter: d2ce6851-adca-49a2-a75b-124fad9f2720
+                stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+              - columnCounter: 441c6ad5-db1d-48b0-a1cd-63fd72b7b83a
+                stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            name: DSS_CHANGE_HASH_NETID_STUDENT_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1d80d8c7-6024-4fd6-a0e7-128d5c0c5041
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3c4834e-6697-4f0c-b263-db342fb4e158
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: 6f6bf6f5-5577-4906-9648-5fe523a82899
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38609eba-5a77-4c6c-80db-0ead8710a598
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: 512e9997-2697-4bcb-919d-f9101c894089
+              stepCounter: 59099993-b01b-4378-baab-75f007bb2396
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_SPT_IDENTITY_AIDA_LND: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_SPT_IDENTITY_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_SPT_IDENTITY_AIDA_LND') }} LOAD_SPT_IDENTITY_AIDA_LND
+            name: STAGE_NETID_STUDENT
+            noLinkRefs: []
+      name: STAGE_NETID_STUDENT
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 59099993-b01b-4378-baab-75f007bb2396

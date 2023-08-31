@@ -1,0 +1,155 @@
+steps:
+  STAGE_ACCESS_BADGE_ACCESS_BADGETYP-b0e09aca-b711-4b7f-a8ec-f8524fb895d2:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 1ea54b8d-8f6a-4656-bd1e-602a009f144d
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 188eff3c-f4ed-4035-bf86-a52264d0f493
+                stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+              - columnCounter: f6eaeb97-659c-43d6-8016-9f2b92a708b8
+                stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            name: ACCESS_BADGE_ACCESS_BADGETYP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 188eff3c-f4ed-4035-bf86-a52264d0f493
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 6ccb6298-2ffa-4221-9d81-01fa706d1bc3
+                stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            name: ACCESS_BADGETYP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f6eaeb97-659c-43d6-8016-9f2b92a708b8
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 5e0755b5-edcc-4bf2-8518-9a2b655fd3ac
+                stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            name: ACCESS_BADGE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 6ccb6298-2ffa-4221-9d81-01fa706d1bc3
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: DECIMAL(19,0)
+            defaultValue: ""
+            description: ""
+            name: BADGE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5e0755b5-edcc-4bf2-8518-9a2b655fd3ac
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: DECIMAL(19,0)
+            defaultValue: ""
+            description: ""
+            name: BADGE_ID_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f1983912-bb00-45f4-8f21-f0aaa264dfc7
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 76923c59-8538-4c07-a955-e48dcb75b5bf
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5304cf25-72fe-432c-ba48-d9023d64a55b
+              stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_BADGE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_BADGE_AIDA_LND') }} LOAD_UDO_BADGE_AIDA_LND
+            name: STAGE_ACCESS_BADGE_ACCESS_BADGETYP
+            noLinkRefs: []
+      name: STAGE_ACCESS_BADGE_ACCESS_BADGETYP
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: b0e09aca-b711-4b7f-a8ec-f8524fb895d2

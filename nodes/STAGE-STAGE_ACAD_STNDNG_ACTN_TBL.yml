@@ -1,0 +1,277 @@
+steps:
+  STAGE_ACAD_STNDNG_ACTN_TBL-cff9557b-81f7-4a3d-a5fd-388080688363:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 3c793afa-ab1d-4091-a046-3eb14724a8b1
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: dea78e80-9acb-43ad-bd62-d6301992a1a0
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+              - columnCounter: e544d7fa-fe72-4f72-9f0d-cad4f7f8b52a
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+              - columnCounter: 496b5180-0913-4998-9cdf-2010c57812fc
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            name: ACAD_STNDNG_ACTN_TBL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: dea78e80-9acb-43ad-bd62-d6301992a1a0
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 8e52e822-4dfd-442b-a856-fe79b97cf81d
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            name: ACAD_STNDNG_ACTN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e544d7fa-fe72-4f72-9f0d-cad4f7f8b52a
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: f63a9b15-0f7b-48bc-80cb-35b1184ae4ab
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            name: ACAD_CAREER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f63a9b15-0f7b-48bc-80cb-35b1184ae4ab
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: ACAD_CAREER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d16e8f4-d73d-49ff-9d51-daf9af7e0ae6
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 496b5180-0913-4998-9cdf-2010c57812fc
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 90d6aa6a-4251-4057-a199-9db271b19402
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 8e52e822-4dfd-442b-a856-fe79b97cf81d
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: ACAD_STNDNG_ACTN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98c9662e-6f16-4678-9ffc-4a9ee0e0ea94
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 3f3a0c74-e5ec-4d7b-8f2c-f5520b55d38e
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: DESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b09d1ba4-a513-4d58-8ef2-34e8cbeab0a4
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: fe2dd477-b24f-4c12-8be3-038ca7517a94
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: DESCRSHORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 18ab3337-c9f2-48dd-9ab9-9d4d71ba304c
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 99b015c1-9306-4b4a-8c71-3f26ce43591d
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: TRANSCRIPT_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 360c8cde-0882-4f68-aa0d-7fe56be61339
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: c94d7cfc-8168-4bfa-bdd6-f795d9891e77
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: ACAD_STNDNG_STAT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d93b994e-4237-4ef7-b800-3176c6282a31
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 415014ae-f3b3-4234-b6d8-550410a77779
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DESCRFORMAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb95b33e-bdac-4448-91e6-0aade762f9ab
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 1cf67494-8f8d-43b6-9db2-01e805c36f25
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DESCRINTERNAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 65be2ddf-d3d2-4d35-9850-60e534a14ae8
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: dd89eac5-383e-4feb-b46a-297f972ab714
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 3f3a0c74-e5ec-4d7b-8f2c-f5520b55d38e
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+              - columnCounter: fe2dd477-b24f-4c12-8be3-038ca7517a94
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+              - columnCounter: 99b015c1-9306-4b4a-8c71-3f26ce43591d
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+              - columnCounter: c94d7cfc-8168-4bfa-bdd6-f795d9891e77
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+              - columnCounter: 415014ae-f3b3-4234-b6d8-550410a77779
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+              - columnCounter: 1cf67494-8f8d-43b6-9db2-01e805c36f25
+                stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            name: DSS_CHANGE_HASH_ACAD_STNDNG_ACTN_TBL_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: cfda2855-087e-4a0e-aee7-d46ee7da7424
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4a2613d-9311-4e53-ac22-16a4d604cdb5
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 33efc39f-d059-4d82-b4a8-3df0cb233157
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bcefc7e2-143f-4e58-afd4-5249661ed1eb
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 5522b062-4bca-45cd-b794-b5e306cf2829
+              stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_STACTN_TBL_CS_LND: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_STACTN_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_STACTN_TBL_CS_LND') }} LOAD_PS_ACAD_STACTN_TBL_CS_LND
+            name: STAGE_ACAD_STNDNG_ACTN_TBL
+            noLinkRefs: []
+      name: STAGE_ACAD_STNDNG_ACTN_TBL
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: cff9557b-81f7-4a3d-a5fd-388080688363

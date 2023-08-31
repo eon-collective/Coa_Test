@@ -1,0 +1,319 @@
+steps:
+  STAGE_ACAD_PLAN_TBL_AIDA_LND-e056547c-b778-487a-943e-f2eb7d7f6986:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 64432c6b-2362-438f-9b10-7a7effba31cb
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: a7654494-1ccb-4146-99a6-0dacc489b638
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 603fe459-4cd7-4281-b013-761d7f09410d
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            name: ACAD_PLAN_TBL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a7654494-1ccb-4146-99a6-0dacc489b638
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: c0c74967-7af2-4a75-8d2a-21090057330d
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            name: ACAD_PLAN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c0c74967-7af2-4a75-8d2a-21090057330d
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: ACAD_PLAN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3dd3d9b4-2ea8-443d-82d7-929331b4fd03
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 603fe459-4cd7-4281-b013-761d7f09410d
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1352ecd0-8fe4-4456-95ae-9081803ec8b8
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: eab622f7-1c8c-41a4-9757-b398f3aad0e8
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: NYU_HEGIS_SUFFIX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9321cb47-6225-40b7-aabd-eb7faffd1af1
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: fbaf678f-1f4a-4264-90ae-fd7b349bae7d
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: NYU_NYSED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b4c98ca5-fb11-4011-bda7-8060831a60ef
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 0583020e-186b-4a71-8208-682715215d84
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: NYU_IPEDS_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9a538e3-e595-40db-b72f-140b8f4ab27b
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 5bce5f5d-5eca-420a-95a1-84a5d42a43f1
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: ""
+            name: NYU_DEGREE_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3004cfac-d585-4057-b9e3-4b5d469cad7d
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 822f4a6e-cb6e-463b-8d7c-f0fed4102098
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: NYU_SCH_GRP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: acf5b7b8-5939-4389-8755-cd671101f18f
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: a08e24a5-0c1c-4f9b-88c2-abd55eb33295
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: NYU_SCH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6cde2184-3867-4e37-be3a-64b9c67abde9
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 26a98065-3c1c-4956-8446-7aa182873e1a
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: NYU_SCH_GRP_SUB
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be5ebe40-c467-4a96-b344-171e7fad53fb
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 11a815b6-6ec1-4192-a44b-5703503eb59b
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: NYU_DEGR_LVL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e31de84c-db14-47a9-a43c-d843458db3a0
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: c3ab31d2-24ce-4288-a6b5-86bec449c08c
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: NYU_DEGR_LVL_SUB
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5e477fc-17a9-455f-9007-9ad99e0218c8
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 1ee5aa4c-a848-4beb-9a82-fb0b25ff015c
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: NYU_TAP_ELIG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c1e26c0-c0ea-4844-838e-c05fcd6efbe9
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 1f1954ab-b984-460f-9ecc-d1a9377b0251
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: NYU_INSTRUCT_MODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a6296a8f-a21e-4f70-8337-b062e1b3b912
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 5630a71b-2457-42b4-a256-0b063d133aa3
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: eab622f7-1c8c-41a4-9757-b398f3aad0e8
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: fbaf678f-1f4a-4264-90ae-fd7b349bae7d
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 0583020e-186b-4a71-8208-682715215d84
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 5bce5f5d-5eca-420a-95a1-84a5d42a43f1
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 822f4a6e-cb6e-463b-8d7c-f0fed4102098
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: a08e24a5-0c1c-4f9b-88c2-abd55eb33295
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 26a98065-3c1c-4956-8446-7aa182873e1a
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 11a815b6-6ec1-4192-a44b-5703503eb59b
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: c3ab31d2-24ce-4288-a6b5-86bec449c08c
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 1ee5aa4c-a848-4beb-9a82-fb0b25ff015c
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+              - columnCounter: 1f1954ab-b984-460f-9ecc-d1a9377b0251
+                stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            name: DSS_CHANGE_HASH_PS_PLAN_TAXON_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c53c49d2-4d3e-47b8-a37d-0c48b18f7a5f
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b196e95f-793f-41a8-afab-a8f0dbb97805
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 51047241-548d-424b-8535-c88ac6cf2dcb
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bdc479d-edf4-4e58-88e1-684735cf6faf
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 12fc8ed0-ebf6-43f9-aaaf-8ffc105d5eac
+              stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_NYU_PLAN_TAXON_AIDA_LND: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_NYU_PLAN_TAXON_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_NYU_PLAN_TAXON_AIDA_LND') }} LOAD_PS_NYU_PLAN_TAXON_AIDA_LND
+            name: STAGE_ACAD_PLAN_TBL_AIDA_LND
+            noLinkRefs: []
+      name: STAGE_ACAD_PLAN_TBL_AIDA_LND
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: e056547c-b778-487a-943e-f2eb7d7f6986

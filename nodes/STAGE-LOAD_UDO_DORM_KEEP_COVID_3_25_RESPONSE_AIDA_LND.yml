@@ -1,0 +1,110 @@
+steps:
+  LOAD_UDO_DORM_KEEP_COVID_3_25_RESPONSE_AIDA_LND-3017b1a7-815c-4db3-af01-f30abfced530:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 97c727cd-7622-491e-9093-7567493c2b6e
+              stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: NNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14f38251-7d29-44af-bb13-962f1def9a2e
+                    stepCounter: a3710707-0018-4861-b3c9-dac2131f9b93
+                transform: ""
+          - columnReference:
+              columnCounter: ee539542-aad0-4b49-9045-7e0726c9acc8
+              stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 51ea130c-1cd8-47b0-bece-d086a4168b10
+                    stepCounter: a3710707-0018-4861-b3c9-dac2131f9b93
+                transform: ""
+          - columnReference:
+              columnCounter: e21d0b42-7ed7-4e2c-91b6-7e262c88037f
+              stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45cddbb5-9302-464f-b2e1-619d24e26d6f
+                    stepCounter: a3710707-0018-4861-b3c9-dac2131f9b93
+                transform: ""
+          - columnReference:
+              columnCounter: 98c1791e-16a4-4df9-b9fc-359402a1e449
+              stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66a36e01-bfb5-49f5-a8c6-34119e1ff8e3
+                    stepCounter: a3710707-0018-4861-b3c9-dac2131f9b93
+                transform: ""
+          - columnReference:
+              columnCounter: 99c9d768-81c3-401f-8cda-e9aee7ea4230
+              stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'AIDA_LND.AIDA_LND.UDO_DORM_KEEP_COVID_3_25_RESPONSE'"
+          - columnReference:
+              columnCounter: 8bc4571a-01c7-48f6-8988-593286f8aa66
+              stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases:
+              UDO_DORM_KEEP_COVID_3_25_RESPONSE: a3710707-0018-4861-b3c9-dac2131f9b93
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: AIDA_LND
+                nodeName: UDO_DORM_KEEP_COVID_3_25_RESPONSE
+            join:
+              joinCondition: FROM {{ ref('AIDA_LND','UDO_DORM_KEEP_COVID_3_25_RESPONSE') }} UDO_DORM_KEEP_COVID_3_25_RESPONSE
+            name: LOAD_UDO_DORM_KEEP_COVID_3_25_RESPONSE_AIDA_LND
+            noLinkRefs: []
+      name: LOAD_UDO_DORM_KEEP_COVID_3_25_RESPONSE_AIDA_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530

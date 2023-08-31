@@ -1,0 +1,105 @@
+steps:
+  STAGE_AFL-740b865d-37ce-49a0-8ed7-a33452eb968b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: b4a7ee69-e3a2-48fa-b218-d39382f53acf
+              stepCounter: 740b865d-37ce-49a0-8ed7-a33452eb968b
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 1bec83f4-5222-4bda-aa0d-75b3a17cfa60
+                stepCounter: 740b865d-37ce-49a0-8ed7-a33452eb968b
+            name: AFFILIATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1bec83f4-5222-4bda-aa0d-75b3a17cfa60
+              stepCounter: 740b865d-37ce-49a0-8ed7-a33452eb968b
+            dataType: VARCHAR(128)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c21c19a0-77d0-47f4-9152-2ef66d43dda6
+                    stepCounter: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+                transform: ""
+          - columnReference:
+              columnCounter: dd3e327f-fef8-42d4-91db-c631c0f84e42
+              stepCounter: 740b865d-37ce-49a0-8ed7-a33452eb968b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1da5b0ad-b4cc-4882-b72a-ed5c832757d9
+                    stepCounter: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+                transform: ""
+          - columnReference:
+              columnCounter: d53fccd2-209c-4925-8dac-52b21c1ce224
+              stepCounter: 740b865d-37ce-49a0-8ed7-a33452eb968b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66c60cc7-0bfe-4bdf-bbf7-d6a57b8c005d
+                    stepCounter: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+                transform: ""
+          - columnReference:
+              columnCounter: 2d3f8e9a-ceb5-4155-8915-f74c79705fec
+              stepCounter: 740b865d-37ce-49a0-8ed7-a33452eb968b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_MDM_ALL_MV_CS_LND: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_MDM_ALL_MV_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_MDM_ALL_MV_CS_LND') }} LOAD_MDM_ALL_MV_CS_LND
+            name: STAGE_AFL
+            noLinkRefs: []
+      name: STAGE_AFL
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 740b865d-37ce-49a0-8ed7-a33452eb968b

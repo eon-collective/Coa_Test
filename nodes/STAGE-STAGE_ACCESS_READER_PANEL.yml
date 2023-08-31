@@ -1,0 +1,240 @@
+steps:
+  STAGE_ACCESS_READER_PANEL-3e37a99a-b5ff-42a2-8fad-23925c2cbbf6:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 257618e7-8f92-4142-96b3-5449370af08f
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 877f3324-2880-4fcc-bef6-3957cdf0ade8
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+              - columnCounter: 896643e2-33ab-4cfe-b8d5-ae94c2539e5b
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            name: ACCESS_READER_PANEL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 877f3324-2880-4fcc-bef6-3957cdf0ade8
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: READERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 896643e2-33ab-4cfe-b8d5-ae94c2539e5b
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: PANELID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ffc1055f-7c55-4a1b-ab97-06b93018bd5c
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: VARCHAR(96)
+            defaultValue: ""
+            description: ""
+            name: READERDESC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 71afbbfc-2587-4c62-945b-0b2101face00
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: PORTNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 784a5251-4b5c-4e03-8504-da77b98d16d7
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: COMMADDR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ce6573be-cb00-4414-94dd-4e5f23b18ba7
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: AUX1NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 51afb81c-07ce-41aa-bfd7-59f426d2f00a
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: AUX2NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ee6103b8-7d44-429a-b710-8ace09fb18bd
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: OUT1NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4e8c6685-f21e-4d4f-be20-c86ad250e660
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: OUT2NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bfcd2d9f-2cf4-4297-8c0f-48f022f6750f
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: ffc1055f-7c55-4a1b-ab97-06b93018bd5c
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+              - columnCounter: 71afbbfc-2587-4c62-945b-0b2101face00
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+              - columnCounter: 784a5251-4b5c-4e03-8504-da77b98d16d7
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+              - columnCounter: ce6573be-cb00-4414-94dd-4e5f23b18ba7
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+              - columnCounter: 51afb81c-07ce-41aa-bfd7-59f426d2f00a
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+              - columnCounter: ee6103b8-7d44-429a-b710-8ace09fb18bd
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+              - columnCounter: 4e8c6685-f21e-4d4f-be20-c86ad250e660
+                stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            name: DSS_CHANGE_HASH_ACCESS_READER_PANEL_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 91c039c3-cb5b-4de2-8c2b-b691a13bdebd
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 96b14339-d2ac-43d2-b058-ef177f3b8436
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1b0f4edd-f718-4a58-b2ac-793db93917f4
+              stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_READER_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_READER_AIDA_LND') }} LOAD_UDO_READER_AIDA_LND
+            name: STAGE_ACCESS_READER_PANEL
+            noLinkRefs: []
+      name: STAGE_ACCESS_READER_PANEL
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 3e37a99a-b5ff-42a2-8fad-23925c2cbbf6

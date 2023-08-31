@@ -1,0 +1,286 @@
+steps:
+  STAGE_ACCESS_LENEL_ENTERPRISE-0e5b806f-3ecb-4ff7-9841-b099636eefb9:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 3a91378d-75e9-4db8-8160-39e414a33d18
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: df7bedbb-649e-43ca-bb7b-16deca59ed04
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            name: ACCESS_LENEL_ENTERPRISE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: df7bedbb-649e-43ca-bb7b-16deca59ed04
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5f410820-b080-4351-b226-0bf6a475d25a
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: 19c4afcb-112e-476a-9839-f16c8e843ebf
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: ""
+            name: NYUIDN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 45568f9f-0e00-4943-99a5-74bc37ea706b
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: 5b1d5e8b-771f-424e-a657-4fb3ffe93042
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: CARD_ELIGIBLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ea0b15f-afe1-4cfd-b01c-d7ee743ec238
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: 48cff783-a957-4bac-ade5-25573f5badb7
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: LOCAL_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c679ad3-7a1c-4be7-900f-6d2e1e354e01
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: c563dd41-db82-4059-a48a-0c41b58114ae
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: DIVISION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3883ecc7-c95e-4f67-a88b-be40595a9a6e
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: bfe52943-2df4-40cd-a17b-bd4fbfeab7a2
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATE_SUBTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d94e15cb-7fad-4e57-98cb-583c325f00fb
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: 014c7981-32d7-4069-8460-9514880ce110
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: ""
+            name: CARD_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c588452-c08f-419d-9047-265ad47e5df1
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: c5e1d873-9d08-4134-ad39-d0dc35aa5215
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: SITE_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a45161ba-99e3-4000-b4fd-fd54907fc0df
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: 68c252ed-dbda-4501-906f-9f1f211271ab
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: HOME_SITE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32d2b38e-ed19-4625-893b-7a0439b5e9d7
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: 579a7a54-d270-47bb-a99c-54fc51c100a7
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: CARD_SITE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d7dc9e03-112c-423f-b366-06bc50a9dcf1
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: d89a63c2-431a-4831-b18b-d85130847021
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: CARD_TEXT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d5ed5fb3-3192-4c00-88ea-bedbcc9506c5
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: cbfcb0cd-b83f-47c7-afb1-deae224631f1
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: ALL_DORM_ACCESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5816a50-d25c-43ab-a69c-249db245eeb5
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: a334a4d1-93c6-4bec-9b7a-7722cba61e51
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 19c4afcb-112e-476a-9839-f16c8e843ebf
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: 5b1d5e8b-771f-424e-a657-4fb3ffe93042
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: 48cff783-a957-4bac-ade5-25573f5badb7
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: c563dd41-db82-4059-a48a-0c41b58114ae
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: bfe52943-2df4-40cd-a17b-bd4fbfeab7a2
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: 014c7981-32d7-4069-8460-9514880ce110
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: c5e1d873-9d08-4134-ad39-d0dc35aa5215
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: 68c252ed-dbda-4501-906f-9f1f211271ab
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: 579a7a54-d270-47bb-a99c-54fc51c100a7
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: d89a63c2-431a-4831-b18b-d85130847021
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+              - columnCounter: cbfcb0cd-b83f-47c7-afb1-deae224631f1
+                stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            name: DSS_CHANGE_HASH_ACCESS_LENEL_ENTERPRISE_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b7b79057-9c88-41d3-98e0-fea4cc6ed0b6
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 548b4ad9-76c1-4ceb-aef9-1dba904c748d
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: e233dd1f-e39c-49d6-a57d-95590cf919df
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b50a669-b2ba-4f4c-b5da-6995207098d7
+                    stepCounter: dd47e430-c15b-41ee-9ae5-42b02a751736
+                transform: ""
+          - columnReference:
+              columnCounter: af39ee9f-23f7-4a36-857f-2c946df12d0b
+              stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_UDO_LENEL_ENTERPRISE_AIDA_LND: dd47e430-c15b-41ee-9ae5-42b02a751736
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_UDO_LENEL_ENTERPRISE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_UDO_LENEL_ENTERPRISE_AIDA_LND') }} LOAD_UDO_LENEL_ENTERPRISE_AIDA_LND
+            name: STAGE_ACCESS_LENEL_ENTERPRISE
+            noLinkRefs: []
+      name: STAGE_ACCESS_LENEL_ENTERPRISE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 0e5b806f-3ecb-4ff7-9841-b099636eefb9

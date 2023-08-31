@@ -1,0 +1,105 @@
+steps:
+  STAGE_NETID_AIDA_LND_1-6dc807fd-f0cb-4d5b-aa8c-c238adc30396:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: d3af2bbc-3cd9-4d86-9e93-dbb8ef590612
+              stepCounter: 6dc807fd-f0cb-4d5b-aa8c-c238adc30396
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 2a4f781f-5594-4cac-a308-f125925da470
+                stepCounter: 6dc807fd-f0cb-4d5b-aa8c-c238adc30396
+            name: NETID_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2a4f781f-5594-4cac-a308-f125925da470
+              stepCounter: 6dc807fd-f0cb-4d5b-aa8c-c238adc30396
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9d3dbfac-0ac2-433c-8a44-6748f63637da
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: 13680284-fc12-45e2-9988-ba15e61dab96
+              stepCounter: 6dc807fd-f0cb-4d5b-aa8c-c238adc30396
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54df873b-9095-457d-8db6-c8c632f6a5ee
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: f6d63ec3-51b9-4a57-b0c2-f80bcef3b6f0
+              stepCounter: 6dc807fd-f0cb-4d5b-aa8c-c238adc30396
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a4956fc-7edc-4743-8094-2c6dbfc6f3c7
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: fa4fbd21-613b-45a9-8655-983bdd734863
+              stepCounter: 6dc807fd-f0cb-4d5b-aa8c-c238adc30396
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND') }} LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND
+            name: STAGE_NETID_AIDA_LND_1
+            noLinkRefs: []
+      name: STAGE_NETID_AIDA_LND_1
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 6dc807fd-f0cb-4d5b-aa8c-c238adc30396

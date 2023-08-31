@@ -1,0 +1,105 @@
+steps:
+  STAGE_NETID_AIDA_LND_2-83ab965f-6136-437b-8aa5-8bb807f2c602:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: eaad145a-73f3-4161-9cce-3c4fff0367d7
+              stepCounter: 83ab965f-6136-437b-8aa5-8bb807f2c602
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: c9ca30aa-e1e8-4e69-b3ea-162bc32bf53d
+                stepCounter: 83ab965f-6136-437b-8aa5-8bb807f2c602
+            name: NETID_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c9ca30aa-e1e8-4e69-b3ea-162bc32bf53d
+              stepCounter: 83ab965f-6136-437b-8aa5-8bb807f2c602
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20ca26e2-e2ee-4af9-93e1-fba6b2c51b64
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: 80fb3248-18ef-4d9f-8daf-b613ca3104e6
+              stepCounter: 83ab965f-6136-437b-8aa5-8bb807f2c602
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3c4834e-6697-4f0c-b263-db342fb4e158
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: ef46ea86-cc63-4f92-886c-c049cd9c511e
+              stepCounter: 83ab965f-6136-437b-8aa5-8bb807f2c602
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38609eba-5a77-4c6c-80db-0ead8710a598
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: 08e36933-f11a-4bcf-99e5-95ebb3a076a2
+              stepCounter: 83ab965f-6136-437b-8aa5-8bb807f2c602
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_SPT_IDENTITY_AIDA_LND: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_SPT_IDENTITY_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_SPT_IDENTITY_AIDA_LND') }} LOAD_SPT_IDENTITY_AIDA_LND
+            name: STAGE_NETID_AIDA_LND_2
+            noLinkRefs: []
+      name: STAGE_NETID_AIDA_LND_2
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 83ab965f-6136-437b-8aa5-8bb807f2c602

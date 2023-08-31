@@ -1,0 +1,214 @@
+steps:
+  LOAD_WD_REGISTRY_HRI173_SUPORG_WD_LND-e36e1d93-db16-4611-8282-c40b197b421b:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: a5e02d0f-3de8-4f9e-a4e1-77621e47f992
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SUPORG_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3205a00c-5cde-4119-af08-92c916ba90b0
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: a94e75e3-c78a-4219-9a83-e024286301bd
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SUPERVISORY_ORG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e8349bb-80f7-47b7-9fc7-cda7465da031
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: 5b8ebaff-cff9-450c-9c25-653e7626ee01
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: PARENTSUPORG_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 71e179c0-cca4-4f83-be05-0172f43ca5ae
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: 9bf230d2-62cb-4c64-9ddf-721df029eb4e
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: PARENT_SUPERVISORY_ORG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14c67e0a-917c-48d9-9e27-05041cde8531
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: cdc284f0-2797-42f4-8164-d3f4911ab5e1
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SUB_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d698dfae-2ab2-4b0b-808f-92ece4880238
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: b897fa36-d434-434f-b60b-bad6c27e975e
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: ORG_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 797673f5-20db-422e-aa21-eb325d69e01a
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: f06f538d-df90-4695-8bb2-1cc85542be75
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: DIV_EQUIVALENT_SUPORG_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aa701352-78b9-44fb-8b1a-8d89578ae149
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: eaa81ef9-df9e-4997-aa42-9efeddf6b29e
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: DIV_EQUIVALENT_SUPERVISORY_ORG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8b671310-82ed-45a7-a56c-8df6864815af
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: ef7a9af4-a528-425c-b4e7-81d0596accf7
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: MANAGER_EMP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 712c5dbf-5423-404d-92ee-5c17deb8aee4
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: 749d8655-d331-430d-830e-88b77f601537
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54c719d6-269a-4dc3-802f-d54a596b8a70
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: efb9916d-2076-4a37-b7be-cfd49c199cc7
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e94dd82f-a383-4d3b-94c8-c6303b7aa599
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: 09580ab9-f54f-4c7a-b1be-ca190c7dc050
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 59bc8ab2-d060-4e25-b52f-015ab56d8153
+                    stepCounter: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+                transform: ""
+          - columnReference:
+              columnCounter: b06bee5c-7c2a-48e1-9a09-2bd8f2f782e6
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'WD_LND.WD_LND.WD_REGISTRY_HRI173_SUPORG'"
+          - columnReference:
+              columnCounter: e96bbdc0-0c3c-4afe-9713-cf7ed168944f
+              stepCounter: e36e1d93-db16-4611-8282-c40b197b421b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases:
+              WD_REGISTRY_HRI173_SUPORG: 0f64a5ed-e47b-415c-a732-2467ec20d91e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: RETROWD_LND
+                nodeName: WD_REGISTRY_HRI173_SUPORG
+            join:
+              joinCondition: FROM {{ ref('RETROWD_LND','WD_REGISTRY_HRI173_SUPORG') }} WD_REGISTRY_HRI173_SUPORG
+            name: LOAD_WD_REGISTRY_HRI173_SUPORG_WD_LND
+            noLinkRefs: []
+      name: LOAD_WD_REGISTRY_HRI173_SUPORG_WD_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: e36e1d93-db16-4611-8282-c40b197b421b

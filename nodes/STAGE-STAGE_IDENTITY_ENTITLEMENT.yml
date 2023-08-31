@@ -1,0 +1,156 @@
+steps:
+  STAGE_IDENTITY_ENTITLEMENT-206ecb01-b143-4093-8688-91827348e4e7:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 7a35168d-00e1-42ac-9911-7cfd0af01429
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 0a3b1fb7-d223-4c4c-abec-447dcaed340d
+                stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+              - columnCounter: 5012ef12-957f-4009-a5e2-b35d8b68121d
+                stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            name: IDENTITY_ENTITLEMENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0a3b1fb7-d223-4c4c-abec-447dcaed340d
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: fe452a1c-1bf1-4452-99a7-761addf41e8c
+                stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            name: IDENTITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5012ef12-957f-4009-a5e2-b35d8b68121d
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 2b7e1960-29b6-43e2-9372-95e408d653e0
+                stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            name: ENTITLEMENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2b7e1960-29b6-43e2-9372-95e408d653e0
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f714f48c-68e7-4a0d-9103-36849a547b68
+                    stepCounter: 01610f04-a481-4cad-a2ec-5652003e12cc
+                transform: ""
+          - columnReference:
+              columnCounter: fe452a1c-1bf1-4452-99a7-761addf41e8c
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: IDENTITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 928f0434-a3a5-4726-b3e0-f5402d797532
+                    stepCounter: 01610f04-a481-4cad-a2ec-5652003e12cc
+                transform: ""
+          - columnReference:
+              columnCounter: 40e0ee89-72b6-465e-8700-d89d02cf1b71
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 877449ec-db04-49c5-add2-c5e48eccf284
+                    stepCounter: 01610f04-a481-4cad-a2ec-5652003e12cc
+                transform: ""
+          - columnReference:
+              columnCounter: 3d03fe06-40a4-431f-8644-ca8e35f1de61
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 08174414-fd95-4fa2-9aaa-f902ff0aecb0
+                    stepCounter: 01610f04-a481-4cad-a2ec-5652003e12cc
+                transform: ""
+          - columnReference:
+              columnCounter: 3e0ccbca-5d11-4756-936c-94b59cf6a6e5
+              stepCounter: 206ecb01-b143-4093-8688-91827348e4e7
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_SPT_IDENTITY_ENTITLEMENT_AIDA_LND: 01610f04-a481-4cad-a2ec-5652003e12cc
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_SPT_IDENTITY_ENTITLEMENT_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_SPT_IDENTITY_ENTITLEMENT_AIDA_LND') }} LOAD_SPT_IDENTITY_ENTITLEMENT_AIDA_LND
+            name: STAGE_IDENTITY_ENTITLEMENT
+            noLinkRefs: []
+      name: STAGE_IDENTITY_ENTITLEMENT
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 206ecb01-b143-4093-8688-91827348e4e7

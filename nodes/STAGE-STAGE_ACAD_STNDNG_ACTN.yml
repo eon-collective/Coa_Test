@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_STNDNG_ACTN-28f3a5bd-2d86-4a58-82fd-739c97f954cf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 16ff1b71-59c1-4da2-a033-1fe05d21019b
+              stepCounter: 28f3a5bd-2d86-4a58-82fd-739c97f954cf
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 8724ff55-a440-4bea-ac8f-0d34cf20282f
+                stepCounter: 28f3a5bd-2d86-4a58-82fd-739c97f954cf
+            name: ACAD_STNDNG_ACTN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8724ff55-a440-4bea-ac8f-0d34cf20282f
+              stepCounter: 28f3a5bd-2d86-4a58-82fd-739c97f954cf
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: ACAD_STNDNG_ACTN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98c9662e-6f16-4678-9ffc-4a9ee0e0ea94
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 462c2555-8fa5-4a05-bf25-66402b58e60c
+              stepCounter: 28f3a5bd-2d86-4a58-82fd-739c97f954cf
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4a2613d-9311-4e53-ac22-16a4d604cdb5
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 619bff12-d842-4dcc-b093-0a61b5cb7cf6
+              stepCounter: 28f3a5bd-2d86-4a58-82fd-739c97f954cf
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bcefc7e2-143f-4e58-afd4-5249661ed1eb
+                    stepCounter: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+                transform: ""
+          - columnReference:
+              columnCounter: 71b43e93-6721-4de4-a6f3-aade8e6c96bf
+              stepCounter: 28f3a5bd-2d86-4a58-82fd-739c97f954cf
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_STACTN_TBL_CS_LND: b8ed72f8-f7d0-46bd-a943-4efb12fc154c
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_STACTN_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_STACTN_TBL_CS_LND') }} LOAD_PS_ACAD_STACTN_TBL_CS_LND
+            name: STAGE_ACAD_STNDNG_ACTN
+            noLinkRefs: []
+      name: STAGE_ACAD_STNDNG_ACTN
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 28f3a5bd-2d86-4a58-82fd-739c97f954cf

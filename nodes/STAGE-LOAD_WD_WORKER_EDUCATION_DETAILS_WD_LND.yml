@@ -1,0 +1,215 @@
+steps:
+  LOAD_WD_WORKER_EDUCATION_DETAILS_WD_LND-7a09799b-527e-4faf-8ba4-011ee58cfccc:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 12b6e5c4-c256-4ae4-9471-f9e85b92033d
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 16fa25f7-db9a-4b75-bece-8f5e6806ec17
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: WORKDAY_ID_FOR_DEGREE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d088e32d-e91e-49ea-b6b3-5dab0d7c9cf4
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_ISO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 28fe7508-e1eb-4526-9e41-79b5c2111c4b
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: SCHOOL_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c491c4a2-ad46-4ef2-9e51-a2a3ad4f203a
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: DEGREE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1da584df-3c87-4776-a679-d1826adabcd8
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: DEGREE_RECEIVED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b8f4241c-ef29-4d84-bf3b-f7f51266a5f7
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: YEAR_DEGREE_RECEIVED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 6546dce7-13ca-4140-ab0f-39fe896e168a
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: FEILD_OF_STUDY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a179189b-333d-434f-8ec1-2a3dfeef8fa1
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SOURCE_FILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f5616fc7-65d1-4968-8c9a-86b03abb4e7d
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 7bc3bfca-9c32-4828-bb2c-410ae6c5b34f
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bfd719f9-74c8-457b-b180-b887b452cd2a
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e26a3ab5-8318-4fa6-9d14-08fb0b4c725f
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'WD_LND.WD_LND.WD_WORKER_EDUCATION_DETAILS'"
+          - columnReference:
+              columnCounter: 9f1f97d7-ff1b-4250-8412-3043d08c5bdc
+              stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: WD_WORKER_EDUCATION_DETAILS
+              - locationName: UNKNOWN
+                nodeName: WD_WORKER_EDUCATION_DETAILS
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','WD_WORKER_EDUCATION_DETAILS') }} WD_WORKER_EDUCATION_DETAILS
+            name: LOAD_WD_WORKER_EDUCATION_DETAILS_WD_LND
+            noLinkRefs: []
+      name: LOAD_WD_WORKER_EDUCATION_DETAILS_WD_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: 7a09799b-527e-4faf-8ba4-011ee58cfccc

@@ -1,5 +1,5 @@
 steps:
-  STG_SUPPLIER-f900c9ed-d3b0-4fc0-8cef-a451d16f9b25:
+  STG_SUPPLIER-61bea97b-638b-49b2-837e-021c86bd1d39:
     operation:
       config:
         insertStrategy: INSERT
@@ -8,22 +8,20 @@ steps:
         testsEnabled: true
         truncateBefore: true
       database: ""
+      dependencies: []
       deployEnabled: true
       description: Supplier data as defined by TPC-H
+      isDataVault: false
       isMultisource: false
-      locationName: WORK
+      locationID: ""
+      locationName: TARGET
       materializationType: table
       metadata:
-        appliedNodeTests:
-          - continueOnFailure: true
-            description: ""
-            name: at_least_one
-            runOrder: After
-            templateString: "{{ at_least_one('\"ANALYTICS\".\"COATEST\".\"STG_SUPPLIER\"', '\"S_ACCTBAL\"') }}"
+        appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 457f8da2-8920-455d-8a07-c83bf0c3c64f
-              stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+              columnCounter: 7d5b7637-c5b1-445a-85de-dbf5b0445111
+              stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -32,12 +30,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 97e9b596-6865-456e-bd89-33d838965f5d
-                    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+                  - columnCounter: 87d1d430-a0f8-4534-a169-e45866e31504
+                    stepCounter: 7266f586-9a6b-4d20-a852-bf54893016e2
                 transform: ""
           - columnReference:
-              columnCounter: f8e96e66-326e-43b0-bec5-df0b451b0f1f
-              stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+              columnCounter: 4915bfd2-e089-44c3-a6d3-ec8b207936fb
+              stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39
             dataType: VARCHAR(25)
             description: ""
             hashColumns: []
@@ -46,12 +44,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 196baaef-fb47-445e-95ac-8f7e3197e82e
-                    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+                  - columnCounter: 7f566f17-5a7a-4478-8376-70c9514348ca
+                    stepCounter: 7266f586-9a6b-4d20-a852-bf54893016e2
                 transform: ""
           - columnReference:
-              columnCounter: ebafd1a8-2096-42fd-84fb-8c1b4e5d12eb
-              stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+              columnCounter: 4c96b306-7fb9-4c0a-afd4-2f3c6cfe8277
+              stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39
             dataType: VARCHAR(40)
             description: ""
             hashColumns: []
@@ -60,12 +58,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: afc5d70c-0dfb-42e9-89a2-8348089c7491
-                    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+                  - columnCounter: 09c0c2af-34b2-498d-9e1f-f7a02049e21d
+                    stepCounter: 7266f586-9a6b-4d20-a852-bf54893016e2
                 transform: ""
           - columnReference:
-              columnCounter: 130a5ae5-7dd9-4dc0-a1b7-fccfc7c2aff9
-              stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+              columnCounter: 6be95f19-cd56-434f-b35c-c44c8ac82f1b
+              stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -74,12 +72,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: a0a27f82-91e9-4d0b-aaf8-22f552f954ab
-                    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+                  - columnCounter: f892b649-8046-47a2-8518-95415a71c74e
+                    stepCounter: 7266f586-9a6b-4d20-a852-bf54893016e2
                 transform: ""
           - columnReference:
-              columnCounter: fdd96ea1-e557-491f-8473-e221a51698f8
-              stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+              columnCounter: 5cf2bbf6-e1de-420b-87e5-69ac68fce753
+              stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39
             dataType: VARCHAR(15)
             description: ""
             hashColumns: []
@@ -88,12 +86,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2be26db5-a4a4-42b4-a8dc-eafd555ef1f0
-                    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+                  - columnCounter: ed2b9435-29d3-4ede-a966-35c81b44f52c
+                    stepCounter: 7266f586-9a6b-4d20-a852-bf54893016e2
                 transform: ""
           - columnReference:
-              columnCounter: 80cb24b4-d974-4bc2-9073-ee2c7ac0ef49
-              stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+              columnCounter: 73774458-9f0b-4b3f-b582-f196309ad7b5
+              stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39
             dataType: NUMBER(12,2)
             description: ""
             hashColumns: []
@@ -102,12 +100,12 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 6e09d8e3-4d87-49a9-8699-f445cd52c639
-                    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+                  - columnCounter: ff01abbf-48a5-4339-91a8-11365f1a552d
+                    stepCounter: 7266f586-9a6b-4d20-a852-bf54893016e2
                 transform: ""
           - columnReference:
-              columnCounter: 48c467f4-5e2f-48ff-a006-6f8d77fc27f1
-              stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+              columnCounter: c468bfe6-eead-4a03-a22f-191e1ff68c9a
+              stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39
             dataType: VARCHAR(101)
             description: ""
             hashColumns: []
@@ -116,8 +114,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: afeb006e-a095-4ad0-9bdf-462e55e20b11
-                    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+                  - columnCounter: eb973b63-cb8d-4515-b654-b6b11b1a795c
+                    stepCounter: 7266f586-9a6b-4d20-a852-bf54893016e2
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -125,10 +123,10 @@ steps:
           - customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SCR
+              - locationName: SRC
                 nodeName: SUPPLIER
             join:
-              joinCondition: FROM {{ ref('SCR', 'SUPPLIER') }} "SUPPLIER"
+              joinCondition: FROM {{ ref('SRC', 'SUPPLIER') }} "SUPPLIER"
             name: STG_SUPPLIER
             noLinkRefs: []
       name: STG_SUPPLIER
@@ -136,4 +134,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: f900c9ed-d3b0-4fc0-8cef-a451d16f9b25
+    stepCounter: 61bea97b-638b-49b2-837e-021c86bd1d39

@@ -1,0 +1,235 @@
+steps:
+  STAGE_GYM_FACILITY_USAGE-2d200307-7965-4e70-82e0-752ccd1bf4a8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: edd98328-3f5b-4e96-9d0b-01a348841384
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: fefa1c83-1514-4008-ae27-a7e40b9541d0
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+              - columnCounter: c9d56858-d8d3-4805-b138-4b0a3963fff2
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+              - columnCounter: 7b231262-271b-4448-a04e-7c80d8f5dae4
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            name: GYM_FACILITY_USAGE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: fefa1c83-1514-4008-ae27-a7e40b9541d0
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: bb0f23d8-23e8-48cc-b76d-51e384e16533
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            name: PERSON_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c9d56858-d8d3-4805-b138-4b0a3963fff2
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: ff819c1d-6e0e-4a4f-b847-2c7d316d98e5
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            name: FACILITY_USER_AFFILIATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 7b231262-271b-4448-a04e-7c80d8f5dae4
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: cb642d7e-e9bc-47b3-a7e2-362c6d49ea3c
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            name: GYM_FACILITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: cb642d7e-e9bc-47b3-a7e2-362c6d49ea3c
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: FACILITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5f4e4e2-85cb-4331-9224-3359d550c47e
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: ff819c1d-6e0e-4a4f-b847-2c7d316d98e5
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: FACILITY_USER_AFFILIATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1bcdf177-6d27-4b7e-9534-f24fccf34261
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: bb0f23d8-23e8-48cc-b76d-51e384e16533
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: VARCHAR(11)
+            defaultValue: ""
+            description: ""
+            name: UNIVERSITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d1de556-543d-45ee-acfc-786ea34e6ff4
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: 49ef25ca-c2de-4b2a-9bdb-082434e4dc05
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: FACILITY_USAGE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0bed2a9-d12b-4a50-a89b-77e34e352f96
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: 9220216b-8e07-45ac-84df-ef4d8d88e939
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: FACILITY_USAGE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 249215a5-b805-418d-9fdc-5c722115623a
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: 10d821e9-f12b-4173-ae1a-c06e8c3bef59
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 49ef25ca-c2de-4b2a-9bdb-082434e4dc05
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+              - columnCounter: 9220216b-8e07-45ac-84df-ef4d8d88e939
+                stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            name: DSS_CHANGE_HASH_GYM_FACILITY_USAGE_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8a7a5dce-bc34-4ee8-afe7-3b22a9826a24
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a839621-9be8-4754-83e0-e1927114a758
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: b452f389-8042-4a17-9090-7b64aa792bb8
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 954d8441-5361-44a5-9621-8a817e568dc1
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: dc4ad919-010d-4104-8e3c-26fecb509ced
+              stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_GYM_FACILITY_USAGE_AIDA_LND: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_GYM_FACILITY_USAGE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_GYM_FACILITY_USAGE_AIDA_LND') }} LOAD_GYM_FACILITY_USAGE_AIDA_LND
+            name: STAGE_GYM_FACILITY_USAGE
+            noLinkRefs: []
+      name: STAGE_GYM_FACILITY_USAGE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 2d200307-7965-4e70-82e0-752ccd1bf4a8

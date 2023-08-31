@@ -1,0 +1,135 @@
+steps:
+  STAGE_ACCESS_EVENTYPE-250148a0-b1b1-42e3-bb01-d4c0efacc9c6:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 09e6018d-cd8a-443c-a75b-b46e9ac85985
+              stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 5c0f952f-e79d-493c-8e32-1159da4ecca9
+                stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            name: ACCESS_EVENTYPE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5c0f952f-e79d-493c-8e32-1159da4ecca9
+              stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d65c3815-a663-4449-9035-a4a9b5d67e05
+              stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            dataType: VARCHAR(128)
+            defaultValue: ""
+            description: ""
+            name: EVTDESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9d06bff9-e64e-4fdc-9378-29cf1d565e0a
+              stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: d65c3815-a663-4449-9035-a4a9b5d67e05
+                stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            name: DSS_CHANGE_HASH_ACCESS_EVENTYPE_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: fe6bef91-db09-4d62-955a-c152869f49b0
+              stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: cb33f50f-9716-4ecf-99d0-75406874b9ce
+              stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: baca22e8-5e05-4986-8e02-b1ae3ca17048
+              stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_EVENTYPE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_EVENTYPE_AIDA_LND') }} LOAD_UDO_EVENTYPE_AIDA_LND
+            name: STAGE_ACCESS_EVENTYPE
+            noLinkRefs: []
+      name: STAGE_ACCESS_EVENTYPE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 250148a0-b1b1-42e3-bb01-d4c0efacc9c6

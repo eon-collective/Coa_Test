@@ -1,0 +1,104 @@
+steps:
+  STAGE_HOUSING_EVENT-df305b91-32e3-4481-8fd6-1f20ac622512:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: cefc70f1-aeb4-46d0-9fc6-6ca999f4a77e
+              stepCounter: df305b91-32e3-4481-8fd6-1f20ac622512
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: ae829055-5e67-4f8f-a1f4-8b8ff104f757
+                stepCounter: df305b91-32e3-4481-8fd6-1f20ac622512
+            name: HOUSING_EVENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ae829055-5e67-4f8f-a1f4-8b8ff104f757
+              stepCounter: df305b91-32e3-4481-8fd6-1f20ac622512
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: HOUSING_EVENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 59d063e7-9ea6-46ee-b0c2-a5f4dec8349b
+              stepCounter: df305b91-32e3-4481-8fd6-1f20ac622512
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: dea790f7-3f99-4ec8-a3de-9c7ed456d7e7
+              stepCounter: df305b91-32e3-4481-8fd6-1f20ac622512
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: faa3f353-fca9-42db-b9f2-1f8a29f1e73c
+              stepCounter: df305b91-32e3-4481-8fd6-1f20ac622512
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_HOUSING_EVENT_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_HOUSING_EVENT_AIDA_LND') }} LOAD_HOUSING_EVENT_AIDA_LND
+            name: STAGE_HOUSING_EVENT
+            noLinkRefs: []
+      name: STAGE_HOUSING_EVENT
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: df305b91-32e3-4481-8fd6-1f20ac622512

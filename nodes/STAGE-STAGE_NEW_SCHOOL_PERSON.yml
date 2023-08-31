@@ -1,0 +1,301 @@
+steps:
+  STAGE_NEW_SCHOOL_PERSON-81bf1386-4338-4a4a-ac9c-cd602d4b7773:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 3c66c382-222d-4ffd-a835-11fc6b74e891
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: fb0ab0aa-5589-4ae3-8a72-6fd57e868e3c
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            name: NEW_SCHOOL_PERSON_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: fb0ab0aa-5589-4ae3-8a72-6fd57e868e3c
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: NSID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1994712e-4955-4ef2-b6e5-5454b8ac0432
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: cd57b14c-091e-487c-ab8b-367644bed11b
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: LASTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a44cda4f-a596-4b66-a945-bc1aec64e927
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 6aa419c6-6229-47d1-9eb7-2758c1c5d92a
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: FIRSTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ed97d30-9a53-46c4-9f2e-a6af87caa43f
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: f3c64888-cbef-4e51-82c8-23c1e076ae9b
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: MIDDLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0e5259a-d654-417a-969b-0f86af32a637
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 1e7a88b0-8397-4e52-8e8a-dd273751bfc9
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: NUM_ON_CARD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 68799b22-407a-41bd-9dca-2e4bffbdbce2
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 63a81d64-0857-4c6a-b503-9a78ee080bdc
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: ISSUE_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 324a37d7-3710-4216-b999-ecfd8fe5859f
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 8e5e6c3c-5608-43de-83b6-aa58556e37f7
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: PRIV1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32453a55-0366-413b-bd07-b44726e0a53a
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: eb4b915f-6c6f-4db6-8b8e-ea1f32090c9a
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: ISSUE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d9cf2b6-6286-4066-99d0-d2871644fb2c
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 34f79f3b-e2f7-4ac6-b621-0912932b9ef9
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: CARD_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f425af42-1074-47a8-9cce-9604e952f8e1
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 503979bf-62a8-43e5-abb0-5a1a806216f7
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: CARD_SUBTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4375825e-548f-4661-8d9f-6812d247ea73
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 31fdcc02-3852-4996-a2ee-19d5364bd9f5
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: CARD_SITE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37fa3c7c-cdc1-4fee-864f-e06331958182
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 575623ca-fd81-4727-bd46-fd381ff39c1a
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: RFID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc1776f3-d73c-47cd-a33f-ccbcc598a39e
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 8ed4c01a-fe84-4ff2-841a-5d14460caf05
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: HID_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5535fe35-1213-4fa0-bea2-65e36dea9e3e
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: d8bc2069-c881-492e-9644-1cbd05279429
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: cd57b14c-091e-487c-ab8b-367644bed11b
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 6aa419c6-6229-47d1-9eb7-2758c1c5d92a
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: f3c64888-cbef-4e51-82c8-23c1e076ae9b
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 1e7a88b0-8397-4e52-8e8a-dd273751bfc9
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 63a81d64-0857-4c6a-b503-9a78ee080bdc
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 8e5e6c3c-5608-43de-83b6-aa58556e37f7
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: eb4b915f-6c6f-4db6-8b8e-ea1f32090c9a
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 34f79f3b-e2f7-4ac6-b621-0912932b9ef9
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 503979bf-62a8-43e5-abb0-5a1a806216f7
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 31fdcc02-3852-4996-a2ee-19d5364bd9f5
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 575623ca-fd81-4727-bd46-fd381ff39c1a
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+              - columnCounter: 8ed4c01a-fe84-4ff2-841a-5d14460caf05
+                stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            name: DSS_CHANGE_HASH_NEW_SCHOOL_PERSON_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b53c145f-557b-4e6b-8802-48b77831c760
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e424e7c6-67d8-4698-98f1-2c451895f1dc
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: d8f946c0-f5cc-4eb2-83a0-adccc11bcb3e
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: acf14d62-1620-495b-b3d7-9b6aa993b8ad
+                    stepCounter: 681c333e-ba1f-43bd-a409-a0df98b49f12
+                transform: ""
+          - columnReference:
+              columnCounter: 4bc596b2-d78e-4ecf-822a-8e8511a2e5a2
+              stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_NEW_SCHOOL_PERSON_AIDA_LND: 681c333e-ba1f-43bd-a409-a0df98b49f12
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_NEW_SCHOOL_PERSON_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_NEW_SCHOOL_PERSON_AIDA_LND') }} LOAD_NEW_SCHOOL_PERSON_AIDA_LND
+            name: STAGE_NEW_SCHOOL_PERSON
+            noLinkRefs: []
+      name: STAGE_NEW_SCHOOL_PERSON
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 81bf1386-4338-4a4a-ac9c-cd602d4b7773

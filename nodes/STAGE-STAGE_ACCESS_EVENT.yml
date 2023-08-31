@@ -1,0 +1,165 @@
+steps:
+  STAGE_ACCESS_EVENT-f81e0e09-c856-42ea-a58f-7ac2157b510a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 3f71ebdb-1a84-4c36-b6de-85059e9c9983
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: aced63db-f8ab-45d8-8f65-352b574ee513
+                stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            name: ACCESS_EVENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: aced63db-f8ab-45d8-8f65-352b574ee513
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 964bdc40-ee06-4335-ac3a-a6e474b4f29e
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5db2f665-4eb1-4b0e-a3a9-a2d233ab7ae9
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 37791369-81eb-44db-abb5-1ad890568c43
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: VARCHAR(128)
+            defaultValue: ""
+            description: ""
+            name: EVDESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0f592a17-46c2-481b-b104-a0d8ad2723ce
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 964bdc40-ee06-4335-ac3a-a6e474b4f29e
+                stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+              - columnCounter: 5db2f665-4eb1-4b0e-a3a9-a2d233ab7ae9
+                stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+              - columnCounter: 37791369-81eb-44db-abb5-1ad890568c43
+                stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            name: DSS_CHANGE_HASH_ACCESS_EVENT_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bd2bee49-5e47-458e-961a-da704ea4d761
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e30f12a0-d9d8-4dd1-995c-c1b5167bd584
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: fa9a1bc5-4b0c-4dea-9ba9-f0add35fc384
+              stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_EVENT_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_EVENT_AIDA_LND') }} LOAD_UDO_EVENT_AIDA_LND
+            name: STAGE_ACCESS_EVENT
+            noLinkRefs: []
+      name: STAGE_ACCESS_EVENT
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: f81e0e09-c856-42ea-a58f-7ac2157b510a

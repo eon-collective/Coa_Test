@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_PLAN_CS_LND-663d6ecf-aa6c-43a7-835c-5e1287210d3e:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 3c0679b3-5cc0-4fc7-a344-8b7476fa11e4
+              stepCounter: 663d6ecf-aa6c-43a7-835c-5e1287210d3e
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 1af34665-4e91-48fe-8f3b-efdd69360648
+                stepCounter: 663d6ecf-aa6c-43a7-835c-5e1287210d3e
+            name: ACAD_PLAN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1af34665-4e91-48fe-8f3b-efdd69360648
+              stepCounter: 663d6ecf-aa6c-43a7-835c-5e1287210d3e
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: ACAD_PLAN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 27191006-4f6d-482c-af5d-b7806c45a269
+                    stepCounter: 86222e0b-6447-4b44-bbb1-cf4432a2e720
+                transform: ""
+          - columnReference:
+              columnCounter: d117c319-7bec-4d0e-bbb1-14c1896da02b
+              stepCounter: 663d6ecf-aa6c-43a7-835c-5e1287210d3e
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e995e70-b275-4cf2-9c81-d05f0e04df7a
+                    stepCounter: 86222e0b-6447-4b44-bbb1-cf4432a2e720
+                transform: ""
+          - columnReference:
+              columnCounter: 5e966385-a15f-4940-bff9-7de2dc06718e
+              stepCounter: 663d6ecf-aa6c-43a7-835c-5e1287210d3e
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73cb70d2-51a6-42cd-b6e2-95bd339a6962
+                    stepCounter: 86222e0b-6447-4b44-bbb1-cf4432a2e720
+                transform: ""
+          - columnReference:
+              columnCounter: 3b177356-01f7-494d-823f-fca7245d6b9b
+              stepCounter: 663d6ecf-aa6c-43a7-835c-5e1287210d3e
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_PLAN_TBL_CS_LND: 86222e0b-6447-4b44-bbb1-cf4432a2e720
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_PLAN_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_PLAN_TBL_CS_LND') }} LOAD_PS_ACAD_PLAN_TBL_CS_LND
+            name: STAGE_ACAD_PLAN_CS_LND
+            noLinkRefs: []
+      name: STAGE_ACAD_PLAN_CS_LND
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 663d6ecf-aa6c-43a7-835c-5e1287210d3e

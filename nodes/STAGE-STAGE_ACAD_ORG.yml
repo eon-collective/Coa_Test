@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_ORG-fedc1bd0-5025-4829-ac75-37c6597d2239:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: b77c9ca3-e854-4e47-b6bd-e74d43baf1c4
+              stepCounter: fedc1bd0-5025-4829-ac75-37c6597d2239
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: bf858042-5cbb-45ac-9381-c12b21ca7cd9
+                stepCounter: fedc1bd0-5025-4829-ac75-37c6597d2239
+            name: ACAD_ORG_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bf858042-5cbb-45ac-9381-c12b21ca7cd9
+              stepCounter: fedc1bd0-5025-4829-ac75-37c6597d2239
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: ACAD_ORG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 454985ec-8591-4492-a193-0d2c5b0699cc
+                    stepCounter: 0b1df45b-600a-4131-9fc2-4933ed26ac64
+                transform: ""
+          - columnReference:
+              columnCounter: 2f64f4eb-870f-4fbd-a598-14fdaf1237df
+              stepCounter: fedc1bd0-5025-4829-ac75-37c6597d2239
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 82d27321-ac9b-4dbd-ae45-287421528c26
+                    stepCounter: 0b1df45b-600a-4131-9fc2-4933ed26ac64
+                transform: ""
+          - columnReference:
+              columnCounter: ccea70fa-786f-4194-a46b-c14d59d4f2b4
+              stepCounter: fedc1bd0-5025-4829-ac75-37c6597d2239
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 759cc651-3d09-4612-aba3-022350db0e0c
+                    stepCounter: 0b1df45b-600a-4131-9fc2-4933ed26ac64
+                transform: ""
+          - columnReference:
+              columnCounter: 929042ef-5928-47c9-a933-1dfc1e64c254
+              stepCounter: fedc1bd0-5025-4829-ac75-37c6597d2239
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_ORG_TBL_CS_LND: 0b1df45b-600a-4131-9fc2-4933ed26ac64
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_ORG_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_ORG_TBL_CS_LND') }} LOAD_PS_ACAD_ORG_TBL_CS_LND
+            name: STAGE_ACAD_ORG
+            noLinkRefs: []
+      name: STAGE_ACAD_ORG
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: fedc1bd0-5025-4829-ac75-37c6597d2239

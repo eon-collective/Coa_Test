@@ -1,0 +1,274 @@
+steps:
+  STAGE_NYU_STUDY_AGRM-748bb18a-f79a-443f-b61b-22e08756ef13:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 2e52df80-faf8-4370-88d2-9e0082ff7f2d
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 2c7ea3a4-ed74-4c22-9bcb-1beba1d47141
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: 014dc4eb-88a8-4d88-8481-ae57af104ae6
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            name: NYU_STUDY_AGRM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2c7ea3a4-ed74-4c22-9bcb-1beba1d47141
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 873ee06c-5b70-4c6b-bf6b-eac6a99d63fc
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            name: STUDY_AGREEMENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 873ee06c-5b70-4c6b-bf6b-eac6a99d63fc
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: STUDY_AGREEMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34a71cae-f3d2-4929-9afa-73e85abbe2ec
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 014dc4eb-88a8-4d88-8481-ae57af104ae6
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2f05ce6-5dca-4e0a-9d9f-738f184a23e2
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 3e3307df-2fa8-489f-a508-293fa0031838
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: NYU_ST_AB_CAT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 571e5a3d-8a8a-4031-bfa7-3c951b4c3942
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 0dd7577d-66f6-461a-878a-9b794abbf80b
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: TRNSCR_PRINT_FL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e359ebac-9231-4ce7-890e-7597d46bcc04
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: a25077b8-228d-492f-8686-63a1dd45a61e
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(254)
+            defaultValue: ""
+            description: ""
+            name: DESCR254
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e2c55d3b-1483-4449-ae83-b56032d34af3
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: b1045bfb-79e9-4eb7-9d69-4f248f50c16a
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a93f157b-87f9-4f97-bb46-ef2e81af030c
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: e4410014-adb6-4008-952d-0d4e58430cdf
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c43f5f97-a159-46a5-922e-e8e6e3bf8a30
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 30acf7f8-c71c-48dc-900f-3ee16adf810d
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_DESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca26d268-b6f8-456f-bbee-7050776e265a
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 71443ffd-f890-4664-b303-e1be717eb298
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(2)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY_2CHAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e24e259-1e74-418f-b1e8-1053011dda3a
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 6ac39ede-b7b3-4f4c-8266-5e5418cd2bb1
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: NYU_LAT_LONG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 600612c6-7a46-42fb-98b3-3bfbc84d2f1b
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 627022a6-894d-4d1d-8e7a-06ef3edf950f
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 3e3307df-2fa8-489f-a508-293fa0031838
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: 0dd7577d-66f6-461a-878a-9b794abbf80b
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: a25077b8-228d-492f-8686-63a1dd45a61e
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: b1045bfb-79e9-4eb7-9d69-4f248f50c16a
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: e4410014-adb6-4008-952d-0d4e58430cdf
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: 30acf7f8-c71c-48dc-900f-3ee16adf810d
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: 71443ffd-f890-4664-b303-e1be717eb298
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+              - columnCounter: 6ac39ede-b7b3-4f4c-8266-5e5418cd2bb1
+                stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            name: DSS_CHANGE_HASH_NYU_STUDY_AGRM_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bb816a1a-5af1-4f80-b358-f264341f5ca4
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dc72a432-7ca4-4e24-b1f0-751bc97a7f63
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 0371ba35-0047-40b9-b455-6615552e4514
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7703c1e0-e51f-4b15-9e8a-8f94f72b1d36
+                    stepCounter: adba5fa2-41f8-4585-8464-15bdaaafd23a
+                transform: ""
+          - columnReference:
+              columnCounter: 6d770eaa-8007-45cf-bc3d-8c2e1c67ea59
+              stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_NYU_STUDY_AGRM_CS_LND: adba5fa2-41f8-4585-8464-15bdaaafd23a
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_NYU_STUDY_AGRM_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_NYU_STUDY_AGRM_CS_LND') }} LOAD_PS_NYU_STUDY_AGRM_CS_LND
+            name: STAGE_NYU_STUDY_AGRM
+            noLinkRefs: []
+      name: STAGE_NYU_STUDY_AGRM
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 748bb18a-f79a-443f-b61b-22e08756ef13

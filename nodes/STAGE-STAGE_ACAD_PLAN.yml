@@ -1,0 +1,87 @@
+steps:
+  STAGE_ACAD_PLAN-a9c64216-8c84-4928-99a9-0832d8183f61:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 5cdf4d4e-3850-4ec6-bccc-46c81a1ff192
+              stepCounter: a9c64216-8c84-4928-99a9-0832d8183f61
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            name: ACAD_PLAN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4b75f2ac-1cf4-4c91-ab37-113387fd8218
+              stepCounter: a9c64216-8c84-4928-99a9-0832d8183f61
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1e995e70-b275-4cf2-9c81-d05f0e04df7a
+                    stepCounter: 86222e0b-6447-4b44-bbb1-cf4432a2e720
+                transform: ""
+          - columnReference:
+              columnCounter: 6bf1fe30-7715-4c98-89d5-8172ce31442e
+              stepCounter: a9c64216-8c84-4928-99a9-0832d8183f61
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 73cb70d2-51a6-42cd-b6e2-95bd339a6962
+                    stepCounter: 86222e0b-6447-4b44-bbb1-cf4432a2e720
+                transform: ""
+          - columnReference:
+              columnCounter: 1fd7fc2c-1a89-4d77-aadf-7a55abde01ce
+              stepCounter: a9c64216-8c84-4928-99a9-0832d8183f61
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_PLAN_TBL_CS_LND: 86222e0b-6447-4b44-bbb1-cf4432a2e720
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_PLAN_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_PLAN_TBL_CS_LND') }} LOAD_PS_ACAD_PLAN_TBL_CS_LND
+            name: STAGE_ACAD_PLAN
+            noLinkRefs: []
+      name: STAGE_ACAD_PLAN
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: a9c64216-8c84-4928-99a9-0832d8183f61

@@ -1,0 +1,136 @@
+steps:
+  LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND-fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 8b63c10d-3704-4472-8552-a61b910c9e9c
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7909a7fe-645b-48a7-afdf-eef11df89704
+                    stepCounter: 844dca6d-b23b-4c76-85a3-b2cabb7d9d6e
+                transform: ""
+          - columnReference:
+              columnCounter: 9d3dbfac-0ac2-433c-8a44-6748f63637da
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c4befd1c-4d1f-4b3e-9d81-799bc8c95060
+                    stepCounter: 844dca6d-b23b-4c76-85a3-b2cabb7d9d6e
+                transform: ""
+          - columnReference:
+              columnCounter: 6364542c-196a-4f08-ad80-8a2d6c9061f9
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: DEPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38126333-8022-4014-8ff7-cd3ade932fae
+                    stepCounter: 844dca6d-b23b-4c76-85a3-b2cabb7d9d6e
+                transform: ""
+          - columnReference:
+              columnCounter: bad3989e-b3d6-4f20-8697-ee116fef36cb
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 080c7ab0-39ea-450e-864a-386698eca6cb
+                    stepCounter: 844dca6d-b23b-4c76-85a3-b2cabb7d9d6e
+                transform: ""
+          - columnReference:
+              columnCounter: 7c54b087-f261-4906-925c-4dd62180d09b
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac786cfa-31c6-47eb-baaa-70b89e037756
+                    stepCounter: 844dca6d-b23b-4c76-85a3-b2cabb7d9d6e
+                transform: ""
+          - columnReference:
+              columnCounter: e12a5a82-77df-44fc-bb50-8309ebc64d70
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa14218f-6384-4d8b-93ab-0ebe31560b15
+                    stepCounter: 844dca6d-b23b-4c76-85a3-b2cabb7d9d6e
+                transform: ""
+          - columnReference:
+              columnCounter: 54df873b-9095-457d-8db6-c8c632f6a5ee
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'AIDA_LND.AIDA_LND.UDO_CRITICAL_PERSONNEL_COVID_RESPONSE'"
+          - columnReference:
+              columnCounter: 6a4956fc-7edc-4743-8094-2c6dbfc6f3c7
+              stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases:
+              UDO_CRITICAL_PERSONNEL_COVID_RESPONSE: 844dca6d-b23b-4c76-85a3-b2cabb7d9d6e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: AIDA_LND
+                nodeName: UDO_CRITICAL_PERSONNEL_COVID_RESPONSE
+            join:
+              joinCondition: FROM {{ ref('AIDA_LND','UDO_CRITICAL_PERSONNEL_COVID_RESPONSE') }} UDO_CRITICAL_PERSONNEL_COVID_RESPONSE
+            name: LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND
+            noLinkRefs: []
+      name: LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2

@@ -1,0 +1,149 @@
+steps:
+  LOAD_UDO_EMP_AIDA_LND-f81951eb-1976-440d-ad6a-cb89e253e3be:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 71f2133c-88ff-4d72-8326-9ade153aa677
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2657c8db-8fb9-45c7-97b3-e4a73827839b
+                    stepCounter: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+                transform: ""
+          - columnReference:
+              columnCounter: b217ffb5-bc8f-48d9-8ae4-0e6df2fe781b
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: LASTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3cc18e4d-1a74-4291-8237-b30ba33800ad
+                    stepCounter: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 921fb107-2438-471f-a25c-4c20ac1ffabe
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: FIRSTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1100b49-c117-4baf-85f3-a37d7c2addf5
+                    stepCounter: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+                transform: ""
+          - columnReference:
+              columnCounter: d8393a31-874d-44cc-9a71-1382626edc41
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: VARCHAR(13)
+            defaultValue: ""
+            description: ""
+            name: SSNO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4e2ac7ae-4ef7-4cec-a538-71d2e734ea57
+                    stepCounter: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 14a3020a-8782-4339-809f-04c8622e9eb4
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 081a8219-dba8-481a-91ea-8991775805fb
+                    stepCounter: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 36b497af-c8b2-4b0d-a2ed-584e8195c662
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5dda4391-6204-4e0e-b334-d8d22abf423f
+                    stepCounter: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 26e9781e-5a95-4eda-8e65-6460e198c921
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fee3cd0-eb84-4e6e-aff1-bdf32089d2a0
+                    stepCounter: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+                transform: ""
+          - columnReference:
+              columnCounter: 7f3442c9-dc82-4319-b346-61a70338b606
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'AIDA_LND.AIDA_LND.UDO_EMP'"
+          - columnReference:
+              columnCounter: a9458599-d76a-4c88-890d-2486a0308312
+              stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases:
+              UDO_EMP: cf47853e-ed13-4b81-8652-f7cf9a8b0bfa
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: AIDA_LND
+                nodeName: UDO_EMP
+            join:
+              joinCondition: FROM {{ ref('AIDA_LND','UDO_EMP') }} UDO_EMP
+            name: LOAD_UDO_EMP_AIDA_LND
+            noLinkRefs: []
+      name: LOAD_UDO_EMP_AIDA_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be

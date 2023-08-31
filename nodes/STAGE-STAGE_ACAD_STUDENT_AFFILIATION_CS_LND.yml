@@ -1,0 +1,341 @@
+steps:
+  STAGE_ACAD_STUDENT_AFFILIATION_CS_LND-cc5f7cb8-65cc-41b7-93da-44963e6f26a7:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 169bf545-adff-4271-9e74-c97c47259ac0
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b940ec37-9ab0-4000-a978-d91e6262ac0c
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: ab194439-ed89-4b81-b096-c50c7cb2076b
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            name: PERSON_AFFILIATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b940ec37-9ab0-4000-a978-d91e6262ac0c
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 0095c9fb-7fbb-4cb9-9f2f-e66fad13b3db
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            name: AFFILIATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ab194439-ed89-4b81-b096-c50c7cb2076b
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 7fc0fc0b-0320-4abc-84e0-ba8bf512f396
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            name: STUDENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0095c9fb-7fbb-4cb9-9f2f-e66fad13b3db
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e603d55-9e77-446f-8473-c3880fcb0164
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 7fc0fc0b-0320-4abc-84e0-ba8bf512f396
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: EMPLID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccde8cf2-e16e-415d-9ecf-966cea9d2f9c
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: f65d3242-9652-42d0-9fad-5d91d4a6b038
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: INSTITUTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a01f516d-ad2c-42ec-af96-3bf8c0bec3de
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 1643ff12-a35d-47a5-b565-9def552f437e
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: START_DT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c333431-05a0-4e35-a644-77adf750c7ad
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: adbffbbd-4660-4797-b535-3e6ba3860671
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFFL_SPONS_DEPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 65a332ef-4605-422c-9fa9-b84be8204223
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 259154dc-1e89-4807-a70f-e1bfe1bb2936
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: END_DT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94ab51f9-cc09-495d-88ba-a4dafa9b0a7b
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: cf089bf3-c9a2-4cad-aeae-c04723a7e4f5
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: LASTUPDOPRID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3982bc5-c975-49da-a36e-95fce296143c
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 9ab0d959-a9e1-4744-8cff-fb78ae075acf
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: LASTUPDDTTM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca66036d-a381-4d53-82f2-50925db4c57c
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: eede633b-2c53-46e7-8b8d-868406978b95
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_PLCD_MTD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc0a42f7-5061-42a4-b49d-0ae92a8c0d5b
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 8d870d26-89c8-4776-b740-d0a3fed9c73b
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_RLCD_MTD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 615d0130-dd86-4392-9cb5-ec45dd7a23dd
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: d7170efe-c106-4299-9279-8f467f7c5f16
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6bf7720e-e9c9-4872-8eaf-c7c0329c532f
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 95bf24a1-b00b-4271-9497-e429e7496116
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_STS_DESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea0f5a60-cd36-4c55-a641-5fc5958e8edb
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 7984a3b6-2f86-44f8-bef1-112576a1b422
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_RANK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c2e9b36c-a3cc-4b23-ac89-97eadc516cc1
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: a5d9274c-381d-4131-ae6f-1395145b7ac9
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 7fc0fc0b-0320-4abc-84e0-ba8bf512f396
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: f65d3242-9652-42d0-9fad-5d91d4a6b038
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: 0095c9fb-7fbb-4cb9-9f2f-e66fad13b3db
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: 1643ff12-a35d-47a5-b565-9def552f437e
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: adbffbbd-4660-4797-b535-3e6ba3860671
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: 259154dc-1e89-4807-a70f-e1bfe1bb2936
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: cf089bf3-c9a2-4cad-aeae-c04723a7e4f5
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: 9ab0d959-a9e1-4744-8cff-fb78ae075acf
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: eede633b-2c53-46e7-8b8d-868406978b95
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: 8d870d26-89c8-4776-b740-d0a3fed9c73b
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: d7170efe-c106-4299-9279-8f467f7c5f16
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: 95bf24a1-b00b-4271-9497-e429e7496116
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+              - columnCounter: 7984a3b6-2f86-44f8-bef1-112576a1b422
+                stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            name: DSS_CHANGE_HASH_ACAD_STUDENT_AFFILIATION_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d6476797-7bc7-4134-b12d-282f13094ab7
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 211cbf36-be82-4557-b33e-e803960bcde8
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: ac45b729-f265-49ce-9aae-d3927a8859bd
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d0f8613-22e7-4c44-829b-694872b2b759
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 2b87d6fc-65c3-4496-9648-50ac9302408e
+              stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_SCC_AFL_PERSON_CS_LND: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_SCC_AFL_PERSON_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_SCC_AFL_PERSON_CS_LND') }} LOAD_PS_SCC_AFL_PERSON_CS_LND
+            name: STAGE_ACAD_STUDENT_AFFILIATION_CS_LND
+            noLinkRefs: []
+      name: STAGE_ACAD_STUDENT_AFFILIATION_CS_LND
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: cc5f7cb8-65cc-41b7-93da-44963e6f26a7

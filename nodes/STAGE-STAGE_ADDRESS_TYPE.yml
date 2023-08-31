@@ -1,0 +1,105 @@
+steps:
+  STAGE_ADDRESS_TYPE-40987dfd-e574-4d3c-b21e-9c033c39334a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 9aac4888-0113-4b7a-9569-343bc23fb5a4
+              stepCounter: 40987dfd-e574-4d3c-b21e-9c033c39334a
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 9ed3d3bb-6f6d-4fec-b31d-7d3661dab75e
+                stepCounter: 40987dfd-e574-4d3c-b21e-9c033c39334a
+            name: ADDRESS_TYPE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9ed3d3bb-6f6d-4fec-b31d-7d3661dab75e
+              stepCounter: 40987dfd-e574-4d3c-b21e-9c033c39334a
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: ADDRESS_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4e4faf62-3091-4eb4-a55b-bad3de2cc7c2
+                    stepCounter: 0d8ffc76-8847-4f0e-b750-a6fb607be58e
+                transform: ""
+          - columnReference:
+              columnCounter: 51cd7164-21ab-4123-abe2-81dd4c27b54d
+              stepCounter: 40987dfd-e574-4d3c-b21e-9c033c39334a
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6fda85db-49a6-489e-81a6-1f90304c263c
+                    stepCounter: 0d8ffc76-8847-4f0e-b750-a6fb607be58e
+                transform: ""
+          - columnReference:
+              columnCounter: 8bf173fe-85f7-49d6-8fdd-1c4240af6b12
+              stepCounter: 40987dfd-e574-4d3c-b21e-9c033c39334a
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3cce86dc-45e6-41c0-a276-82b86409a9fd
+                    stepCounter: 0d8ffc76-8847-4f0e-b750-a6fb607be58e
+                transform: ""
+          - columnReference:
+              columnCounter: f17bda0d-fc08-4057-9881-185b506352f8
+              stepCounter: 40987dfd-e574-4d3c-b21e-9c033c39334a
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ADDRESSES_CS_LND: 0d8ffc76-8847-4f0e-b750-a6fb607be58e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ADDRESSES_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ADDRESSES_CS_LND') }} LOAD_PS_ADDRESSES_CS_LND
+            name: STAGE_ADDRESS_TYPE
+            noLinkRefs: []
+      name: STAGE_ADDRESS_TYPE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 40987dfd-e574-4d3c-b21e-9c033c39334a

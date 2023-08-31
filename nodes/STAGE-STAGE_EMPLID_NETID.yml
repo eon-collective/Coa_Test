@@ -1,0 +1,261 @@
+steps:
+  STAGE_EMPLID_NETID-6ca266ae-0536-4bd6-a490-65e7667b9358:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: a25b04e5-1108-49b9-9a9a-3d8e814d78d6
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 86077ac0-08e8-4c7d-a205-f60e0395e2cb
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: 7b04f231-8aa2-4cd6-9b91-d831a6be2431
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            name: EMPLID_NETID_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 86077ac0-08e8-4c7d-a205-f60e0395e2cb
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: EMPLID_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 7b04f231-8aa2-4cd6-9b91-d831a6be2431
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 11a7d37a-3997-49e8-b75e-64f8d10318a2
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            name: NETID_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: edc4a713-217a-4f63-8c1e-99c42f711e13
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(11)
+            defaultValue: ""
+            description: ""
+            name: EMPLID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 31e3081d-e410-42c7-9bd3-aa0e3357dcdf
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 11a7d37a-3997-49e8-b75e-64f8d10318a2
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a5ccc02-5cc0-4f67-9e6a-cf10fda146c4
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 3947adfa-074e-4825-9686-8a08f243fa31
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: EXTERNAL_SYSTEM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 201ddc7a-476e-416c-99e2-181c09b7a79f
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 557a6b9e-04fb-45fe-9804-e2e6050c9abf
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 12696d49-bd87-4d17-827b-b63acd470774
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 6bba397d-7fbc-4c72-9aae-726adfddb1ee
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 331c016c-b9ca-4df8-b8f0-0d1e0316b8a0
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 9e84a701-17aa-4e71-b827-eeaa1bf71332
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DML_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 68b7575d-01f9-4291-8e82-eae17b6e4c03
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 06f07836-f7d5-4c4f-979d-b83671bad139
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e27998fe-c451-491f-ae19-0e2eee26ae94
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 3f7643e5-642b-43f1-90bd-667be35b20ec
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: DECIMAL(18,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e53b7c9-a841-49f9-a260-ff242d2267d1
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 67f65a15-4b9a-4693-b782-958d679a7aa2
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 11a7d37a-3997-49e8-b75e-64f8d10318a2
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: edc4a713-217a-4f63-8c1e-99c42f711e13
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: 3947adfa-074e-4825-9686-8a08f243fa31
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: 557a6b9e-04fb-45fe-9804-e2e6050c9abf
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: 6bba397d-7fbc-4c72-9aae-726adfddb1ee
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: 9e84a701-17aa-4e71-b827-eeaa1bf71332
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: 06f07836-f7d5-4c4f-979d-b83671bad139
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+              - columnCounter: 3f7643e5-642b-43f1-90bd-667be35b20ec
+                stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            name: DSS_CHANGE_HASH_SIS_EMPLID_NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bd21cd9e-d647-42ab-9e48-e22a9e2591aa
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5dde74b6-9f7d-4625-b5ac-d5784f7247b0
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: bd5e15da-fbd7-4922-a2be-487c169649aa
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94074c70-c074-4115-b61d-1e7be5b6f8a1
+                    stepCounter: d1f1faaa-940b-499a-bcc4-6cc14a139949
+                transform: ""
+          - columnReference:
+              columnCounter: 344ae22b-5025-4e32-8508-c3251ce64482
+              stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_EXTERNAL_SYSTEM_CS_LND: d1f1faaa-940b-499a-bcc4-6cc14a139949
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_EXTERNAL_SYSTEM_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_EXTERNAL_SYSTEM_CS_LND') }} LOAD_PS_EXTERNAL_SYSTEM_CS_LND
+            name: STAGE_EMPLID_NETID
+            noLinkRefs: []
+      name: STAGE_EMPLID_NETID
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 6ca266ae-0536-4bd6-a490-65e7667b9358

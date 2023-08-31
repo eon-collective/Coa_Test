@@ -1,0 +1,442 @@
+steps:
+  STAGE_IM_LEAGUE_SPORT_PARTICIPATION-c66d8e69-874f-4a40-898c-d850e5e779eb:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 28fdf212-7065-40f7-823e-5df345b19691
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: e73c05ae-e248-415b-b4c2-9ffb9b8ecac6
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: ccc7312e-b835-41fc-ac5a-3ce8d1bd8d1c
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 12b457da-27f8-4b98-b551-9bd585a1dbe4
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 1fab06d6-f92b-4be7-b42a-81ab5a7de2f2
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: bcf820af-150d-4169-8e5b-0cff70a44799
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            name: IM_LEAGUE_SPORT_PARTICIPATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e73c05ae-e248-415b-b4c2-9ffb9b8ecac6
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: e136553c-5f18-4bb9-a601-993c3064e9f4
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            name: PERSON_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ccc7312e-b835-41fc-ac5a-3ce8d1bd8d1c
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b198090e-6529-47b8-82fd-06016d5cec9e
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            name: SPORT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 12b457da-27f8-4b98-b551-9bd585a1dbe4
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b95454a8-d28c-4189-a895-443e1e17d786
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            name: ACAD_TERM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1fab06d6-f92b-4be7-b42a-81ab5a7de2f2
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 1eed9bee-3fff-494e-95dd-684dc3c7a713
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            name: SPORT_PARTICIPATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bcf820af-150d-4169-8e5b-0cff70a44799
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(90)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: c016abe6-2774-470f-a447-b97ed9336c93
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            name: SPORT_TEAM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e136553c-5f18-4bb9-a601-993c3064e9f4
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(250)
+            defaultValue: ""
+            description: ""
+            name: PERSON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ba78f58-61ea-4556-a999-d17fbce8da8f
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: b198090e-6529-47b8-82fd-06016d5cec9e
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SPORT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc4c468c-6f97-4cf2-ab25-ad83044ed634
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: b95454a8-d28c-4189-a895-443e1e17d786
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: ""
+            name: STRM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e30bc7e5-ff8f-4f13-9da8-f4a49a2a577b
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 1eed9bee-3fff-494e-95dd-684dc3c7a713
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: PARTICIPATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7576f43d-d0fe-45cc-8867-d155241694fa
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: c016abe6-2774-470f-a447-b97ed9336c93
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: TEAM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f268747-9ba2-4687-a911-a60c6a6e24d7
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 070b03f8-dc5a-4ce5-92eb-4c4728ddfde1
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: LEAGUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 054eea32-0269-4108-983e-141184e4655d
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: eaf24a3f-0a61-4d68-9dbf-24dd8f2a11a5
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7ccbf3b5-ba05-455f-b5c1-fe4eab059e5a
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 022ec580-4d94-4888-8ecd-6da5b35e8e80
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: TERM_SEASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e30bc7e5-ff8f-4f13-9da8-f4a49a2a577b
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 481996e2-a51d-4ff3-adb4-1cb670a503d0
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: NUMBER_OF_TEAMS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2f51b1c-ec29-4b4e-ad11-08e86800b6f0
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: ea48951c-cd72-471e-ac89-c47af5b29346
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: GAMES_PLAYED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d12a849d-f8b9-4670-a46d-965211f27291
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 8f4eefcf-7745-4ebe-b7cf-4c5809cb5dfe
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: POSITION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7576f43d-d0fe-45cc-8867-d155241694fa
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 0622320e-3506-4819-bdf3-44ad8b49ec2c
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e742cb85-16d8-4396-8a50-7002c837949e
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: ff2e269c-4384-49a6-b75c-058143b32583
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d812f0c-6c74-491e-a151-4369f6de330a
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: f6128445-8b53-4aaa-8908-9e4b68db0e02
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 09982df2-d1b3-42b9-b24f-8c88a2390363
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 810eafd6-473b-433c-b077-29421199654e
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89aace43-8901-4a5f-a486-c6dae20e4938
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 4ffaf055-ccab-4fd2-a654-299b13925e12
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(200)
+            defaultValue: ""
+            description: ""
+            name: SCHOOL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4ba78f58-61ea-4556-a999-d17fbce8da8f
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 553497db-13db-4a38-8e69-f73a7e0e6625
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b198090e-6529-47b8-82fd-06016d5cec9e
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 070b03f8-dc5a-4ce5-92eb-4c4728ddfde1
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: eaf24a3f-0a61-4d68-9dbf-24dd8f2a11a5
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 022ec580-4d94-4888-8ecd-6da5b35e8e80
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 481996e2-a51d-4ff3-adb4-1cb670a503d0
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: ea48951c-cd72-471e-ac89-c47af5b29346
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: c016abe6-2774-470f-a447-b97ed9336c93
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 8f4eefcf-7745-4ebe-b7cf-4c5809cb5dfe
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 0622320e-3506-4819-bdf3-44ad8b49ec2c
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: ff2e269c-4384-49a6-b75c-058143b32583
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: f6128445-8b53-4aaa-8908-9e4b68db0e02
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 810eafd6-473b-433c-b077-29421199654e
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 4ffaf055-ccab-4fd2-a654-299b13925e12
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+              - columnCounter: 1eed9bee-3fff-494e-95dd-684dc3c7a713
+                stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            name: DSS_CHANGE_HASH_IM_LEAGUE_SPORT_PARTICIPATION_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 6f045f5a-b2f9-4a01-985c-64bf67d6504b
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d6a0dc7f-27c5-48df-817e-260332736d59
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: f89f87b7-9b9a-4ff2-a831-6cfeb96d69df
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b136d645-531e-466b-8ebc-8cfa0b0f8eb6
+                    stepCounter: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+                transform: ""
+          - columnReference:
+              columnCounter: 061655b8-f035-4c08-944d-c8b7bf20dcda
+              stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_ATHLETICS_INTRAMURAL_AIDA_LND: 4dc7b6d5-6bbd-4bbf-8b44-09e9b1960b86
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_ATHLETICS_INTRAMURAL_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_ATHLETICS_INTRAMURAL_AIDA_LND') }} LOAD_ATHLETICS_INTRAMURAL_AIDA_LND
+            name: STAGE_IM_LEAGUE_SPORT_PARTICIPATION
+            noLinkRefs: []
+      name: STAGE_IM_LEAGUE_SPORT_PARTICIPATION
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: c66d8e69-874f-4a40-898c-d850e5e779eb

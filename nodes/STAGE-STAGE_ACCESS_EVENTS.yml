@@ -1,0 +1,299 @@
+steps:
+  STAGE_ACCESS_EVENTS-cf479e5d-8216-463a-86fd-c424afb3ddf8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 40b275aa-3cdd-4517-a3bf-ac35e706fe63
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 203a8543-48a7-46fb-86ef-6d57c25f8ac6
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+              - columnCounter: 3a98880f-1861-456c-8be1-5ad6ed3e342a
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+              - columnCounter: d289b519-185f-4e66-bb31-c85b3938a96f
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+              - columnCounter: e824c496-cbf0-42f8-844d-bbd395565876
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            name: ACCESS_EVENTS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 203a8543-48a7-46fb-86ef-6d57c25f8ac6
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b554c35b-306d-4f4f-bf3f-97d2ca9ec9e8
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+              - columnCounter: 07e97618-bcf6-4779-9bbb-90bd44d059ab
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            name: ACCESS_READER_PANEL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3a98880f-1861-456c-8be1-5ad6ed3e342a
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b554c35b-306d-4f4f-bf3f-97d2ca9ec9e8
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            name: ACCESS_PANEL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d289b519-185f-4e66-bb31-c85b3938a96f
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 42696c74-3212-4125-b655-a9788a8c18b1
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            name: ACCESS_EMP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e824c496-cbf0-42f8-844d-bbd395565876
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 82718d15-8e55-48d1-b244-7d1276220d4b
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            name: ACCESS_EVENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 82718d15-8e55-48d1-b244-7d1276220d4b
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 42696c74-3212-4125-b655-a9788a8c18b1
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EMPID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b554c35b-306d-4f4f-bf3f-97d2ca9ec9e8
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: MACHINE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 07e97618-bcf6-4779-9bbb-90bd44d059ab
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEVID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0844c55f-5724-4edc-bc32-72f7b8a7c850
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: EVENT_TIME_UTC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d4efdb32-5677-4a56-abea-8d59ba19c6df
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENTTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d14f6e6f-d75b-4112-ac9e-ff121da49252
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: DECIMAL(19,0)
+            defaultValue: ""
+            description: ""
+            name: CARDNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f5518d20-d76f-4162-8d09-284f0bf3aa77
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: SERIALNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1256908c-86cd-4b46-984c-eefcb6ac501c
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 0844c55f-5724-4edc-bc32-72f7b8a7c850
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+              - columnCounter: d4efdb32-5677-4a56-abea-8d59ba19c6df
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+              - columnCounter: d14f6e6f-d75b-4112-ac9e-ff121da49252
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+              - columnCounter: f5518d20-d76f-4162-8d09-284f0bf3aa77
+                stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            name: DSS_CHANGE_HASH_ACCESS_EVENTS_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 824c9fca-acfd-4ad5-8fb3-fdeae8369dd6
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b11c8792-b5a9-4de0-a0c1-3758234d0560
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 260088d9-9e2d-40d2-a63d-27a654a94914
+              stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_EVENTS_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_EVENTS_AIDA_LND') }} LOAD_UDO_EVENTS_AIDA_LND
+            name: STAGE_ACCESS_EVENTS
+            noLinkRefs: []
+      name: STAGE_ACCESS_EVENTS
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: cf479e5d-8216-463a-86fd-c424afb3ddf8

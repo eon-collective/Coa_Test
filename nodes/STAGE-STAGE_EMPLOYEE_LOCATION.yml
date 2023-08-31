@@ -1,0 +1,156 @@
+steps:
+  STAGE_EMPLOYEE_LOCATION-0dc65063-2bd3-4351-9776-0c94e8102894:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: bf418bc5-8e10-446d-b5b1-541afcb529e7
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 63a3299b-7798-40f2-87a9-6b735cd37fbd
+                stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+              - columnCounter: dff6baf9-9620-465e-8a84-3908a91bed81
+                stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            name: EMPLOYEE_LOCATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 63a3299b-7798-40f2-87a9-6b735cd37fbd
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 1fd67e9b-33f6-4dee-9f65-f1fe65299979
+                stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            name: WORKER_DETAILS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: dff6baf9-9620-465e-8a84-3908a91bed81
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 9a40aca1-2181-4330-8c80-1b6e2713ec85
+                stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            name: WD_LOCATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1fd67e9b-33f6-4dee-9f65-f1fe65299979
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PERSON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5bf8b987-241f-466b-90e2-9d1f7aaf1c12
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: 9a40aca1-2181-4330-8c80-1b6e2713ec85
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: LOCATION_REFERENCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c54625b0-0a7d-4e90-834b-4d4a08a39cf2
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: 9b25aa30-5008-4f13-a8d9-f4d6a8381daa
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96f381a9-1874-43e4-922e-5903c1b2f26e
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: 4e112795-f1a9-4430-bf1e-b4c0802201b4
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94cc5c40-997f-4492-bb4e-d5b54919afc9
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: f4b15887-9487-4536-91be-2c40712a43f2
+              stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_WD_HRI018_WORKER_DETAILS_WD_LND: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_WD_HRI018_WORKER_DETAILS_WD_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_WD_HRI018_WORKER_DETAILS_WD_LND') }} LOAD_WD_HRI018_WORKER_DETAILS_WD_LND
+            name: STAGE_EMPLOYEE_LOCATION
+            noLinkRefs: []
+      name: STAGE_EMPLOYEE_LOCATION
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 0dc65063-2bd3-4351-9776-0c94e8102894

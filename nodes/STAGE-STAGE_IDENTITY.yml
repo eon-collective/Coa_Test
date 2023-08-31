@@ -1,0 +1,105 @@
+steps:
+  STAGE_IDENTITY-d02b588e-1c8f-4e69-b595-0b4767b39b29:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: afef8188-0667-462e-bcdd-0a4c712e4735
+              stepCounter: d02b588e-1c8f-4e69-b595-0b4767b39b29
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: a7c317b2-7d7f-44b0-99ee-3bd0ca17f225
+                stepCounter: d02b588e-1c8f-4e69-b595-0b4767b39b29
+            name: IDENTITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a7c317b2-7d7f-44b0-99ee-3bd0ca17f225
+              stepCounter: d02b588e-1c8f-4e69-b595-0b4767b39b29
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: IDENTITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41590a09-8b94-4050-b655-eb57eb656326
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: 317a479c-0ea8-4732-b76c-623754468c4a
+              stepCounter: d02b588e-1c8f-4e69-b595-0b4767b39b29
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3c4834e-6697-4f0c-b263-db342fb4e158
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: e1c40a7e-77a0-47b8-ad76-a336eaeb4b62
+              stepCounter: d02b588e-1c8f-4e69-b595-0b4767b39b29
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38609eba-5a77-4c6c-80db-0ead8710a598
+                    stepCounter: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+                transform: ""
+          - columnReference:
+              columnCounter: bf6e8943-16cc-4f9d-8f72-f4a6ffc48b1a
+              stepCounter: d02b588e-1c8f-4e69-b595-0b4767b39b29
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_SPT_IDENTITY_AIDA_LND: e230bb94-5871-4c1c-86bc-c6bfe896aaa7
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_SPT_IDENTITY_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_SPT_IDENTITY_AIDA_LND') }} LOAD_SPT_IDENTITY_AIDA_LND
+            name: STAGE_IDENTITY
+            noLinkRefs: []
+      name: STAGE_IDENTITY
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: d02b588e-1c8f-4e69-b595-0b4767b39b29

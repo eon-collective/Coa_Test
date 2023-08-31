@@ -1,0 +1,224 @@
+steps:
+  STAGE_ACAD_PLAN_SUB_PLAN-542839b3-8132-4c44-94cc-29caa36186b3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 3ac5aae9-b91d-421d-b469-1574859bf02a
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9465c7ac-08d4-42cc-8ac6-4e5ea5836709
+                    stepCounter: ad04d68c-8555-43ac-ac54-ed0ee4967244
+                transform: ""
+          - columnReference:
+              columnCounter: 4597215a-50b1-4d5b-ac01-10871a362e8b
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: DECIMAL(38, 0)
+            defaultValue: ""
+            description: ""
+            name: EFFSEQ
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab489e8c-6681-4e16-851f-f789f3b00315
+                    stepCounter: ad04d68c-8555-43ac-ac54-ed0ee4967244
+                transform: ""
+          - columnReference:
+              columnCounter: 8f60ddab-6346-47dc-8403-4929f49d638e
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: ACAD_PLAN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cbfce1ef-ed62-4b0a-bc91-330da82c76e1
+                    stepCounter: ad04d68c-8555-43ac-ac54-ed0ee4967244
+                transform: ""
+          - columnReference:
+              columnCounter: 69fc0d3e-160a-4972-b4b5-81e6e517b669
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: ACAD_SUB_PLAN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11e71c31-6bca-46cc-93d1-5ea9725a6a94
+                    stepCounter: ad04d68c-8555-43ac-ac54-ed0ee4967244
+                transform: ""
+          - columnReference:
+              columnCounter: 9811e266-5ed1-4328-a790-75e3732d7eb0
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a42111f6-6116-44ba-9143-ef9d4cf7f79e
+                    stepCounter: ad04d68c-8555-43ac-ac54-ed0ee4967244
+                transform: ""
+          - columnReference:
+              columnCounter: 69e97d38-a2a7-4ea1-ae1f-1a175aa98802
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9d872b99-c2af-47aa-b11a-ea93436b363e
+                    stepCounter: ad04d68c-8555-43ac-ac54-ed0ee4967244
+                transform: ""
+          - columnReference:
+              columnCounter: 514a9274-1529-4e0e-b01f-72ec1351cbd7
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 23138ad4-f7fa-4db4-b995-c674cfa18a9c
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 8f60ddab-6346-47dc-8403-4929f49d638e
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            name: ACAD_PLAN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1dafc482-664d-4747-b63d-398c714ad353
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 69fc0d3e-160a-4972-b4b5-81e6e517b669
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            name: ACAD_SUB_PLAN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ad5698b9-643c-47ad-9188-8c802aa28837
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 3ac5aae9-b91d-421d-b469-1574859bf02a
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            name: EFFDT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: da382cd0-54d5-4a87-a9d3-8e29ac80e727
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 4597215a-50b1-4d5b-ac01-10871a362e8b
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            name: EFFSEQ_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8082fc83-f482-4920-80d3-d3dd634adf22
+              stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 23138ad4-f7fa-4db4-b995-c674cfa18a9c
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+              - columnCounter: 1dafc482-664d-4747-b63d-398c714ad353
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+              - columnCounter: da382cd0-54d5-4a87-a9d3-8e29ac80e727
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+              - columnCounter: ad5698b9-643c-47ad-9188-8c802aa28837
+                stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3
+            name: ACAD_PLAN_SUB_PLAN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_SUBPLN_TBL_CS_LND: 7ab49fe6-e088-40ef-b23c-39d63c12003d
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_SUBPLAN_CS_LND
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_SUBPLN_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_SUBPLN_TBL_CS_LND') }} LOAD_PS_ACAD_SUBPLN_TBL_CS_LND
+            name: STAGE_ACAD_PLAN_SUB_PLAN
+            noLinkRefs: []
+      name: STAGE_ACAD_PLAN_SUB_PLAN
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 542839b3-8132-4c44-94cc-29caa36186b3

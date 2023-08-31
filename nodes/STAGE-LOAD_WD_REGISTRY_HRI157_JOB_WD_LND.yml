@@ -1,0 +1,344 @@
+steps:
+  LOAD_WD_REGISTRY_HRI157_JOB_WD_LND-6330dfb0-930d-4664-9e64-40db28d700c9:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 4533c5f3-6bde-47d5-b228-2be58b418224
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e5504aa-1426-417a-a495-541a473d245b
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: da393184-9b47-427e-a471-18e38c36dcac
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: POSITION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f49e5237-a5a9-4081-b1c3-d68c297e68b9
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 5341d9a2-39e1-4b95-99d9-301f69c11bfc
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: JOB_PROFILE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e492ae6-86cd-43c6-9a0b-0da83f4b3ff7
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 2aa6f668-8718-4e5c-add7-ca031a3e2cda
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: JOB_PROFILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f7310981-62b6-4a2c-a8f8-45e9c95814eb
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 308cf9e7-5634-4299-9589-f7ac8b32e121
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: ASSIGNMENT_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b3ddbd4-01d4-478e-a8e2-7be746f51bf3
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 0e8d5ca1-ce82-4719-a496-a884f307b460
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: ASSIGNMENT_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1f4a941-8279-42aa-90b1-bedc72708b9d
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 1e0b36c7-6feb-4f0a-8a10-4a01806e49eb
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: JOB_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 53a58895-e93a-425f-bdf6-a65a058dfe6a
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: b736ce59-0bb9-4012-b22f-10ef7bfa6ffb
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: IS_PRIMARY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f9e64187-4d4d-4dcb-9469-66501be0814a
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: d29e781e-e66f-4e1d-a5c9-75406e0d8888
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: JOB_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6cb346d-d867-4ff7-ad86-b1ef73ef017e
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: dbfe06f1-9dea-4c29-8e79-f420bdc6c549
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SUPERVISORY_ORG_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a13d16cb-636c-4a66-8f7e-7be84d4a4f5f
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 9dfe3b4e-9e53-4eed-a7a6-fb5b8800b74c
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SUPERVISORY_ORGANIZATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1c932a18-2529-43dd-8164-4b4ec522b71b
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: cf6a5549-caef-4d9c-8abb-ee8c17ab9423
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: DIVISION_EQUIVALENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fbdf96cb-37e7-44f2-9ed9-23d5decc7078
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: cb90316b-3341-4f46-864d-dd18f2e409a6
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: DIVISION_EQUIVALENT_ORG_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 320703ba-ae84-4da9-89a9-67bc6f341015
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 254116a7-2951-4f1c-a484-3167e210bb0d
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: JOB_FAMILY_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 655b22ce-805c-45a0-95ab-a4c3494917a3
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 81145e35-3066-439a-96cc-4072d176916e
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: JOB_FAMILY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df9ba127-c8c4-4697-ae56-651b8e7e4333
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 5591789f-e963-408e-943c-c994be8f8482
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: COMPENSATION_GRADE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66b08bbe-fb7e-4eab-9920-02981468a098
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 1ce2ed1e-1c85-4d93-9211-ce76d153ab70
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: MANAGER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c2923d9a-872a-4440-937a-5805c7074172
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 89d638fc-2437-4bad-8189-91fb1f2e6482
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: MANAGER_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0ed83e82-77ef-4b87-9cfa-b36cd5c39610
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: 414f9011-6412-47e2-b23f-65777641a8dd
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: RETIREMENT_JOB
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c6da4b84-3f47-49f7-8a6e-f973f7cd1075
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: f57ac749-d84a-46ea-ac7f-f8151bb6e5bd
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 554c4f1c-be5f-49b6-a6d6-062b587e35d5
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: f2afa154-6a59-4c95-9008-42b001f46b71
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d80830d8-ef27-4064-b820-681942ad337d
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: d4d80b48-9bcd-4618-b38a-816fdda1179e
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2df86145-4eeb-4cb3-9026-75a25db97d14
+                    stepCounter: 636e3409-65a7-4ee7-836c-9e9a663323a3
+                transform: ""
+          - columnReference:
+              columnCounter: f070604c-861e-42fa-ad14-156b45127dd6
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'WD_LND.WD_LND.WD_REGISTRY_HRI157_JOB'"
+          - columnReference:
+              columnCounter: 1569bda2-8a93-4e88-9534-060bd199679a
+              stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases:
+              WD_REGISTRY_HRI157_JOB: 636e3409-65a7-4ee7-836c-9e9a663323a3
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: RETROWD_LND
+                nodeName: WD_REGISTRY_HRI157_JOB
+            join:
+              joinCondition: FROM {{ ref('RETROWD_LND','WD_REGISTRY_HRI157_JOB') }} WD_REGISTRY_HRI157_JOB
+            name: LOAD_WD_REGISTRY_HRI157_JOB_WD_LND
+            noLinkRefs: []
+      name: LOAD_WD_REGISTRY_HRI157_JOB_WD_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: 6330dfb0-930d-4664-9e64-40db28d700c9

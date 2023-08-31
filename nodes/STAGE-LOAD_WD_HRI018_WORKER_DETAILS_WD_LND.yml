@@ -1,0 +1,1320 @@
+steps:
+  LOAD_WD_HRI018_WORKER_DETAILS_WD_LND-302b4063-f020-499e-bb02-66c3dfeafa9b:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 60a873f0-1985-4ac7-815f-978686157d69
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: WORKER_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5bf8b987-241f-466b-90e2-9d1f7aaf1c12
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: df07b8a3-72b5-4f93-ba8b-5901144ae6c2
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d94a9444-92d3-4ac5-aee7-61b1255425b4
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PREFERRED_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a54e8dda-27e9-4e0d-87ea-af09fd1670e3
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PREFERRED_MIDDLE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a69383da-6ea7-4fa7-b127-336bb9d28787
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PREFERRED_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 985ccfce-9eeb-4aee-9623-af019a989b4d
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: NAME_PREFIX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3646094a-7036-4bb9-818d-30b5b4bc8ac4
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: NAME_SUFFIX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2b8da8c1-021d-4d02-8307-f538179cc274
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: LEGAL_SEX
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 486ddff3-b0ee-435e-ba0d-137331249dc8
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: DATE_OF_BIRTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 05f7f594-198a-41a4-9cf3-1432c6cd8d3b
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_ADDRESS_LINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 54ecf560-b6c5-45fb-b1fb-7524969b232b
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_ADDRESS_LINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9c5e40c1-4b81-4997-b0ab-73cbff783a29
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_ADDRESS_LINE3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 06f90099-e294-4304-821a-53096eaba940
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_ADDRESS_LINE4
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 411e5dcf-1762-4a5f-882d-69e683f6dba2
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 83fb0506-75a8-4237-8377-6cba864e8233
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a4064246-4e06-4942-b3f7-fdfc1f505637
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_COUNTRY_ISO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: aaded253-0272-48fe-8004-c4ed6d2e6fd3
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_HOME_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4f4ffb5b-e735-4665-8860-2c6e4d01e740
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: HOME_PHONE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0a2744b2-180b-4751-93c9-4e85ef35d4cb
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PERSONAL_HOME_EMAIL_ADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e740d098-f29a-48a9-858b-2b7d32414d72
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: VIP_INDICATOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2a717c4b-d299-4d1b-a320-014c616d6c4a
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_ADDRESS_LINE1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9488b60f-1deb-4221-8270-521679bcdcf4
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_ADDRESS_LINE2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 7ae16861-9ce3-48d5-a724-be46385f7ebe
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_ADDRESS_LINE3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: af4025bd-d2ed-4431-973c-4945647502d0
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_ADDRESS_LINE4
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3de141d2-8f9e-4808-ac46-12741e3555dc
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: aea688d9-d933-4e08-b70d-9758d86f66d6
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4689705f-8368-4de9-ac17-b7e5bcd9d91a
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_POSTAL_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a33bcc35-d6f7-4a23-8f45-0ba88a9c1b83
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_WORKSPACE_COUNTRY_ISO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 755cd3ff-f25d-497b-93ae-042a6be7eb35
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: WORK_PHONE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 52f9c182-bd8f-433a-85ba-0bd7f3084988
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: MOBILE_PHONE_NUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3dfd3ae5-ea0d-4f6a-8f88-eac5b772e1be
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: WORK_EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1b5b0fed-f85a-4dc7-9d09-f697b64de817
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: BUILDING_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 6749c42f-0347-44ab-8c4a-bf760869a5be
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: CAMPUS_LOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c54625b0-0a7d-4e90-834b-4d4a08a39cf2
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: CAMPUS_LOCATION_REFID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ccc439f9-76ee-475f-8152-5bf60f470420
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: CAMPUS_LOCATION_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 7787feda-596b-44ec-9cf7-18caae29410d
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: EMPLOYMENT_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 482aefb2-d0ea-4cdd-bef7-e5281fa18d84
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: LATEST_HIRE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 58f90cdb-d1b1-44c1-94b1-26a2ce24c950
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: HIRE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ca54dccb-8bb2-4bf3-a05f-75aaf0b9fe02
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ORIGINAL_HIRE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d67f6a39-1ec7-469e-9a67-dea987db3415
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: HIRE_REASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 764479f2-cda6-449e-b88c-b782c48707c2
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: HIRE_REASON_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1da324ca-0556-41f0-8c29-1a2e6b37f9ce
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_REHIRE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0da5fea0-2706-418c-a8d6-e15dcc9c6af7
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_NOT_ELIGIBLE_FOR_REHIRE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 205137d4-65da-40de-8877-2f9948b652ad
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_TERMINATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bcf92b7c-7c18-461b-9681-7d872db6ec33
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TERMINATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e47e0199-d08c-40db-8fd1-15bfa43579ea
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TERMINATION_REASON
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0c55d332-49af-4a45-b0be-7d13fe8849eb
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TERMINATION_REASON_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 7ae596b8-530d-4f94-8d7a-c1ab2e8efac0
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TERMINATION_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f1ec3598-e3cc-4400-b499-1b56bce70c1c
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TERMINATION_CATEGORY_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9180945a-09e0-4ff7-9508-9570f87cc9eb
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_TERMINATION_INVOLUNTARY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5c1e8d34-955f-4c3c-88e3-8650fea4406a
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_REGRETTABLE_TERMINATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e0069a98-3a0b-4ca1-894e-611412f5a06d
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: FIRST_DAY_OF_WORK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 591421f3-813a-4e3e-b4a7-52706796b1dc
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: CONTINUOUS_SERVICE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9e19bed2-94bb-495a-b5a1-23c49296bb8a
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ACCESS_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5f1de3fa-a8d5-48de-a4eb-0ed1554d6e84
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ACCESS_GRACE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f66ad905-4339-4f67-8624-e24991bced2d
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ACCESS_END_DATE_OVERRIDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 86ae720f-bf38-4d5d-876b-14056f444d80
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: GRACE_PERIOD_END_DATE_OVERRIDE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1e2bb4b5-d5c2-48b1-9615-cd7a14483dfb
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: RETIREMENT_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b61c4547-6a14-4ee5-9fa9-25b07e1eb054
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_RETIRED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1aa63ebe-8473-4674-872e-869d07ec5ec7
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_RETIRED_ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e0d59a78-fe3b-4983-b78b-5fb4051db555
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_ON_LEAVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a7108f11-c9b5-49cb-bf2c-c5925e62bab3
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: IS_INTERNATIONAL_ASSIGNEE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b12f2ce5-1b56-4fa1-9b7e-d4a6c33e76b6
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: INTERNATIONAL_ASSIGNMENT_COUNTRY_ISO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5860ac80-030f-431d-a889-c0eb5800f205
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TIME_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8463d61f-29e3-4fc0-ad66-12d440df5c8b
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: WORKER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 73da0605-6a68-4db2-b944-1f3d0b46ef3d
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_POSITION_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5df04fda-76b4-4bb4-876c-a7729b3a120d
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_POSITION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e3f36d78-407a-4ca8-9111-34966f0a4588
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_POSITION_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 41dbe4e5-fbbf-4816-ba21-b2c46806913f
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_PROFILE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ec72a2fd-13c1-40ef-b34e-af6898698479
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_PROFILE_REFID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b5ce70b2-023b-4494-86f7-14c13c0d4eff
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_PROFILE_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 365600ac-afc7-4ce1-ba07-c290d02e49af
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_FAMILY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3cea2471-c215-4095-9e71-facc9d9acfc7
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_FAMILY_REFID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f4965c02-0ae5-4700-9048-8fdef2583475
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_FAMILY_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 00075468-53ac-4975-a614-e01a8d8e5098
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_FAMILY_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 72f83f5c-be77-486a-844f-886d9babd9aa
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_FAMILY_GROUP_WID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a933d27d-e726-4282-8dbe-81745501d832
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_JOB_FAMILY_GROUP_REFID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 6e0fb71e-5d05-4265-abd4-b577aef171b8
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_SUPERVISORY_ORG_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e6cd121e-d9a8-4fa5-8844-c8a288769938
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_SUPERVISORY_ORG_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ce885c83-d755-42db-a181-3484380c7bda
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_DIV_SUPERVISORY_ORG_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: d38d422a-51f8-47b8-88ff-130c9db3129b
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_DIV_SUPERVISORY_ORG_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f5f422ec-becf-4335-937f-930af9e32037
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: HRO_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 445f7cb6-42a5-459d-a95e-815acc0f6232
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: MANAGER_EMPLOYEE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9a720f10-65fc-4580-bb97-df279414e960
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: COMPANY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 570ae91e-3183-40d5-94cf-e3ec312ac03c
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_ACADEMIC_UNIT_REFID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 71b0e066-9159-45a5-b312-91c8b5cbde32
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_TENURE_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b6b11a89-2f75-4167-af87-f2f3335f85b1
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_RANK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 274ce048-9c3b-47e0-98d8-8d292510bdc3
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TOTAL_BASE_PAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 22c6059d-01ff-4fe8-826c-1bc644b38f9f
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: TOTAL_COMPENSATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a8412063-9cc2-4233-9fe1-5ade09440dc9
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_COMPENSATION_BASIS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b70e3707-b2e0-4826-b61e-c2d98267eea5
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PRIMARY_PAY_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 87839bfa-cf15-40c8-8b3a-3b38cf2baf70
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: COMPENSATION_GRADE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9beee9fb-c22b-4fbf-9433-29619167f686
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SOURCE_FILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 901b1718-80dd-4142-ae3c-4235003383e2
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 83d6a767-35c0-40d3-96d4-d8e8aa783110
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 69b34c60-fa87-4cd4-9a82-9a9f495a942e
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 96f381a9-1874-43e4-922e-5903c1b2f26e
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'WD_LND.WD_LND.WD_HRI018_WORKER_DETAILS'"
+          - columnReference:
+              columnCounter: 94cc5c40-997f-4492-bb4e-d5b54919afc9
+              stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: WD_HRI018_WORKER_DETAILS
+              - locationName: UNKNOWN
+                nodeName: WD_HRI018_WORKER_DETAILS
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','WD_HRI018_WORKER_DETAILS') }} WD_HRI018_WORKER_DETAILS
+            name: LOAD_WD_HRI018_WORKER_DETAILS_WD_LND
+            noLinkRefs: []
+      name: LOAD_WD_HRI018_WORKER_DETAILS_WD_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b

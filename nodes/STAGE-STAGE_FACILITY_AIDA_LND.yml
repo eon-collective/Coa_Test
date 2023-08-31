@@ -1,0 +1,105 @@
+steps:
+  STAGE_FACILITY_AIDA_LND-c37dd372-440a-4068-83f9-fbcc1a085b0f:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 070ec1c6-d637-4678-ab4c-76f5835b082a
+              stepCounter: c37dd372-440a-4068-83f9-fbcc1a085b0f
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b8470d99-400a-4cd4-92f5-04496ac3931f
+                stepCounter: c37dd372-440a-4068-83f9-fbcc1a085b0f
+            name: FACILITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b8470d99-400a-4cd4-92f5-04496ac3931f
+              stepCounter: c37dd372-440a-4068-83f9-fbcc1a085b0f
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: FACILITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f5f4e4e2-85cb-4331-9224-3359d550c47e
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: dc28a45f-d678-42d2-be30-f5fb26bc5ff7
+              stepCounter: c37dd372-440a-4068-83f9-fbcc1a085b0f
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8a839621-9be8-4754-83e0-e1927114a758
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: dac5185e-23e7-4848-a0da-604d5c5c5f93
+              stepCounter: c37dd372-440a-4068-83f9-fbcc1a085b0f
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 954d8441-5361-44a5-9621-8a817e568dc1
+                    stepCounter: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+                transform: ""
+          - columnReference:
+              columnCounter: 27e6fd2d-3cc7-4b4c-8d0d-0df5421b242a
+              stepCounter: c37dd372-440a-4068-83f9-fbcc1a085b0f
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_GYM_FACILITY_USAGE_AIDA_LND: f824d1e8-8c6a-4fbf-8e6b-ffdb8ffdb185
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_GYM_FACILITY_USAGE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_GYM_FACILITY_USAGE_AIDA_LND') }} LOAD_GYM_FACILITY_USAGE_AIDA_LND
+            name: STAGE_FACILITY_AIDA_LND
+            noLinkRefs: []
+      name: STAGE_FACILITY_AIDA_LND
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: c37dd372-440a-4068-83f9-fbcc1a085b0f

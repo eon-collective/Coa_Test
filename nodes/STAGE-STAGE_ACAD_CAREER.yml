@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_CAREER-7b7926ff-60c2-47da-93c6-9e336a90bb98:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 41f73cfc-99ca-47cd-a65f-8d9ecfe9c604
+              stepCounter: 7b7926ff-60c2-47da-93c6-9e336a90bb98
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 893f638b-6197-4214-9f36-411880c06baf
+                stepCounter: 7b7926ff-60c2-47da-93c6-9e336a90bb98
+            name: ACAD_CAREER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 893f638b-6197-4214-9f36-411880c06baf
+              stepCounter: 7b7926ff-60c2-47da-93c6-9e336a90bb98
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: ACAD_CAREER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a35a5e7-53c1-4ae4-abb6-ea98ac800004
+                    stepCounter: c1e86931-6cff-4ac4-8764-9e948e6057f9
+                transform: ""
+          - columnReference:
+              columnCounter: d1af6332-055d-40db-a015-b08e6daa4e99
+              stepCounter: 7b7926ff-60c2-47da-93c6-9e336a90bb98
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 900ef9ed-f65b-436d-b0b1-00406d2068ad
+                    stepCounter: c1e86931-6cff-4ac4-8764-9e948e6057f9
+                transform: ""
+          - columnReference:
+              columnCounter: 391af9d0-a115-4ceb-b094-4f4c85b9ce21
+              stepCounter: 7b7926ff-60c2-47da-93c6-9e336a90bb98
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1aef6156-32b5-464e-ade8-f8f10e186bbf
+                    stepCounter: c1e86931-6cff-4ac4-8764-9e948e6057f9
+                transform: ""
+          - columnReference:
+              columnCounter: 4a1d3766-2636-413c-926c-815cdbcd4e3c
+              stepCounter: 7b7926ff-60c2-47da-93c6-9e336a90bb98
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_PLAN_CS_LND: c1e86931-6cff-4ac4-8764-9e948e6057f9
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_PLAN_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_PLAN_CS_LND') }} LOAD_PS_ACAD_PLAN_CS_LND
+            name: STAGE_ACAD_CAREER
+            noLinkRefs: []
+      name: STAGE_ACAD_CAREER
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 7b7926ff-60c2-47da-93c6-9e336a90bb98

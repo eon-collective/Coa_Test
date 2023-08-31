@@ -1,0 +1,105 @@
+steps:
+  STAGE_ADMIT_TYPE-2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 2cfe7e10-d902-43ed-a240-97e3ede08dd1
+              stepCounter: 2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 37f1ce24-38f9-490c-9cdc-72332b0918e8
+                stepCounter: 2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf
+            name: ADMIT_TYPE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 37f1ce24-38f9-490c-9cdc-72332b0918e8
+              stepCounter: 2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: ADMIT_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2a380356-9c18-4f5a-9f0c-15277e04837e
+                    stepCounter: 8e09a82d-eecd-4888-8059-bfc8ea752498
+                transform: ""
+          - columnReference:
+              columnCounter: 79a6a96a-0039-4957-91d9-f56e6b38dae1
+              stepCounter: 2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bd99211d-e5c9-4d03-b4b7-410a6f9fc67f
+                    stepCounter: 8e09a82d-eecd-4888-8059-bfc8ea752498
+                transform: ""
+          - columnReference:
+              columnCounter: 4b7de9e3-a256-45f0-89d2-1ae4302df183
+              stepCounter: 2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d373044-aaaf-4820-ac1f-4b75f35493bd
+                    stepCounter: 8e09a82d-eecd-4888-8059-bfc8ea752498
+                transform: ""
+          - columnReference:
+              columnCounter: e5b9c9b1-a113-4677-81a2-64edace5411e
+              stepCounter: 2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ADMIT_TYPE_TBL_CS_LND: 8e09a82d-eecd-4888-8059-bfc8ea752498
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ADMIT_TYPE_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ADMIT_TYPE_TBL_CS_LND') }} LOAD_PS_ADMIT_TYPE_TBL_CS_LND
+            name: STAGE_ADMIT_TYPE
+            noLinkRefs: []
+      name: STAGE_ADMIT_TYPE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 2c5d45dd-c877-4fd8-b7da-84c42bd2f4bf

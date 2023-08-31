@@ -1,0 +1,229 @@
+steps:
+  STAGE_ACAD_GROUP_TBL-aeded811-26f3-428f-86d3-17286b6600e8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 792a8c56-9089-4a5b-b936-7bc522583dda
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 4926ad8b-8c52-4577-83a5-48e3d80b1ba3
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+              - columnCounter: e1291b16-1aa8-4638-b33c-28505877d805
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            name: ACAD_GROUP_TBL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4926ad8b-8c52-4577-83a5-48e3d80b1ba3
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 2cd21bf8-430f-4a78-87dd-211ea1a20c25
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            name: ACAD_GROUP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2cd21bf8-430f-4a78-87dd-211ea1a20c25
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: ACAD_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64c2710d-e98d-4e85-a6ce-662928a39825
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: e1291b16-1aa8-4638-b33c-28505877d805
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e2c0759-592a-46ff-94bc-07ff71161783
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: b387ff3c-1808-41a9-9d0e-2323e75718c4
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: EFF_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6d7812b-79fb-4053-931d-b45ca3fd8233
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: a2b0a70f-ed03-435c-9fac-26f2707ca1f6
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: DESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afcda707-e179-40c5-b157-dfb826a58e5e
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: cb807885-a893-436e-b13c-3c7cb57cdc93
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: DESCRSHORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3ab59d20-8895-4acd-9acb-bb11d5e09669
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: 05268cd5-78ce-4e2b-85c1-68a059395660
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: STDNT_SPEC_PERM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 628e15d5-c307-4b17-8615-9e7f7e159ac4
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: 5a118b1f-ead3-45b6-9ff8-b8e06906c7b1
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: AUTO_ENRL_WAITLIST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: adef5e6a-aa2e-4e9a-9ccf-ac22e017c304
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: db5684b2-237d-405d-8cad-74043d7428cf
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b387ff3c-1808-41a9-9d0e-2323e75718c4
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+              - columnCounter: a2b0a70f-ed03-435c-9fac-26f2707ca1f6
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+              - columnCounter: cb807885-a893-436e-b13c-3c7cb57cdc93
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+              - columnCounter: 05268cd5-78ce-4e2b-85c1-68a059395660
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+              - columnCounter: 5a118b1f-ead3-45b6-9ff8-b8e06906c7b1
+                stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            name: DSS_CHANGE_HASH_ACAD_GROUP_TBL_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 289d949e-d6c2-4090-aa43-777a94aa1546
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d5b42789-d57c-44ef-959f-dea4d8889129
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: 33eead08-25eb-429e-8a9e-84d326993999
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b0187b70-448a-4086-bc77-31970d35ca32
+                    stepCounter: 0fa62cbc-aaa4-4559-b523-610140de3484
+                transform: ""
+          - columnReference:
+              columnCounter: a6efd6e4-1371-42b5-90ed-82d5fe97d9fd
+              stepCounter: aeded811-26f3-428f-86d3-17286b6600e8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_GROUP_TBL_CS_LND: 0fa62cbc-aaa4-4559-b523-610140de3484
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_GROUP_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_GROUP_TBL_CS_LND') }} LOAD_PS_ACAD_GROUP_TBL_CS_LND
+            name: STAGE_ACAD_GROUP_TBL
+            noLinkRefs: []
+      name: STAGE_ACAD_GROUP_TBL
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: aeded811-26f3-428f-86d3-17286b6600e8

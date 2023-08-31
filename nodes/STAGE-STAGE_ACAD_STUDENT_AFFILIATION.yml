@@ -1,0 +1,341 @@
+steps:
+  STAGE_ACAD_STUDENT_AFFILIATION-f809c3be-7417-4a32-b409-06a95541e07b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 7f9cd92d-5584-4a8f-aba8-57b232764fd1
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: e8da65fa-1285-47bc-b383-2364c1349d62
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 3229a4be-487d-47d2-bedb-0a76db17bbaa
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            name: PERSON_AFFILIATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e8da65fa-1285-47bc-b383-2364c1349d62
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 9a9a097b-46f1-4fac-ac7e-6932ac28dafb
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            name: AFFILIATION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3229a4be-487d-47d2-bedb-0a76db17bbaa
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: eda769b5-78ac-4555-9b83-47543826c7e8
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            name: STUDENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9a9a097b-46f1-4fac-ac7e-6932ac28dafb
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e603d55-9e77-446f-8473-c3880fcb0164
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: eda769b5-78ac-4555-9b83-47543826c7e8
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: EMPLID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ccde8cf2-e16e-415d-9ecf-966cea9d2f9c
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 9cd12833-c14f-4e7b-834c-4b9d035024a1
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: INSTITUTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a01f516d-ad2c-42ec-af96-3bf8c0bec3de
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 6d4eb8ab-7cc5-4942-91cf-8bddce3e42b8
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: START_DT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c333431-05a0-4e35-a644-77adf750c7ad
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: f5d8ebad-5486-43c7-a9a9-e8453ed3178d
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFFL_SPONS_DEPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 65a332ef-4605-422c-9fa9-b84be8204223
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 17b97bb8-3b4e-44ab-8629-4a9c46374360
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: END_DT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94ab51f9-cc09-495d-88ba-a4dafa9b0a7b
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 4979f20c-7510-406d-b5d1-aa00a91e31c9
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: LASTUPDOPRID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a3982bc5-c975-49da-a36e-95fce296143c
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 07fdd682-4a3c-49b4-9f66-21e7a6b231f8
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: LASTUPDDTTM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca66036d-a381-4d53-82f2-50925db4c57c
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 644f63fa-706d-4b0c-b618-a10995f91040
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_PLCD_MTD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bc0a42f7-5061-42a4-b49d-0ae92a8c0d5b
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 50b0ec09-4ada-4fcb-8a2c-6cec98a3676e
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_RLCD_MTD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 615d0130-dd86-4392-9cb5-ec45dd7a23dd
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: e0c79ace-079e-4ce8-808b-254006f727ca
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6bf7720e-e9c9-4872-8eaf-c7c0329c532f
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: b6d723cb-b172-49fd-bcae-980f9fd6e889
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_STS_DESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea0f5a60-cd36-4c55-a641-5fc5958e8edb
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 42087a02-2421-4b2b-b430-a6ce23a478e0
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: SCC_AFL_RANK
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c2e9b36c-a3cc-4b23-ac89-97eadc516cc1
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: 6f0699b3-e21a-4e14-b580-3845bc69484a
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: eda769b5-78ac-4555-9b83-47543826c7e8
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 9cd12833-c14f-4e7b-834c-4b9d035024a1
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 9a9a097b-46f1-4fac-ac7e-6932ac28dafb
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 6d4eb8ab-7cc5-4942-91cf-8bddce3e42b8
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: f5d8ebad-5486-43c7-a9a9-e8453ed3178d
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 17b97bb8-3b4e-44ab-8629-4a9c46374360
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 4979f20c-7510-406d-b5d1-aa00a91e31c9
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 07fdd682-4a3c-49b4-9f66-21e7a6b231f8
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 644f63fa-706d-4b0c-b618-a10995f91040
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 50b0ec09-4ada-4fcb-8a2c-6cec98a3676e
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: e0c79ace-079e-4ce8-808b-254006f727ca
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: b6d723cb-b172-49fd-bcae-980f9fd6e889
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+              - columnCounter: 42087a02-2421-4b2b-b430-a6ce23a478e0
+                stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            name: DSS_CHANGE_HASH_ACAD_STUDENT_AFFILIATION_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 21d18f13-11c7-4ead-a3c2-584de6010191
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 211cbf36-be82-4557-b33e-e803960bcde8
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: fdd04a95-72cb-4699-9e7d-07b41a70b5e0
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d0f8613-22e7-4c44-829b-694872b2b759
+                    stepCounter: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+                transform: ""
+          - columnReference:
+              columnCounter: ca0f9438-112f-47a8-afd9-50c8a2d58fc7
+              stepCounter: f809c3be-7417-4a32-b409-06a95541e07b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_SCC_AFL_PERSON_CS_LND: 03a5663f-9e8d-42cc-9189-e1349fc5558e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_SCC_AFL_PERSON_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_SCC_AFL_PERSON_CS_LND') }} LOAD_PS_SCC_AFL_PERSON_CS_LND
+            name: STAGE_ACAD_STUDENT_AFFILIATION
+            noLinkRefs: []
+      name: STAGE_ACAD_STUDENT_AFFILIATION
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: f809c3be-7417-4a32-b409-06a95541e07b

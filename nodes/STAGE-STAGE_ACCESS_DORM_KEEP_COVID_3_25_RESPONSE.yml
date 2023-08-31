@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACCESS_DORM_KEEP_COVID_3_25_RESPONSE-4703a8f3-287d-4a8a-bdce-23a0eee18c2b:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 2d66e45b-66ac-487f-bad6-aecc45989f0c
+              stepCounter: 4703a8f3-287d-4a8a-bdce-23a0eee18c2b
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 70c7ac41-dc67-4a77-a25f-263f3b3cad27
+                stepCounter: 4703a8f3-287d-4a8a-bdce-23a0eee18c2b
+            name: ACCESS_DORM_KEEP_COVID_3_25_RESPONSE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 70c7ac41-dc67-4a77-a25f-263f3b3cad27
+              stepCounter: 4703a8f3-287d-4a8a-bdce-23a0eee18c2b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: NNUMBER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97c727cd-7622-491e-9093-7567493c2b6e
+                    stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+                transform: ""
+          - columnReference:
+              columnCounter: 5b853d8b-f4e3-4506-b191-d832e0ef782a
+              stepCounter: 4703a8f3-287d-4a8a-bdce-23a0eee18c2b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 99c9d768-81c3-401f-8cda-e9aee7ea4230
+                    stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+                transform: ""
+          - columnReference:
+              columnCounter: f32d1689-5e5f-4198-b0a3-505ad8896380
+              stepCounter: 4703a8f3-287d-4a8a-bdce-23a0eee18c2b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8bc4571a-01c7-48f6-8988-593286f8aa66
+                    stepCounter: 3017b1a7-815c-4db3-af01-f30abfced530
+                transform: ""
+          - columnReference:
+              columnCounter: 3d4c2b47-8a83-4fce-966a-3587f9755f0a
+              stepCounter: 4703a8f3-287d-4a8a-bdce-23a0eee18c2b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_UDO_DORM_KEEP_COVID_3_25_RESPONSE_AIDA_LND: 3017b1a7-815c-4db3-af01-f30abfced530
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_UDO_DORM_KEEP_COVID_3_25_RESPONSE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_UDO_DORM_KEEP_COVID_3_25_RESPONSE_AIDA_LND') }} LOAD_UDO_DORM_KEEP_COVID_3_25_RESPONSE_AIDA_LND
+            name: STAGE_ACCESS_DORM_KEEP_COVID_3_25_RESPONSE
+            noLinkRefs: []
+      name: STAGE_ACCESS_DORM_KEEP_COVID_3_25_RESPONSE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 4703a8f3-287d-4a8a-bdce-23a0eee18c2b

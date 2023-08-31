@@ -1,0 +1,196 @@
+steps:
+  STAGE_ACADEMIC_UNIT-34195ede-9a5f-4553-9554-485f4f6fdedf:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: ac9e20ed-8bc6-4ebd-bac9-709b0ff45fe9
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 45463a47-ea8c-4fec-ada6-aa571fdc0b62
+                stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            name: ACADEMIC_UNIT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 45463a47-ea8c-4fec-ada6-aa571fdc0b62
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: VARCHAR(10000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_UNIT_REFERENCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e715290-98c1-4f99-aab4-6919876bea5e
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: b3b01b9a-007a-4a87-b9e3-c35fd6af347c
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: VARCHAR(10000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_UNIT_REFERENCE_DESCRIPTOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a16708bc-0e3f-4861-b4ca-05ab87e98f0f
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: 2e1b26fc-e767-4318-bc7c-92f491e54b47
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: VARCHAR(10000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_UNIT_DATA_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 213fa6e4-a592-4e72-be4e-6055ac89adb0
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: 9d28ac52-2c46-477b-8618-35b6e6f9d0f4
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: VARCHAR(10000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_UNIT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6b2fd3d9-9481-4fcb-a1f9-e311a466847c
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: 77bdcb3e-54d4-4050-aa7c-c0336bb85ff6
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: VARCHAR(10000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_ORGANIZATION_SUBTYPE_REFERENCE_DESCRIPTOR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 768ca2ed-9c28-4129-bc50-e628e5f02914
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: e1eca307-508a-4856-b205-2138aedb70e5
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: IS_INACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8125dbe-d519-42f7-887a-356de51bc481
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: 26c783b4-e698-4e15-a29b-3c4af5e8c9ea
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b3b01b9a-007a-4a87-b9e3-c35fd6af347c
+                stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+              - columnCounter: 2e1b26fc-e767-4318-bc7c-92f491e54b47
+                stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+              - columnCounter: 9d28ac52-2c46-477b-8618-35b6e6f9d0f4
+                stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+              - columnCounter: 77bdcb3e-54d4-4050-aa7c-c0336bb85ff6
+                stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+              - columnCounter: e1eca307-508a-4856-b205-2138aedb70e5
+                stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            name: DSS_CHANGE_HASH_ACADEMIC_UNIT_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 91e6f591-1f09-4300-be1e-5b7714990188
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96c6b6f5-97fa-4dba-8860-2262d60eda78
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: d521dc56-28bb-454c-a62e-69b682e83732
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 288adc2d-a0b6-46b6-85d5-00c0d7f20a76
+                    stepCounter: ef07c58d-1fd7-4416-9549-42658ab422e9
+                transform: ""
+          - columnReference:
+              columnCounter: 11b8622a-680d-404f-9850-caaa36cca963
+              stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_WD_HRI013_ACADEMIC_UNIT_WD_LND: ef07c58d-1fd7-4416-9549-42658ab422e9
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_WD_HRI013_ACADEMIC_UNIT_WD_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_WD_HRI013_ACADEMIC_UNIT_WD_LND') }} LOAD_WD_HRI013_ACADEMIC_UNIT_WD_LND
+            name: STAGE_ACADEMIC_UNIT
+            noLinkRefs: []
+      name: STAGE_ACADEMIC_UNIT
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 34195ede-9a5f-4553-9554-485f4f6fdedf

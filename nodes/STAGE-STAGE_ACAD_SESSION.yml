@@ -1,0 +1,196 @@
+steps:
+  STAGE_ACAD_SESSION-d92a5b02-7cb6-4001-b680-19a53a73ef34:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: b3ca0f7b-fb05-471c-9911-fcbcd8c9e5d7
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 5ef395b1-3436-40ff-9b9b-ad8fadd1114d
+                stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            name: SESSION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c8d8075a-c4cb-4322-ac8b-69f9af6c4d0a
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: FIELDNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d43df468-1606-4e3d-b078-0d8aa2c0b856
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: 5ef395b1-3436-40ff-9b9b-ad8fadd1114d
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: SESSION_CODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e55521ab-013d-4ca8-a003-d865d86bedcf
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: 78c0f08c-d279-469b-818b-784a55f45f75
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: VARCHAR(150)
+            defaultValue: ""
+            description: ""
+            name: DESCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f1728557-7f60-416e-bb22-e808b7a3ac83
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: ed1f2333-f809-4d64-be47-f36e259d1add
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: DESCRSHORT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0f78076e-a1b1-452f-8609-598f609426ee
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: 80cd02d2-696b-43ee-8bb2-b9863f0cc8bd
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: EFFDT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 07ff8289-3dd3-4166-b8b0-d689da51de40
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: 6d7a4e9a-a9cd-4623-af75-6a4f94df56cc
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: EFF_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9d078dc-1372-42a6-b0f7-f76b24a72544
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: 4d16dca1-5cbf-4941-a52d-35f9e36bc5e7
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 5ef395b1-3436-40ff-9b9b-ad8fadd1114d
+                stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+              - columnCounter: 78c0f08c-d279-469b-818b-784a55f45f75
+                stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+              - columnCounter: ed1f2333-f809-4d64-be47-f36e259d1add
+                stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+              - columnCounter: 80cd02d2-696b-43ee-8bb2-b9863f0cc8bd
+                stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+              - columnCounter: 6d7a4e9a-a9cd-4623-af75-6a4f94df56cc
+                stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            name: DSS_CHANGE_HASH_ACAD_SESSION_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: cb66fd34-175e-4a8d-800b-8a2c910ccd5d
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 895742f2-0bd8-4746-876a-fa601c64ce9d
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: 91678085-d412-44af-b63d-7ed6c31f9e64
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d07d25f-8a96-47b6-806f-a837be776772
+                    stepCounter: ca824611-efcd-49ce-9109-83503a0e0838
+                transform: ""
+          - columnReference:
+              columnCounter: 07511811-a8d6-445d-861b-bcc7f841fd68
+              stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PSXLATITEM_CS_LND: ca824611-efcd-49ce-9109-83503a0e0838
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PSXLATITEM_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PSXLATITEM_CS_LND') }} LOAD_PSXLATITEM_CS_LND
+            name: STAGE_ACAD_SESSION
+            noLinkRefs: []
+      name: STAGE_ACAD_SESSION
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: d92a5b02-7cb6-4001-b680-19a53a73ef34

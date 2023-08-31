@@ -1,0 +1,180 @@
+steps:
+  STAGE_ACCESS_PANEL-dec84d34-ab8a-4109-b9c1-3d7f23481c4c:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 9d1c5897-7880-4c0d-a281-1ceeb873d1df
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 5e4a5c29-88fb-411c-a254-c52482dca8fe
+                stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            name: ACCESS_PANEL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 5e4a5c29-88fb-411c-a254-c52482dca8fe
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: PANELID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: cf46865c-1e8b-4022-b8ec-4b1e0d39c6aa
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: VARCHAR(96)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8d83f716-3a7b-4f1e-ad5b-85f71ab75c21
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEGMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: edcf96cb-a64b-4c9e-8dce-ace3737df7a5
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: PANELTYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3fe017e4-8a23-4e28-b58b-5e9f0bbdc75b
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: CARDHOLDSZ
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1a745960-4c5e-4082-bbd6-45f74dafc5b1
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: cf46865c-1e8b-4022-b8ec-4b1e0d39c6aa
+                stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+              - columnCounter: 8d83f716-3a7b-4f1e-ad5b-85f71ab75c21
+                stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+              - columnCounter: edcf96cb-a64b-4c9e-8dce-ace3737df7a5
+                stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+              - columnCounter: 3fe017e4-8a23-4e28-b58b-5e9f0bbdc75b
+                stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            name: DSS_CHANGE_HASH_ACCESS_PANEL_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3019bef6-d94f-407a-9ffb-f8b97109a589
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 484bcb64-9667-49a6-953c-a5bf48fe31d9
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2473b890-38d3-4cec-b407-75864778810e
+              stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_ACCESSPANE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_ACCESSPANE_AIDA_LND') }} LOAD_UDO_ACCESSPANE_AIDA_LND
+            name: STAGE_ACCESS_PANEL
+            noLinkRefs: []
+      name: STAGE_ACCESS_PANEL
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: dec84d34-ab8a-4109-b9c1-3d7f23481c4c

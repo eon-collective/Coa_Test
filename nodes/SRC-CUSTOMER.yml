@@ -1,12 +1,12 @@
 steps:
-  SUPPLIER-be84fd46-e115-4cdb-8b2b-5e2b8d7686da:
+  CUSTOMER-199fa092-cc91-4e29-bd82-001fd79a01cc:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
-      description: Supplier data as defined by TPC-H
+      description: Customer data as defined by TPC-H
       locationID: ""
-      locationName: SCR
+      locationName: SRC
       metadata:
         columns:
           - acceptedValues:
@@ -14,13 +14,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 97e9b596-6865-456e-bd89-33d838965f5d
-              stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+              columnCounter: f527d207-208f-47bd-88f7-563bdef087d6
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: S_SUPPKEY
+            name: C_CUSTKEY
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -29,13 +29,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 196baaef-fb47-445e-95ac-8f7e3197e82e
-              stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+              columnCounter: dd3246cb-c252-4d2f-956a-a54c4a95c9c0
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
             config: {}
             dataType: VARCHAR(25)
             defaultValue: ""
             description: ""
-            name: S_NAME
+            name: C_NAME
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -44,13 +44,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: afc5d70c-0dfb-42e9-89a2-8348089c7491
-              stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+              columnCounter: 177dfd8b-a6ac-463c-ab2e-610dcea1c2ac
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
             config: {}
             dataType: VARCHAR(40)
             defaultValue: ""
             description: ""
-            name: S_ADDRESS
+            name: C_ADDRESS
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -59,13 +59,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a0a27f82-91e9-4d0b-aaf8-22f552f954ab
-              stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+              columnCounter: 6c64e2b5-8f02-4da3-b205-0c7af57dbafd
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
             description: ""
-            name: S_NATIONKEY
+            name: C_NATIONKEY
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -74,13 +74,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 2be26db5-a4a4-42b4-a8dc-eafd555ef1f0
-              stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+              columnCounter: f14ebf33-8c2a-46ed-a2a7-6754058284ce
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
             config: {}
             dataType: VARCHAR(15)
             defaultValue: ""
             description: ""
-            name: S_PHONE
+            name: C_PHONE
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -89,13 +89,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6e09d8e3-4d87-49a9-8699-f445cd52c639
-              stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+              columnCounter: fa5a7935-c3bc-48da-9e7a-4e648529a1cf
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
             description: ""
-            name: S_ACCTBAL
+            name: C_ACCTBAL
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -104,21 +104,36 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: afeb006e-a095-4ad0-9bdf-462e55e20b11
-              stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+              columnCounter: 22969650-9fbb-475f-968a-f29cd9cda6be
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
             config: {}
-            dataType: VARCHAR(101)
+            dataType: VARCHAR(10)
             defaultValue: ""
             description: ""
-            name: S_COMMENT
+            name: C_MKTSEGMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b5e80452-f739-4e3d-aacd-1ba4179066a1
+              stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc
+            config: {}
+            dataType: VARCHAR(117)
+            defaultValue: ""
+            description: ""
+            name: C_COMMENT
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SCR', 'SUPPLIER') }}
-      name: SUPPLIER
+          joinCondition: FROM {{ ref('SRC', 'CUSTOMER') }}
+      name: CUSTOMER
       schema: ""
       sqlType: Source
-      table: SUPPLIER
+      table: CUSTOMER
       type: sourceInput
-    stepCounter: be84fd46-e115-4cdb-8b2b-5e2b8d7686da
+    stepCounter: 199fa092-cc91-4e29-bd82-001fd79a01cc

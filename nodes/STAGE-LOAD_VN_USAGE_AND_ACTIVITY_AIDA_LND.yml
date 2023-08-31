@@ -1,0 +1,214 @@
+steps:
+  LOAD_VN_USAGE_AND_ACTIVITY_AIDA_LND-399e3302-5999-4532-a05d-bd750f14ed7b:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 419448b2-399d-4e01-b034-4ab7e94099ef
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efc86acf-f514-469b-b1c2-546042683e96
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: 26209b51-cb29-41c0-a834-372a13e1a1dc
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: USER_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: db8ada5a-c3cb-4141-845e-8bf6bf890856
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: e452a723-ec84-4ef2-b46b-dff198b82137
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: USER_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: decd935d-3842-44da-a9cf-242750bbe67c
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: decd0650-6006-4d84-8a84-80599bb91061
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: DATABASE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f59429dd-7283-4dbb-80a6-9dcae4654dd4
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: 606d42eb-4ceb-4193-be7c-3394832d0533
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: EMAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2eec7f8b-5e4a-430e-bb19-3ce8a4287254
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: 479c27f2-f88b-4aaf-9cee-d15979b72098
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ACTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 274fde48-e758-4ae7-9992-6eac3cb2edcb
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: 1421d736-e0ba-4d62-ad51-f3c50c61d85d
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: ACTION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10d37415-cf4a-4139-a391-f002f174a708
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: 1235e5cb-a503-40f4-8ae0-df8fb28f55c8
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: SIGNUP_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f63e6306-b56d-40bb-bcda-2d8ab27c742d
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: ee8f69a4-c07d-47a2-80a6-65b6f3132912
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2ef3d547-ed39-4fa6-bd0a-682fa066e068
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: c2d21ed1-f0d5-466a-9676-fa99d051d4e0
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: bbdb5d29-e3e0-4af5-bec4-697482122d16
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: a0d7db78-05b9-4579-9d2d-326d4b0e94b2
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5153b0a0-0dce-47b1-b320-df94a5587c36
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: 3612e0cb-6d60-4fc1-9e00-48c9c594c816
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SOURCE_FILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd0e23ef-5f02-417f-a3dd-e28b05abef75
+                    stepCounter: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+                transform: ""
+          - columnReference:
+              columnCounter: a6b1efc2-c7ce-4f2c-a1ec-e32fbc23ab43
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'AIDA_LND.AIDA_LND.VN_USAGE_AND_ACTIVITY'"
+          - columnReference:
+              columnCounter: 8a5d322e-8e9e-45b4-aa73-2165ea19670f
+              stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases:
+              VN_USAGE_AND_ACTIVITY: 2840763f-dd6e-4cd0-bea0-4e497dcf1751
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: AIDA_LND
+                nodeName: VN_USAGE_AND_ACTIVITY
+            join:
+              joinCondition: FROM {{ ref('AIDA_LND','VN_USAGE_AND_ACTIVITY') }} VN_USAGE_AND_ACTIVITY
+            name: LOAD_VN_USAGE_AND_ACTIVITY_AIDA_LND
+            noLinkRefs: []
+      name: LOAD_VN_USAGE_AND_ACTIVITY_AIDA_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: 399e3302-5999-4532-a05d-bd750f14ed7b

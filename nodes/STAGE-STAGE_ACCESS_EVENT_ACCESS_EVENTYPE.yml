@@ -1,0 +1,155 @@
+steps:
+  STAGE_ACCESS_EVENT_ACCESS_EVENTYPE-c86d5cf9-8325-4140-8cd1-944dd774423a:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 460953bd-3a6a-4267-905c-98ba63cc9d6e
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 0389564f-f845-4062-a4f0-82eb68cbb787
+                stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+              - columnCounter: a482723f-60ab-449f-b1c7-f3c079c2f338
+                stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            name: ACCESS_EVENT_ACCESS_EVENTYPE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 0389564f-f845-4062-a4f0-82eb68cbb787
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 68c58b9a-f2f1-403b-939e-64bbde4db60d
+                stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            name: ACCESS_EVENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a482723f-60ab-449f-b1c7-f3c079c2f338
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: ffe9c97c-d88a-40be-949d-a165929d46d6
+                stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            name: ACCESS_EVENTYPE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ffe9c97c-d88a-40be-949d-a165929d46d6
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVTYPEID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 68c58b9a-f2f1-403b-939e-64bbde4db60d
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: EVENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 515ce8b1-740e-4b0e-a9bc-e321a5beadff
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: daf7fbc3-83e2-4554-9ff4-cdd0ba8b90fe
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: c1e87ab5-8a2c-447d-8370-d7d5349b6fe9
+              stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_EVENT_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_EVENT_AIDA_LND') }} LOAD_UDO_EVENT_AIDA_LND
+            name: STAGE_ACCESS_EVENT_ACCESS_EVENTYPE
+            noLinkRefs: []
+      name: STAGE_ACCESS_EVENT_ACCESS_EVENTYPE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: c86d5cf9-8325-4140-8cd1-944dd774423a

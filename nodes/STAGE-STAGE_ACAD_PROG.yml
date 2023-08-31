@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_PROG-91e193bb-e8f0-41e9-90d2-1e1e43897da8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 8b286674-d5d3-4332-a391-32b9bf435590
+              stepCounter: 91e193bb-e8f0-41e9-90d2-1e1e43897da8
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: e4d8fdfa-aa52-4e71-ab50-6accdb2329ea
+                stepCounter: 91e193bb-e8f0-41e9-90d2-1e1e43897da8
+            name: ACAD_PROG_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e4d8fdfa-aa52-4e71-ab50-6accdb2329ea
+              stepCounter: 91e193bb-e8f0-41e9-90d2-1e1e43897da8
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: ACAD_PROG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54dc0b96-3bce-40b9-a441-dd2a4a57107c
+                    stepCounter: bc72ec69-6f49-4d28-b580-f56178573055
+                transform: ""
+          - columnReference:
+              columnCounter: bcb95e1d-6237-45da-b5e7-47bf96f1cab5
+              stepCounter: 91e193bb-e8f0-41e9-90d2-1e1e43897da8
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 17ceea07-2c0c-4314-b87d-c0bd6219f704
+                    stepCounter: bc72ec69-6f49-4d28-b580-f56178573055
+                transform: ""
+          - columnReference:
+              columnCounter: e3c32301-0e35-43b5-86ad-710cb79a6e3c
+              stepCounter: 91e193bb-e8f0-41e9-90d2-1e1e43897da8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a8391f2e-e373-4dc4-9e1b-2e69bfa59efd
+                    stepCounter: bc72ec69-6f49-4d28-b580-f56178573055
+                transform: ""
+          - columnReference:
+              columnCounter: 738d2cf7-87f6-4d90-919a-31f9f7fd9c93
+              stepCounter: 91e193bb-e8f0-41e9-90d2-1e1e43897da8
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_PROG_TBL_CS_LND_1: bc72ec69-6f49-4d28-b580-f56178573055
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_PROG_TBL_CS_LND_1
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_PROG_TBL_CS_LND_1') }} LOAD_PS_ACAD_PROG_TBL_CS_LND_1
+            name: STAGE_ACAD_PROG
+            noLinkRefs: []
+      name: STAGE_ACAD_PROG
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 91e193bb-e8f0-41e9-90d2-1e1e43897da8

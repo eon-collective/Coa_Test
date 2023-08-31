@@ -1,0 +1,151 @@
+steps:
+  STAGE_ACCESS_CRITICAL_PERS_COVID_RESP-d1a40906-60df-4800-a267-c3e2d5564d8c:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: dff0b584-a6bb-49ca-be5c-658d83473208
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 8a23e9e3-ab80-4cbe-9c8d-06b9837dcf43
+                stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            name: ACCESS_CRITICAL_PERS_COVID_RESP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8a23e9e3-ab80-4cbe-9c8d-06b9837dcf43
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: NETID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9d3dbfac-0ac2-433c-8a44-6748f63637da
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: 2a04a32c-bc24-44c0-895e-a967697c88a0
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8b63c10d-3704-4472-8552-a61b910c9e9c
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: 8a0bd8d5-b4f4-4b63-9729-e8727fc3bc80
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: DEPT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6364542c-196a-4f08-ad80-8a2d6c9061f9
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: bdb10334-dad2-4474-96dd-d92a5785eb95
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 2a04a32c-bc24-44c0-895e-a967697c88a0
+                stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+              - columnCounter: 8a0bd8d5-b4f4-4b63-9729-e8727fc3bc80
+                stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            name: DSS_CHANGE_HASH_ACCESS_CRITICAL_PERS_COVID_RESP_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9c07449c-7404-41a9-a3dd-ab5ae8fb40ab
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54df873b-9095-457d-8db6-c8c632f6a5ee
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: 3bb59030-31c5-4cad-b765-44dd68904164
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6a4956fc-7edc-4743-8094-2c6dbfc6f3c7
+                    stepCounter: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+                transform: ""
+          - columnReference:
+              columnCounter: 31cc91a1-f366-4fcf-9f30-320f9fa9afdc
+              stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND: fcbb5b44-6ba2-4d7e-9990-9d0a6a3cd5a2
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND') }} LOAD_UDO_CRITICAL_PERSONNEL_COVID_RESPONSE_AIDA_LND
+            name: STAGE_ACCESS_CRITICAL_PERS_COVID_RESP
+            noLinkRefs: []
+      name: STAGE_ACCESS_CRITICAL_PERS_COVID_RESP
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: d1a40906-60df-4800-a267-c3e2d5564d8c

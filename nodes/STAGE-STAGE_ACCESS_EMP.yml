@@ -1,0 +1,166 @@
+steps:
+  STAGE_ACCESS_EMP-3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 710cb5e3-c5b1-4c39-a93f-0863766b6a99
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 99153893-622e-49b6-b1a1-e1a8428219a1
+                stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            name: ACCESS_EMP_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 99153893-622e-49b6-b1a1-e1a8428219a1
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: EMP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 71f2133c-88ff-4d72-8326-9ade153aa677
+                    stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+                transform: ""
+          - columnReference:
+              columnCounter: b6033394-ce7c-45ae-a5ea-16f7b98b7b30
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: LASTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b217ffb5-bc8f-48d9-8ae4-0e6df2fe781b
+                    stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+                transform: ""
+          - columnReference:
+              columnCounter: 52b16240-386e-4204-a8bc-1becd554a457
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: FIRSTNAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 921fb107-2438-471f-a25c-4c20ac1ffabe
+                    stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+                transform: ""
+          - columnReference:
+              columnCounter: 8509949a-c2f6-4907-a32a-94be03878882
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: VARCHAR(13)
+            defaultValue: ""
+            description: ""
+            name: SSNO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d8393a31-874d-44cc-9a71-1382626edc41
+                    stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+                transform: ""
+          - columnReference:
+              columnCounter: 07bd6569-673b-4145-b7d4-8e4d9539ae63
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: b6033394-ce7c-45ae-a5ea-16f7b98b7b30
+                stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+              - columnCounter: 52b16240-386e-4204-a8bc-1becd554a457
+                stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+              - columnCounter: 8509949a-c2f6-4907-a32a-94be03878882
+                stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            name: DSS_CHANGE_HASH_ACCESS_EMP_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ca73837c-d49a-41ce-bd4d-2dcdc548e79d
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7f3442c9-dc82-4319-b346-61a70338b606
+                    stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+                transform: ""
+          - columnReference:
+              columnCounter: b07760ab-58ff-49cd-a9ba-d1380e6cd573
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a9458599-d76a-4c88-890d-2486a0308312
+                    stepCounter: f81951eb-1976-440d-ad6a-cb89e253e3be
+                transform: ""
+          - columnReference:
+              columnCounter: a42962ad-263a-488f-9632-590388a428cc
+              stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_UDO_EMP_AIDA_LND: f81951eb-1976-440d-ad6a-cb89e253e3be
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_UDO_EMP_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_UDO_EMP_AIDA_LND') }} LOAD_UDO_EMP_AIDA_LND
+            name: STAGE_ACCESS_EMP
+            noLinkRefs: []
+      name: STAGE_ACCESS_EMP
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 3f238543-7ff0-4ed1-bbcf-9c20c3f7aabe

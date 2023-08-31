@@ -1,0 +1,357 @@
+steps:
+  STAGE_HOUSING_EVENT_EVENT-b7d74c45-ee98-47f2-8a50-ec137a28a4b5:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 010d6cbd-d710-4190-8c4f-c702e833fde0
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 9f94c869-b26d-46b2-9b79-459bc8f5e0b5
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 83dc0a25-59ed-4cb0-b8f0-5d80c95167dc
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 976adadb-c3dd-48d1-a00f-53bab7fa8a71
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 93bb9419-80ca-494e-a85e-4d8872b41f4c
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            name: LINK_HOUSING_EVENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9f94c869-b26d-46b2-9b79-459bc8f5e0b5
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: a406e013-66e8-463e-86a1-22a4c9d76b46
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            name: HOUSING_EVENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 83dc0a25-59ed-4cb0-b8f0-5d80c95167dc
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 79f925b2-9e33-4bc6-bb3e-5b4d40144585
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            name: PERSON_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 976adadb-c3dd-48d1-a00f-53bab7fa8a71
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 1fedc4e5-62e5-4bca-a2be-9a3d53ce0427
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            name: BUILDING_LOC_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 93bb9419-80ca-494e-a85e-4d8872b41f4c
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(90)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: cefda8a3-4cdb-4224-9e6e-7ed8818a3097
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            name: ACAD_TERM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: a406e013-66e8-463e-86a1-22a4c9d76b46
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: HOUSING_EVENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 79f925b2-9e33-4bc6-bb3e-5b4d40144585
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(250)
+            defaultValue: ""
+            description: ""
+            name: PERSON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1fedc4e5-62e5-4bca-a2be-9a3d53ce0427
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: BUILDING_LOC_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: cefda8a3-4cdb-4224-9e6e-7ed8818a3097
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(16)
+            defaultValue: ""
+            description: ""
+            name: STRM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: f88a9444-7c39-4f7e-84bc-be03a3367639
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(500)
+            defaultValue: ""
+            description: ""
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4c3e2858-7ba4-46d6-bd0d-d8d00dbc3eb9
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(5000)
+            defaultValue: ""
+            description: ""
+            name: PROGRAM_DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 080d3e1b-4dfb-4e03-a2d4-ac04b03c71ac
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DATE_START
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 6d933a2b-4aca-4878-835a-4bc887d3dcb1
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: DATE_END
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 1cb50a74-2f38-4ed8-a5aa-bf3e4f7e3d8d
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: ATTENDANCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 943f7d36-843e-4f0a-b10f-e3eaed64c579
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(50)
+            defaultValue: ""
+            description: ""
+            name: PROGRAM_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bfd95206-a734-48cc-b25e-98ade4173d20
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: BUILDING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ca4b1c7e-347d-4429-a1d9-c7cb711ce66d
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: SEMESTER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 6e643e4b-67de-49b0-b7aa-b6b892261c43
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: f88a9444-7c39-4f7e-84bc-be03a3367639
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 4c3e2858-7ba4-46d6-bd0d-d8d00dbc3eb9
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 080d3e1b-4dfb-4e03-a2d4-ac04b03c71ac
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 6d933a2b-4aca-4878-835a-4bc887d3dcb1
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 1cb50a74-2f38-4ed8-a5aa-bf3e4f7e3d8d
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: 943f7d36-843e-4f0a-b10f-e3eaed64c579
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: bfd95206-a734-48cc-b25e-98ade4173d20
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+              - columnCounter: ca4b1c7e-347d-4429-a1d9-c7cb711ce66d
+                stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            name: DSS_CHANGE_HASH_HOUSING_EVENT_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: b802ca04-7a66-4499-b23e-9dede6de677a
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 80164685-64be-42e8-b5f4-c7cc3405bc4f
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 9e0808ba-9dc6-4e26-899f-e96db4c4a26d
+              stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_HOUSING_EVENT_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_HOUSING_EVENT_AIDA_LND') }} LOAD_HOUSING_EVENT_AIDA_LND
+            name: STAGE_HOUSING_EVENT_EVENT
+            noLinkRefs: []
+      name: STAGE_HOUSING_EVENT_EVENT
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: b7d74c45-ee98-47f2-8a50-ec137a28a4b5

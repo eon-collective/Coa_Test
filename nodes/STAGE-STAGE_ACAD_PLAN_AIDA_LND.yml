@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_PLAN_AIDA_LND-337c82b7-038c-4803-a68e-4d09a9a29805:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: d609f1a6-f98d-4f45-bcfe-23da36bc4faa
+              stepCounter: 337c82b7-038c-4803-a68e-4d09a9a29805
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 4b53f4d8-526a-483b-880e-a1d269db69f2
+                stepCounter: 337c82b7-038c-4803-a68e-4d09a9a29805
+            name: ACAD_PLAN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4b53f4d8-526a-483b-880e-a1d269db69f2
+              stepCounter: 337c82b7-038c-4803-a68e-4d09a9a29805
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: ACAD_PLAN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3dd3d9b4-2ea8-443d-82d7-929331b4fd03
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: b90abb32-f8ee-4c7f-920c-172a20bce619
+              stepCounter: 337c82b7-038c-4803-a68e-4d09a9a29805
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b196e95f-793f-41a8-afab-a8f0dbb97805
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 3ae5667d-a603-4730-8619-7e6404b65fed
+              stepCounter: 337c82b7-038c-4803-a68e-4d09a9a29805
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bdc479d-edf4-4e58-88e1-684735cf6faf
+                    stepCounter: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+                transform: ""
+          - columnReference:
+              columnCounter: 5d81168b-c9ca-4b6c-9568-2c42aeabfe92
+              stepCounter: 337c82b7-038c-4803-a68e-4d09a9a29805
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_NYU_PLAN_TAXON_AIDA_LND: 6899a5e0-22ce-4434-ad9d-788d47054eaa
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_NYU_PLAN_TAXON_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_NYU_PLAN_TAXON_AIDA_LND') }} LOAD_PS_NYU_PLAN_TAXON_AIDA_LND
+            name: STAGE_ACAD_PLAN_AIDA_LND
+            noLinkRefs: []
+      name: STAGE_ACAD_PLAN_AIDA_LND
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 337c82b7-038c-4803-a68e-4d09a9a29805

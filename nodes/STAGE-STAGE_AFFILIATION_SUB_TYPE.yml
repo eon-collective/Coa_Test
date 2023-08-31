@@ -1,0 +1,105 @@
+steps:
+  STAGE_AFFILIATION_SUB_TYPE-84499a8e-a397-4502-b4d7-49ce0432d430:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 2f8aa48f-607b-4c3e-82b3-da3275326d8a
+              stepCounter: 84499a8e-a397-4502-b4d7-49ce0432d430
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 8cb0a8a2-e967-42ea-94a8-319e518fe1f9
+                stepCounter: 84499a8e-a397-4502-b4d7-49ce0432d430
+            name: AFFILIATION_SUB_TYPE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8cb0a8a2-e967-42ea-94a8-319e518fe1f9
+              stepCounter: 84499a8e-a397-4502-b4d7-49ce0432d430
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: AFFILIATION_SUB_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28bd393a-dd46-4824-999b-57b6b7b5fff6
+                    stepCounter: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+                transform: ""
+          - columnReference:
+              columnCounter: 59c9d050-7c90-4d26-b4c5-b2e24bfb2b3d
+              stepCounter: 84499a8e-a397-4502-b4d7-49ce0432d430
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1da5b0ad-b4cc-4882-b72a-ed5c832757d9
+                    stepCounter: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+                transform: ""
+          - columnReference:
+              columnCounter: be3af1a0-be17-4f88-a649-09ece3d67295
+              stepCounter: 84499a8e-a397-4502-b4d7-49ce0432d430
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66c60cc7-0bfe-4bdf-bbf7-d6a57b8c005d
+                    stepCounter: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+                transform: ""
+          - columnReference:
+              columnCounter: 6c0e506d-5e4d-4e73-a6f8-b62f1a1beeae
+              stepCounter: 84499a8e-a397-4502-b4d7-49ce0432d430
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_MDM_ALL_MV_CS_LND: 9b829a22-ef3c-43f7-ae83-20b9494c5c66
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_MDM_ALL_MV_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_MDM_ALL_MV_CS_LND') }} LOAD_MDM_ALL_MV_CS_LND
+            name: STAGE_AFFILIATION_SUB_TYPE
+            noLinkRefs: []
+      name: STAGE_AFFILIATION_SUB_TYPE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 84499a8e-a397-4502-b4d7-49ce0432d430

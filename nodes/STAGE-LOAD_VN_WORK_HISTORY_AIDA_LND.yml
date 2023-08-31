@@ -1,0 +1,344 @@
+steps:
+  LOAD_VN_WORK_HISTORY_AIDA_LND-04217e23-e4c3-4300-bbcc-1435bf3b3b0f:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      customOverride: false
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: view
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: e26d46df-d110-42ef-acca-3cde1bb88054
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: COMPANY_TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d7af8086-1403-47dd-a120-74c692d3727a
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 6d517ded-7de4-4fcb-8d44-7957b8c317bd
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b21983b-f8da-4bd0-ba42-da703b3adeac
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 69dc6121-f1d2-40a3-8ca7-0f77b3d8145a
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 43887c90-2464-4077-85fc-5f2d43c1742d
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 9671f9db-7f32-4b83-93fc-458e75bd78bb
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7eb3a7b4-fccb-4939-b0d5-4a2d6f1eaf69
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: a2fea9a0-f2f7-49d7-b194-2bc9b8a1d14d
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: CREATED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f42e521d-9448-438a-9ec3-db4c6251afac
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 86d73f45-5b55-4aae-bee8-a4775ba74d7c
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: UPDATE_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8c1e8bbc-c442-4625-8590-dddd6eae1378
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 58d7fa50-d9d0-4ce9-a69b-aed62b72f8f9
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: COMPANY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2bf24b74-10b1-4035-ab72-a7ed9b8e62eb
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 7da1b7f1-bf34-4494-8fa1-b9f2a4beb8d7
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: IS_CURRENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ebc1ae52-d3b2-40bf-b148-0893346fe191
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: f78b01e6-8080-4edc-b739-be0adcb31ed3
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(10000)
+            defaultValue: ""
+            description: ""
+            name: SEARCHABLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 90b67d85-376b-4f03-8fd1-974d5495e6c0
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: b7bd8bba-fc01-43d6-8fef-093a2e2de741
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: START_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb416fc9-b1fc-46bb-84cb-1d0ebd0e2e63
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: dc5d9e77-124c-4415-919e-977d254b61fe
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: END_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4bd2ec9-4335-44ab-bec9-937e1b25b433
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 151cf152-f5c0-4b26-b0e1-f47c76c7b388
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: WORK_ROLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36e56ee5-98d1-4833-81ee-7a2efcb73a62
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 57cb6ba2-7454-4bbc-8f9a-6c1c0fa42e29
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: LOCATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8235a887-55b1-4565-bdd4-e3498b004f08
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: a9b31ea7-a719-481b-a958-826796dd48c2
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(10000)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d19744a8-db9e-4fc0-bf82-806377f59cc4
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: ace49853-58a3-4ad4-a2b2-0fd2fd811217
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ADMIN_VERIFICATION_STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ba4a912b-221a-4c5c-9766-73a2913a130b
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 53da6adf-79ac-4a0d-893d-c43573b05d89
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: START_YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a6d8e1eb-4030-4243-9cd7-0cca925cf74e
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: b8b13611-8511-4627-8680-31dcb49fa256
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: END_MONTH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: df56f16a-b71b-4260-9e81-fce5d1e5c790
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 1cfe8969-bef0-4648-afbf-547e0971b1fb
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: DATABASE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8c23731b-7ba5-4dda-b038-f0f63c755b3e
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LOAD_DTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a1af22d-274b-4528-a52a-b553da8e90e1
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: fdcc4dd0-67c4-4e67-81b9-15dc0cb9070a
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 787c5836-2fd2-482c-8d88-a1ccd33c0735
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 8cbd5963-ce46-443f-acec-f11b51083617
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEQNUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a91655de-4ff8-4c0b-b3c3-592789c6122e
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: 84bbe05e-4a99-46b3-9d61-76577afb483a
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: SOURCE_FILE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 851907d3-0f50-4786-9f73-74d1e9c8a29d
+                    stepCounter: 73b5b621-bebc-4709-809c-4a7dc1173904
+                transform: ""
+          - columnReference:
+              columnCounter: c895812f-5d25-407d-8660-db211816f223
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'AIDA_LND.AIDA_LND.VN_WORK_HISTORY'"
+          - columnReference:
+              columnCounter: 12ce8f27-8c81-4863-b251-21a09c1b2322
+              stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: CURRENT_TIMESTAMP
+        sourceMapping:
+          - aliases:
+              VN_WORK_HISTORY: 73b5b621-bebc-4709-809c-4a7dc1173904
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: AIDA_LND
+                nodeName: VN_WORK_HISTORY
+            join:
+              joinCondition: FROM {{ ref('AIDA_LND','VN_WORK_HISTORY') }} VN_WORK_HISTORY
+            name: LOAD_VN_WORK_HISTORY_AIDA_LND
+            noLinkRefs: []
+      name: LOAD_VN_WORK_HISTORY_AIDA_LND
+      overrideSQL: false
+      sqlType: View
+      type: sql
+    stepCounter: 04217e23-e4c3-4300-bbcc-1435bf3b3b0f

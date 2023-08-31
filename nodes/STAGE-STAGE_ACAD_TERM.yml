@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_TERM-440eade8-e3d5-4467-8a85-091679232f00:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 2122ad1a-e523-48c0-8e83-3e9c08e53b81
+              stepCounter: 440eade8-e3d5-4467-8a85-091679232f00
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 3bd4c4d1-9bda-4465-886b-424081d95763
+                stepCounter: 440eade8-e3d5-4467-8a85-091679232f00
+            name: ACAD_TERM_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 3bd4c4d1-9bda-4465-886b-424081d95763
+              stepCounter: 440eade8-e3d5-4467-8a85-091679232f00
+            dataType: VARCHAR(4)
+            defaultValue: ""
+            description: ""
+            name: STRM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 488c8af4-cdc1-42b3-a7f9-5f951cf02f91
+                    stepCounter: e47637b6-de71-4f9e-a311-db7035570d12
+                transform: ""
+          - columnReference:
+              columnCounter: 9c55c493-9af4-4b15-82ee-1f58f8062738
+              stepCounter: 440eade8-e3d5-4467-8a85-091679232f00
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e1cdd6d1-f147-409c-9a59-ccce864faec7
+                    stepCounter: e47637b6-de71-4f9e-a311-db7035570d12
+                transform: ""
+          - columnReference:
+              columnCounter: bb0d5d68-329e-4e35-aa7b-f9f386dbf9da
+              stepCounter: 440eade8-e3d5-4467-8a85-091679232f00
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0a59dccb-1380-4026-b2fb-0422a9aeac91
+                    stepCounter: e47637b6-de71-4f9e-a311-db7035570d12
+                transform: ""
+          - columnReference:
+              columnCounter: a6bb0eee-31b8-408f-90f8-fed8f59f05c7
+              stepCounter: 440eade8-e3d5-4467-8a85-091679232f00
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_TERM_TBL_CS_LND: e47637b6-de71-4f9e-a311-db7035570d12
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_TERM_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_TERM_TBL_CS_LND') }} LOAD_PS_TERM_TBL_CS_LND
+            name: STAGE_ACAD_TERM
+            noLinkRefs: []
+      name: STAGE_ACAD_TERM
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 440eade8-e3d5-4467-8a85-091679232f00

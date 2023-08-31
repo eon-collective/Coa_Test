@@ -1,0 +1,105 @@
+steps:
+  STAGE_FACILITY_CS_LND-91243b00-0b48-4b8c-be29-a30e39662a26:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: 330c07d5-7ee3-4ae4-b812-3a1cb8ebaafb
+              stepCounter: 91243b00-0b48-4b8c-be29-a30e39662a26
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 10bbde7d-abe3-47a8-ae91-423d7fe8bcf3
+                stepCounter: 91243b00-0b48-4b8c-be29-a30e39662a26
+            name: FACILITY_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 10bbde7d-abe3-47a8-ae91-423d7fe8bcf3
+              stepCounter: 91243b00-0b48-4b8c-be29-a30e39662a26
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: FACILITY_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89dc4dec-db6d-49cd-84ba-328f2d44c2dd
+                    stepCounter: d728969e-5d12-4de2-8fe4-25b826f8ed5e
+                transform: ""
+          - columnReference:
+              columnCounter: ca677569-8a79-4a56-a31c-522b0e18e7b3
+              stepCounter: 91243b00-0b48-4b8c-be29-a30e39662a26
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: abce7ade-f7ea-4e21-b242-d827e33d770e
+                    stepCounter: d728969e-5d12-4de2-8fe4-25b826f8ed5e
+                transform: ""
+          - columnReference:
+              columnCounter: 42f42dde-d33f-45ee-bea1-6e500f66caf4
+              stepCounter: 91243b00-0b48-4b8c-be29-a30e39662a26
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6cd695bf-bbd4-4ed4-8041-d573606faeb5
+                    stepCounter: d728969e-5d12-4de2-8fe4-25b826f8ed5e
+                transform: ""
+          - columnReference:
+              columnCounter: 07c4d49f-db3a-495d-af28-5e4f12b8ac2c
+              stepCounter: 91243b00-0b48-4b8c-be29-a30e39662a26
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_FACILITY_TBL_CS_LND: d728969e-5d12-4de2-8fe4-25b826f8ed5e
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_FACILITY_TBL_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_FACILITY_TBL_CS_LND') }} LOAD_PS_FACILITY_TBL_CS_LND
+            name: STAGE_FACILITY_CS_LND
+            noLinkRefs: []
+      name: STAGE_FACILITY_CS_LND
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 91243b00-0b48-4b8c-be29-a30e39662a26

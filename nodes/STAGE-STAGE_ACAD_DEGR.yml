@@ -1,0 +1,105 @@
+steps:
+  STAGE_ACAD_DEGR-0971f392-b901-4e74-b5cd-9cd5a7ba7a51:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: fae11988-189d-445e-9f3b-6e466c67bff8
+              stepCounter: 0971f392-b901-4e74-b5cd-9cd5a7ba7a51
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 79148339-a7c4-4f37-8834-0d1bc82d42b4
+                stepCounter: 0971f392-b901-4e74-b5cd-9cd5a7ba7a51
+            name: ACAD_DEGREE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 79148339-a7c4-4f37-8834-0d1bc82d42b4
+              stepCounter: 0971f392-b901-4e74-b5cd-9cd5a7ba7a51
+            dataType: VARCHAR(8)
+            defaultValue: ""
+            description: ""
+            name: DEGREE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8006d708-62a0-4283-92a5-7b562ef701b0
+                    stepCounter: 79864c10-9118-4238-8d0f-74b7b21a664b
+                transform: ""
+          - columnReference:
+              columnCounter: d1d78a87-1c4a-48ed-807e-efdd7c64c664
+              stepCounter: 0971f392-b901-4e74-b5cd-9cd5a7ba7a51
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0e75f814-5ca6-4c60-9775-d37dcea2cb3a
+                    stepCounter: 79864c10-9118-4238-8d0f-74b7b21a664b
+                transform: ""
+          - columnReference:
+              columnCounter: 75fb4f8a-5e9f-4f40-9891-94a6919f65e2
+              stepCounter: 0971f392-b901-4e74-b5cd-9cd5a7ba7a51
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 871bb69a-c9b8-40c0-9186-ecc5606f6bf8
+                    stepCounter: 79864c10-9118-4238-8d0f-74b7b21a664b
+                transform: ""
+          - columnReference:
+              columnCounter: fe5bac58-77cf-4c64-b3e5-c7911454d88b
+              stepCounter: 0971f392-b901-4e74-b5cd-9cd5a7ba7a51
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_PS_ACAD_DEGR_CS_LND: 79864c10-9118-4238-8d0f-74b7b21a664b
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_PS_ACAD_DEGR_CS_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_PS_ACAD_DEGR_CS_LND') }} LOAD_PS_ACAD_DEGR_CS_LND
+            name: STAGE_ACAD_DEGR
+            noLinkRefs: []
+      name: STAGE_ACAD_DEGR
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: 0971f392-b901-4e74-b5cd-9cd5a7ba7a51

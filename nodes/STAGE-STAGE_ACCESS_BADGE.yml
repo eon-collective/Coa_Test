@@ -1,0 +1,225 @@
+steps:
+  STAGE_ACCESS_BADGE-b90362af-1b50-4804-9418-ae9cac980b99:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: eaf033bd-576f-439e-8c8e-fbc337e9990d
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 8a68d078-57ca-4d93-97aa-6097b67a5b46
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            name: ACCESS_BADGE_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8a68d078-57ca-4d93-97aa-6097b67a5b46
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: DECIMAL(19,0)
+            defaultValue: ""
+            description: ""
+            name: BADGE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8daca625-1d99-41a2-8d08-8c26219a26a2
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 7a3fa43e-cad8-46e9-b1ac-cf0fc9089311
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 95570024-2222-4ca8-8dc7-77603786d671
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: ACTIVATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8abc0395-060a-4f05-bd7d-1d99a3ab89a2
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: DEACTIVATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 4f8ef5b2-9a4d-4d18-b2b5-cf0ee14983ba
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: TIMESTAMP(9)
+            defaultValue: ""
+            description: ""
+            name: LASTCHANGED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 31cdd402-4f1f-4e05-af42-5eb98c7b453d
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: BADGEKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 8abdb61e-2185-417b-b4af-0ed3d19aa6fc
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: DECIMAL(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEGMENTID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: e3acd4af-541b-4f37-af15-457a63345055
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: The changing hash
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 8daca625-1d99-41a2-8d08-8c26219a26a2
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+              - columnCounter: 7a3fa43e-cad8-46e9-b1ac-cf0fc9089311
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+              - columnCounter: 95570024-2222-4ca8-8dc7-77603786d671
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+              - columnCounter: 8abc0395-060a-4f05-bd7d-1d99a3ab89a2
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+              - columnCounter: 4f8ef5b2-9a4d-4d18-b2b5-cf0ee14983ba
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+              - columnCounter: 31cdd402-4f1f-4e05-af42-5eb98c7b453d
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+              - columnCounter: 8abdb61e-2185-417b-b4af-0ed3d19aa6fc
+                stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            name: DSS_CHANGE_HASH_ACCESS_BADGE_INFO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: ede78b7d-c2e7-4428-8997-9b7b8d8c8b02
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: abcca957-8acf-4edb-896d-a48cf553143d
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bec195d5-ca53-4760-bedb-869f81541466
+              stepCounter: b90362af-1b50-4804-9418-ae9cac980b99
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: UNKNOWN
+                nodeName: LOAD_UDO_BADGE_AIDA_LND
+            join:
+              joinCondition: FROM {{ ref('UNKNOWN','LOAD_UDO_BADGE_AIDA_LND') }} LOAD_UDO_BADGE_AIDA_LND
+            name: STAGE_ACCESS_BADGE
+            noLinkRefs: []
+      name: STAGE_ACCESS_BADGE
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: b90362af-1b50-4804-9418-ae9cac980b99

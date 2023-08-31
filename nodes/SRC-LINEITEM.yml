@@ -1,12 +1,12 @@
 steps:
-  LINEITEM-81c32ed0-23e4-4343-8b65-352d99765c26:
+  LINEITEM-02b10dd2-1af2-4fb4-823e-7b63a1ddef8c:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: Lineitem data as defined by TPC-H
       locationID: ""
-      locationName: SCR
+      locationName: SRC
       metadata:
         columns:
           - acceptedValues:
@@ -14,8 +14,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0bc536ae-38a5-4667-8e57-2f5c4d36cb89
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 54cfd5cd-742e-42b7-9e27-63a20800dbee
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -29,8 +29,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: aba33cb9-46c6-4344-a076-fd94c057dd5e
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 4c5f3552-b43e-41c0-840a-d2689542f5b5
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -44,8 +44,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: c77d053e-c3de-4009-bc7c-74189d9d81a4
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 9dc1b8d4-c02f-4df3-bd17-314380141f8b
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -59,8 +59,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: affbcbfb-7909-420b-a008-3908736b23ef
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: e27f1b37-3050-4da5-8659-fb5bd782c28d
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -74,8 +74,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 80f51a7c-2a75-45d0-8b7a-dc199245db3a
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: c6bc97a3-2a6f-4cd1-a7bd-16ddf42a4b8a
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -89,8 +89,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 24e2c714-a549-40ef-82a6-70db0c0b12a5
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 515f7601-7dfb-41b4-ac7b-42bc95ce8686
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -104,8 +104,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11a83b56-9bc9-4bd2-93b6-9019caa18c89
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 2175ae2e-8298-4ddf-9a1c-d5f28878a08d
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -119,8 +119,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9b76d355-17c4-43a1-a233-6dcdc13f3aa8
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: d1f5bc7a-15ac-4704-adf1-06b454493b62
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: NUMBER(12,2)
             defaultValue: ""
@@ -134,8 +134,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 875eca85-ee0d-46a2-b1e0-2fd60fd4788b
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 85cd5411-e8be-4ccb-ab9a-172bcd38bc40
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: VARCHAR(1)
             defaultValue: ""
@@ -149,8 +149,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6d683107-1ac2-45a1-9106-a83d7f77dfcd
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 6e986a7d-a961-483c-87d7-1929dbe967ca
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: VARCHAR(1)
             defaultValue: ""
@@ -164,8 +164,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 1d0048b5-4931-44a2-9903-c01bcc6e58e8
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: cc3e7cf2-828b-48eb-9825-066c298d8f0b
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: DATE
             defaultValue: ""
@@ -179,8 +179,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 01d8ffad-d434-4841-bf51-9fdf3f139f36
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 36b8cd43-216b-47ff-b8ad-5b01c3054cc2
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: DATE
             defaultValue: ""
@@ -194,8 +194,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 35878286-79ca-4f4d-b65a-f48007efe28d
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: 851c7219-5a22-48b5-9dd7-1babf4643f42
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: DATE
             defaultValue: ""
@@ -209,8 +209,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b62892bb-da66-4fa5-b1fd-9f24f6375254
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: b812ea57-d590-408b-a5c1-2d3d29592dbc
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: VARCHAR(25)
             defaultValue: ""
@@ -224,8 +224,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9fa14f00-6289-447d-8162-f513a115c045
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: d15959cf-758c-4e65-ba5a-6d8c9cc95ec9
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: VARCHAR(10)
             defaultValue: ""
@@ -239,8 +239,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 6797cf1a-9f3d-424e-9ab0-6d2950f34546
-              stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+              columnCounter: b4a575c1-e650-4269-bed3-2d7ca78ffad2
+              stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c
             config: {}
             dataType: VARCHAR(44)
             defaultValue: ""
@@ -250,10 +250,10 @@ steps:
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SCR', 'LINEITEM') }}
+          joinCondition: FROM {{ ref('SRC', 'LINEITEM') }}
       name: LINEITEM
       schema: ""
       sqlType: Source
       table: LINEITEM
       type: sourceInput
-    stepCounter: 81c32ed0-23e4-4343-8b65-352d99765c26
+    stepCounter: 02b10dd2-1af2-4fb4-823e-7b63a1ddef8c

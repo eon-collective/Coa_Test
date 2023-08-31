@@ -1,0 +1,156 @@
+steps:
+  STAGE_EMPLOYEE_ACADEMIC_UNIT-ec49bd4b-de54-4742-ba9c-5f07436741c1:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: false
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        columns:
+          - columnReference:
+              columnCounter: f0f3ca5a-1694-41de-9912-379b215b89c3
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: bc7f9758-6a0d-44c5-8820-db452fff8b6f
+                stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+              - columnCounter: 55228b05-a9b6-4882-96e1-da9c0fab3d52
+                stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            name: EMPLOYEE_ACADEMIC_UNIT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: bc7f9758-6a0d-44c5-8820-db452fff8b6f
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 63db5f04-8b17-4035-b619-14db5e4ea6c5
+                stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            name: WORKER_DETAILS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 55228b05-a9b6-4882-96e1-da9c0fab3d52
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: CHAR(32)
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 6414ae37-570b-4acd-8ac2-2e6f7769c40d
+                stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            name: ACADEMIC_UNIT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 63db5f04-8b17-4035-b619-14db5e4ea6c5
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: PERSON_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5bf8b987-241f-466b-90e2-9d1f7aaf1c12
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: 6414ae37-570b-4acd-8ac2-2e6f7769c40d
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: VARCHAR(1000)
+            defaultValue: ""
+            description: ""
+            name: ACADEMIC_UNIT_REFERENCE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 570ae91e-3183-40d5-94cf-e3ec312ac03c
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: 30b36cda-32e4-4b78-8038-1b7e9d108810
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Record source
+            name: DSS_RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96f381a9-1874-43e4-922e-5903c1b2f26e
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: a9ce51c5-ae8f-4522-a8e2-fa7d783f754b
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was loaded in the data vault
+            name: DSS_LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94cc5c40-997f-4492-bb4e-d5b54919afc9
+                    stepCounter: 302b4063-f020-499e-bb02-66c3dfeafa9b
+                transform: ""
+          - columnReference:
+              columnCounter: 3b66be80-9a83-4f61-8f5f-f00c37cc512a
+              stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: Date and time the row was inserted in the data vault
+            name: DSS_CREATE_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+        sourceMapping:
+          - aliases:
+              LOAD_WD_HRI018_WORKER_DETAILS_WD_LND: 302b4063-f020-499e-bb02-66c3dfeafa9b
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: LOAD_WD_HRI018_WORKER_DETAILS_WD_LND
+            join:
+              joinCondition: FROM {{ ref('STAGE','LOAD_WD_HRI018_WORKER_DETAILS_WD_LND') }} LOAD_WD_HRI018_WORKER_DETAILS_WD_LND
+            name: STAGE_EMPLOYEE_ACADEMIC_UNIT
+            noLinkRefs: []
+      name: STAGE_EMPLOYEE_ACADEMIC_UNIT
+      overrideSQL: false
+      sqlType: Stage
+      type: sql
+    stepCounter: ec49bd4b-de54-4742-ba9c-5f07436741c1
