@@ -25,7 +25,7 @@ macros:
     id: at_least_one
     macroString: |-
       {% macro at_least_one(node, column_name, group_by_columns=[]) %}
-
+      
       {% if group_by_columns %}
       {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
       {% set groupby_gb_cols = 'GROUP BY ' + group_by_columns|join(', ') %}
@@ -33,7 +33,7 @@ macros:
       {% set select_gb_cols = '' %}
       {% set groupby_gb_cols = '' %}
       {% endif %}
-
+      
       SELECT
           {{ select_gb_cols }}
           COUNT({{ column_name }}) AS count_of_values
@@ -46,8 +46,8 @@ macros:
           LIMIT 1
       ) AS pruned_rows
       {{ groupby_gb_cols }}
-      HAVING COUNT({{ column_name }}) = 0;
-
+      HAVING COUNT({{ column_name }}) = 0
+      
       {% endmacro %}
   Macro-equal_rowcount:
     id: equal_rowcount

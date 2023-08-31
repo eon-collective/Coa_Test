@@ -14,7 +14,12 @@ steps:
       locationName: WORK
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: at_least_one
+            runOrder: After
+            templateString: "{{ at_least_one('\"ANALYTICS\".\"COATEST\".\"STG_SUPPLIER\"', '\"S_ACCTBAL\"') }}"
         columns:
           - columnReference:
               columnCounter: 457f8da2-8920-455d-8a07-c83bf0c3c64f
