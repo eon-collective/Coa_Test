@@ -14,7 +14,12 @@ steps:
       locationName: WORK
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: expression_is_true
+            runOrder: After
+            templateString: "{{ expression_is_true('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '>= 1', '\"L_EXTENDEDPRICE\"') }}"
         columns:
           - columnReference:
               columnCounter: 54c99a04-f5f8-4602-81ac-d150c65920ab
