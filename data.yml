@@ -21,6 +21,34 @@ macros:
   Macro-1:
     id: "1"
     macroString: ""
+  Macro-at_least_one:
+    id: at_least_one
+    macroString: |-
+      {% macro at_least_one(node, column_name, group_by_columns=[]) %}
+      
+      {% if group_by_columns %}
+      {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
+      {% set groupby_gb_cols = 'GROUP BY ' + group_by_columns|join(', ') %}
+      {% else %}
+      {% set select_gb_cols = '' %}
+      {% set groupby_gb_cols = '' %}
+      {% endif %}
+      
+      SELECT
+          {{ select_gb_cols }}
+          COUNT({{ column_name }}) AS count_of_values
+      FROM (
+          SELECT
+          {{ select_gb_cols }}
+          {{ column_name }}
+          FROM {{ node }}
+          WHERE {{ column_name }} IS NOT NULL
+          LIMIT 1
+      ) AS pruned_rows
+      {{ groupby_gb_cols }}
+      HAVING COUNT({{ column_name }}) = 0
+      
+      {% endmacro %}
   Macro-equal_rowcount:
     id: equal_rowcount
     macroString: |-
@@ -206,13 +234,13 @@ macros:
     id: recency
     macroString: |-
       {% macro recency(node, field, datepart, interval, ignore_time_component=False, group_by_columns=[]) %}
-      
+
       {% set threshold = 'DATEADD(' ~ datepart ~ ', -' ~ interval ~ ', CURRENT_TIMESTAMP())' %}
-      
+
       {% if ignore_time_component %}
         {% set threshold = 'DATE(' ~ threshold ~ ')' %}
       {% endif %}
-      
+
       {% if group_by_columns %}
         {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
         {% set groupby_gb_cols = 'GROUP BY ' + group_by_columns|join(', ') %}
@@ -220,7 +248,7 @@ macros:
         {% set select_gb_cols = '' %}
         {% set groupby_gb_cols = '' %}
       {% endif %}
-      
+
       WITH recency AS (
           SELECT 
             {{ select_gb_cols }}
@@ -232,14 +260,14 @@ macros:
           FROM {{ node }}
           {{ groupby_gb_cols }}
       )
-      
+
       SELECT
           {{ select_gb_cols }}
           most_recent,
           {{ threshold }} AS threshold
       FROM recency
       WHERE most_recent < {{ threshold }}
-      
+
       {% endmacro %}
 packages: {}
 projects: {}
