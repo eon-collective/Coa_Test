@@ -1,4 +1,4 @@
-## Table of Contents
+## Coalesce Reusable Tests
 1. [equal_rowcount](#equal_rowcount)
 2. [row_count_delta](#row_count_delta)
 3. [equality](#equality)
