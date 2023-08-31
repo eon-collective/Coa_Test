@@ -8,7 +8,7 @@
 7. [not_constant](#not_constant)
 8. [not_empty_string](#not_empty_string)
 9. [cardinality_equality](#cardinality_equality)
-10. [recency](#recency)
+10. [not_null_proportion](#not_null_proportion)
 
 ---
 
@@ -605,6 +605,65 @@ unioned AS (
 
 SELECT *
 FROM unioned
+
+{% endmacro %}
+
+
+```
+</details> 
+
+
+### [not_null_proportion](#not_null_proportion)
+
+#### **Purpose**
+
+The `test_not_null_proportion` macro asserts that the proportion of non-null values in a specified column is within a given range, denoted by the parameters `at_least` and `at_most`. This test is useful for situations where you expect a certain fraction of records in a column to contain non-null values. For example, ensuring that at least 80% of email addresses in a dataset are populated, but not more than 100%.
+
+#### **Syntax**
+
+```jinja
+{{ test_not_null_proportion('<node>', '<column_name>', at_least=<lower_bound>, at_most=<upper_bound>, group_by_columns=['<group_by_column1>', '<group_by_column2>', ...]) }}
+```
+
+**Parameters:**
+- `<node>`:  The initial table you want to evaluate.
+- `<column_name>`:   The column you want to evaluate for the proportion of non-null values.
+- `<at_least>`: (Optional) The lower bound for the proportion of non-null values. Default is 0.
+- `<at_most>`: (Optional) The upper bound for the proportion of non-null values. Default is 1.0.
+- `<group_by_columns>`:  (Optional) Columns to group by if evaluating the non-null proportion for subsets of the data.
+  
+#### Usage Example
+
+```jinja
+{{ not_null_proportion('"ANALYTICS"."COATEST"."STG_LINEITEM"', '"L_SHIPDATE"', at_least=0.8, at_most=1.0) }}
+```
+This example checks if the proportion of non-null values in the L_SHIPDATE column from the STG_LINEITEM table is between 0.8 (or 80%) and 1.0 (or 100%).
+
+```sql
+{% macro not_null_proportion(node, column_name, at_least=0, at_most=1.0, group_by_columns=[]) %}
+
+{% if group_by_columns|length() > 0 %}
+{% set select_gb_cols = group_by_columns|join(' ,') + ', ' %}
+{% set groupby_gb_cols = 'group by ' + group_by_columns|join(',') %}
+{% endif %}
+
+with validation as (
+select
+    {{select_gb_cols}}
+    sum(case when {{ column_name }} is null then 0 else 1 end) / cast(count(*) as numeric) as not_null_proportion
+from {{ node }}
+{{groupby_gb_cols}}
+),
+validation_errors as (
+select
+    {{select_gb_cols}}
+    not_null_proportion
+from validation
+where not_null_proportion < {{ at_least }} or not_null_proportion > {{ at_most }}
+)
+select
+*
+from validation_errors
 
 {% endmacro %}
 
