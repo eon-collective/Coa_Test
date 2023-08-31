@@ -269,8 +269,8 @@ macros:
       WHERE most_recent < {{ threshold }}
 
       {% endmacro %}
-  Macro-recency:
-    id: recency
+  Macro-not_constant:
+    id: not_constant
     macroString: |-
         {% macro not_constant(node, column_name, group_by_columns=[]) %}
 
