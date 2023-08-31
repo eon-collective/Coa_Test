@@ -202,6 +202,41 @@ macros:
       SELECT * FROM final
 
       {% endmacro %}
+  Macro-recency:
+    id: recency
+    macroString: |-
+        {% macro recency(node, field, datepart, interval, ignore_time_component=False, group_by_columns=[]) %}
+
+        {% set threshold = 'CAST(' ~ dateadd(datepart, interval * -1, CURRENT_TIMESTAMP) ~ ' AS ' ~ ('DATE' if ignore_time_component else 'TIMESTAMP') ~ ')'  %}
+
+        {% if group_by_columns %}
+        {% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
+        {% set groupby_gb_cols = 'GROUP BY ' + group_by_columns|join(', ') %}
+        {% else %}
+        {% set select_gb_cols = '' %}
+        {% set groupby_gb_cols = '' %}
+        {% endif %}
+
+        WITH recency AS (
+            SELECT 
+            {{ select_gb_cols }}
+            {% if ignore_time_component %}
+                CAST(MAX({{ field }}) AS DATE) AS most_recent
+            {%- else %}
+                MAX({{ field }}) AS most_recent
+            {%- endif %}
+            FROM {{ node }}
+            {{ groupby_gb_cols }}
+        )
+
+        SELECT
+            {{ select_gb_cols }}
+            most_recent,
+            {{ threshold }} AS threshold
+        FROM recency
+        WHERE most_recent < {{ threshold }}
+
+        {% endmacro %}
 packages: {}
 projects: {}
 stepTypes:
