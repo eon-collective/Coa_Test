@@ -5,6 +5,7 @@
 4. [expression_is_true](#expression_is_true)
 5. [recency](#recency)
 6. [at_least_one](#at_least_one)
+7. [not_constant](#not_constant)
 
 ---
 
@@ -429,3 +430,52 @@ HAVING COUNT({{ column_name }}) = 0
 
 
 ```
+</details> 
+
+### [not_constant](#not_constant)
+
+#### Purpose
+The `not_constant` macro checks if a given column in a table does **not** have the same value across all rows. This test is useful to ensure that data diversity exists in columns where constant values would be problematic.
+
+### Syntax
+```jinja
+{{ not_constant('<node>', '<column_name>', ['<group_by_column1>', '<group_by_column2>', ...]) }}
+```
+**Parameters:**
+- `<node>`:  The table you wish to evaluate.
+- `<column_name>`:  The column you want to check for non-constant values.
+- `['<group_by_column1>', '<group_by_column2>', ...]`: (Optional) Columns to group by.
+
+#### Usage Example
+
+```jinja
+{{ not_constant('"ANALYTICS"."COATEST"."STG_CUSTOMER"', '"C_CUSTKEY"') }}
+```
+This checks if the `C_CUSTKEY` in the `STG_CUSTOMER` table does not have the same value across all rows.  
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro not_constant(node, column_name, group_by_columns=[]) %}
+
+{% if group_by_columns %}
+{% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
+{% set groupby_gb_cols = 'GROUP BY ' + group_by_columns|join(', ') %}
+{% else %}
+{% set select_gb_cols = '' %}
+{% set groupby_gb_cols = '' %}
+{% endif %}
+
+SELECT
+    {{ select_gb_cols }}
+    COUNT(DISTINCT {{ column_name }}) AS distinct_count_of_values
+FROM {{ node }}
+{{ groupby_gb_cols }}
+HAVING COUNT(DISTINCT {{ column_name }}) = 1
+
+{% endmacro %}
+
+
+```
+</details> 
