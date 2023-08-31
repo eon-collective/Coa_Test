@@ -4,6 +4,7 @@
 3. [equality](#equality)
 4. [expression_is_true](#expression_is_true)
 5. [recency](#recency)
+6. [at_least_one](#at_least_one)
 
 ---
 
@@ -374,3 +375,57 @@ WHERE most_recent < {{ threshold }}
 ```
 
 </details> 
+
+### [at_least_one](#at_least_one)
+
+#### Purpose
+The `at_least_one` macro checks if a given column in a table contains at least one non-null value. This test can be useful to ensure that essential columns in your dataset are populated.
+
+#### Syntax
+```jinja
+{{ at_least_one('<node>', '<column_name>', ['<group_by_column1>', '<group_by_column2>', ...]) }}
+```
+**Parameters:**
+- `<node>`:  The table you wish to evaluate.
+- `<column_name>`: The column you want to check for non-null values.
+- `['<group_by_column1>', '<group_by_column2>', ...]`: (Optional) Columns to group by.
+
+#### Usage Example
+
+```jinja
+{{ at_least_one('"ANALYTICS"."COATEST"."STG_SUPPLIER"', '"S_ACCTBAL"') }}
+```
+This checks if there's at least one non-null `S_ACCTBAL` in the `STG_SUPPLIER` table.  
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro at_least_one(node, column_name, group_by_columns=[]) %}
+
+{% if group_by_columns %}
+{% set select_gb_cols = group_by_columns|join(', ') + ', ' %}
+{% set groupby_gb_cols = 'GROUP BY ' + group_by_columns|join(', ') %}
+{% else %}
+{% set select_gb_cols = '' %}
+{% set groupby_gb_cols = '' %}
+{% endif %}
+
+SELECT
+    {{ select_gb_cols }}
+    COUNT({{ column_name }}) AS count_of_values
+FROM (
+    SELECT
+    {{ select_gb_cols }}
+    {{ column_name }}
+    FROM {{ node }}
+    WHERE {{ column_name }} IS NOT NULL
+    LIMIT 1
+) AS pruned_rows
+{{ groupby_gb_cols }}
+HAVING COUNT({{ column_name }}) = 0
+
+{% endmacro %}
+
+
+```
