@@ -2,7 +2,7 @@
 1. [equal_rowcount](#equal_rowcount)
 2. [row_count_delta](#row_count_delta)
 3. [equality](#equality)
-4. ... *(continue as needed)*
+4. [expression_is_true](#expression_is_true)
 
 ---
 
@@ -259,3 +259,48 @@ SELECT * FROM unioned
 
 </details>  
 
+### expression_is_true
+
+#### Purpose
+
+The `expression_is_true` macro is designed to assert that a given SQL expression is true for all records in a table. It's an essential tool for validating data quality and ensuring column integrity. This can be useful in various scenarios, including:
+- Verifying an outcome based on the application of basic algebraic operations between columns.
+- Checking the length of a column.
+- Verifying the truth value of a column.
+
+#### Syntax
+
+```jinja
+{{ expression_is_true('<node>', '<expression>', '<column_name>') }}
+```
+**Parameters:**
+- `<node>`:  The table you wish to evaluate.
+- `<expression>`: The SQL expression you want to evaluate for truthiness.
+- `['<column_name>']`: (Optional) The specific column to which you want to apply the expression. If omitted, the macro evaluates the expression for all records in the table.
+
+#### Usage Example
+
+```jinja
+{{ expression_is_true('"ANALYTICS"."COATEST"."LINEITEM"', '>= 1', '"L_EXTENDEDPRICE"') }}
+```
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro expression_is_true(node, expression, column_name=None) %}
+
+SELECT
+    *
+FROM {{ node }}
+{% if column_name is none %}
+WHERE NOT ({{ expression }})
+{%- else %}
+WHERE NOT ({{ column_name }} {{ expression }})
+{%- endif %}
+
+{% endmacro %}
+
+
+```
+
+</details> 
