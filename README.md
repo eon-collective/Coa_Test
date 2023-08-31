@@ -7,6 +7,8 @@
 6. [at_least_one](#at_least_one)
 7. [not_constant](#not_constant)
 8. [not_empty_string](#not_empty_string)
+9. [cardinality_equality](#cardinality_equality)
+10. [recency](#recency)
 
 ---
 
@@ -525,6 +527,84 @@ errors AS (
 )
 
 SELECT * FROM errors
+
+{% endmacro %}
+
+
+```
+</details> 
+
+### [cardinality_equality](#cardinality_equality)
+
+#### Purpose
+This macro is designed to assert that values in a given column (`column_name`) from one table (`node`) have the same cardinality (i.e., the same number of unique values) as values from a different column (`field`) in another table (`to_node`). It's especially handy in scenarios where two columns, potentially from different tables, are expected to have matching sets of unique values.
+
+#### Syntax
+```jinja
+{{ cardinality_equality('<node>', '<column_name>', '<to_node>', '<field>') }}
+```
+
+**Parameters:**
+- `<node>`:  The initial table you want to evaluate.
+- `<column_name>`:  The column in the initial table you wish to assess.
+- `<to_node>`: he secondary table you're comparing against.
+- `<field>`: The column in the secondary table you're comparing with.
+  
+#### Usage Example
+
+```jinja
+{{ cardinality_equality('"ANALYTICS"."COATEST"."STG_CUSTOMER"', '"C_CUSTKEY"', '"ANALYTICS"."COATEST"."STG_ORDERS"', '"O_ORDERKEY"') }}
+```
+This example checks if the unique values of `"C_CUSTKEY"` from the `"STG_CUSTOMER"` table have the same cardinality as the unique values of `"O_ORDERKEY"` from the `"STG_ORDERS"` table.
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro cardinality_equality(node, column_name, to_node, field) %}
+
+WITH table_a AS (
+    SELECT
+        {{ column_name }},
+        COUNT(*) AS num_rows
+    FROM {{ node }}
+    GROUP BY {{ column_name }}
+),
+
+table_b AS (
+    SELECT
+        {{ field }},
+        COUNT(*) AS num_rows
+    FROM {{ to_node }}
+    GROUP BY {{ field }}
+),
+
+except_a AS (
+    SELECT *
+    FROM table_a
+    EXCEPT
+    SELECT *
+    FROM table_b
+),
+
+except_b AS (
+    SELECT *
+    FROM table_b
+    EXCEPT
+    SELECT *
+    FROM table_a
+),
+
+unioned AS (
+    SELECT *
+    FROM except_a
+    UNION ALL
+    SELECT *
+    FROM except_b
+)
+
+SELECT *
+FROM unioned
 
 {% endmacro %}
 
