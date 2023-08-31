@@ -392,6 +392,37 @@ macros:
       WHERE most_recent < {{ threshold }}
 
       {% endmacro %}
+  Macro-not_accepted_values:
+    id: not_accepted_values
+    macroString: |-
+        {% macro not_accepted_values(node, column_name, values, quote=True) %}
+
+        with all_values as (
+            select distinct
+                {{ column_name }} as value_field
+            from {{ node }}
+        ),
+
+        validation_errors as (
+            select
+                value_field
+            from all_values
+            where value_field in (
+                {% for value in values -%}
+                    {% if quote -%}
+                    '{{ value }}'
+                    {%- else -%}
+                    {{ value }}
+                    {%- endif -%}
+                    {%- if not loop.last -%},{%- endif %}
+                {%- endfor %}
+            )
+        )
+
+        select *
+        from validation_errors
+
+        {% endmacro %}
 packages: {}
 projects: {}
 stepTypes:
