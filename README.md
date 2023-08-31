@@ -319,7 +319,7 @@ The `recency` macro checks if the most recent date in a given column is within a
 - `<node>`:  The table you wish to evaluate.
 - `<field>`:  The timestamp or date column you want to check.
 - `<datepart>`: The date part you want to use for the interval (e.g., 'day', 'month', 'year', etc.).
-- - `<interval>`:  The interval value you want to subtract from the current date or timestamp.
+- `<interval>`:  The interval value you want to subtract from the current date or timestamp.
 - `<ignore_time_component>`:  If set to `True`, only the date part of the timestamp will be considered, otherwise the full timestamp is used.
 - `['<group_by_column1>', '<group_by_column2>', ...]`: (Optional) Columns to group by.
 
