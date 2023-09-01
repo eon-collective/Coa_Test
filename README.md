@@ -12,7 +12,7 @@
 11. [not_accepted_values](#not_accepted_values)
 12. [relationships_where](#relationships_where)
 13. [mutually_exclusive_ranges](#mutually_exclusive_ranges)
-14. [recency](#recency)
+14. [sequential_values](#sequential_values)
 
 ---
 
@@ -912,3 +912,72 @@ select * from validation_errors
 ```
 
 </details>
+
+### [sequential_values](#sequential_values)
+
+#### Purpose:
+
+This macro is designed to identify records in a given column that do not follow a specified sequence. For example, in a date column, you might want to verify that every date is followed by the next consecutive day. This macro can handle both numeric and date-type sequences.
+
+#### Syntax:
+
+```sql
+{{ sequential_values(node, column_name, interval=1, datepart=None, group_by_columns = []) }}
+```
+
+📘 Parameters:
+- `<node>`: The table you wish to evaluate.
+- `column_name`: The column you wish to check for sequential values.
+- `interval`: The expected interval between sequential values. Default is 1.
+- `datepart`: (Optional) The part of the date you wish to evaluate (e.g., 'day', 'month', etc.).
+- `group_by_columns`: (Optional) Columns to group by.
+
+#### 🚀 Usage Example
+
+```jinja
+{{ sequential_values('"ANALYTICS"."COATEST"."STG_LINEITEM"', '"L_RECEIPTDATE"', interval=1, datepart='day') }}
+```
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro sequential_values(node, column_name, interval=1, datepart=None, group_by_columns = []) %}
+
+{% set previous_column_name = "previous_" ~ column_name %}
+
+{% if group_by_columns|length() > 0 %}
+{% set select_gb_cols = group_by_columns|join(',') + ', ' %}
+{% set partition_gb_cols = 'partition by ' + group_by_columns|join(',') %}
+{% endif %}
+
+with windowed as (
+    select
+        {{ select_gb_cols }}
+        {{ column_name }},
+        lag({{ column_name }}) over (
+            {{partition_gb_cols}}
+            order by {{ column_name }}
+        ) as {{ previous_column_name }}
+    from {{ node }}
+),
+
+validation_errors as (
+    select
+        *
+    from windowed
+    {% if datepart %}
+    where not(cast({{ column_name }} as timestamp)= DATEADD({{ datepart }}, {{ interval }}, cast({{ previous_column_name }} as timestamp)))
+    {% else %}
+    where not({{ column_name }} = {{ previous_column_name }} + {{ interval }})
+    {% endif %}
+)
+
+select *
+from validation_errors
+
+{% endmacro %}
+```
+
+</details>
+
