@@ -35,6 +35,11 @@ steps:
             name: not_accepted_values
             runOrder: After
             templateString: "{{ not_accepted_values('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_SHIPMODE\"', ['EXPRESS', 'AIR'], True) }}"
+          - continueOnFailure: true
+            description: ""
+            name: sequential_values
+            runOrder: After
+            templateString: "{{ sequential_values('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_RECEIPTDATE\"', interval=1, datepart='day') }}"
         columns:
           - columnReference:
               columnCounter: 54c99a04-f5f8-4602-81ac-d150c65920ab
