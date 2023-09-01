@@ -11,7 +11,7 @@
 10. [not_null_proportion](#not_null_proportion)
 11. [not_accepted_values](#not_accepted_values)
 12. [relationships_where](#relationships_where)
-13. [recency](#recency)
+13. [mutually_exclusive_ranges](#mutually_exclusive_ranges)
 14. [recency](#recency)
 
 ---
@@ -799,6 +799,114 @@ where right_table.id is null
 )
 
 select * from exceptions
+
+{% endmacro %}
+```
+
+</details>
+
+### [mutually_exclusive_ranges](#mutually_exclusive_ranges)
+
+#### Purpose:
+
+This macro asserts that, for a given `lower_bound_column` and `upper_bound_column`, the ranges between the lower and upper bounds do not overlap with the ranges of another row in the table.
+
+#### Syntax:
+
+```sql
+{{ mutually_exclusive_ranges(model, lower_bound_column, upper_bound_column, partition_by=None, gaps='allowed', zero_length_range_allowed=False) }}
+```
+
+📘 Parameters:
+- `<node>`: The table you wish to evaluate.
+- `lower_bound_column`: The column acting as the starting point of the range.
+- `upper_bound_column`: The column acting as the ending point of the range.
+- `partition_by`: (Optional) Column to partition by.
+- `gaps`: (Optional) Defines whether gaps are 'allowed', 'not_allowed', or 'required'. Default is 'allowed'.
+- `zero_length_range_allowed`:  (Optional) If set to True, zero-length ranges are allowed. Default is `False`.
+
+#### 🚀 Usage Example
+
+```jinja
+{{ mutually_exclusive_ranges('"ANALYTICS"."COATEST"."STG_CUSTOMER"', '"C_ACCTBAL"', '"C_NATIONKEY"') }}
+```
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro mutually_exclusive_ranges(node, lower_bound_column, upper_bound_column, partition_by=None, gaps='allowed', zero_length_range_allowed=False) %}
+
+{% if gaps == 'not_allowed' %}
+    {% set allow_gaps_operator='=' %}
+    {% set allow_gaps_operator_in_words='equal_to' %}
+{% elif gaps == 'allowed' %}
+    {% set allow_gaps_operator='<=' %}
+    {% set allow_gaps_operator_in_words='less_than_or_equal_to' %}
+{% elif gaps == 'required' %}
+    {% set allow_gaps_operator='<' %}
+    {% set allow_gaps_operator_in_words='less_than' %}
+{% else %}
+    {{ exceptions.raise_compiler_error(
+        "`gaps` argument for mutually_exclusive_ranges macro must be one of ['not_allowed', 'allowed', 'required'] Got: '" ~ gaps ~"'.'"
+    ) }}
+{% endif %}
+
+{% if not zero_length_range_allowed %}
+    {% set allow_zero_length_operator='<' %}
+    {% set allow_zero_length_operator_in_words='less_than' %}
+{% elif zero_length_range_allowed %}
+    {% set allow_zero_length_operator='<=' %}
+    {% set allow_zero_length_operator_in_words='less_than_or_equal_to' %}
+{% else %}
+    {{ exceptions.raise_compiler_error(
+        "`zero_length_range_allowed` argument for mutually_exclusive_ranges macro must be one of [true, false] Got: '" ~ zero_length_range_allowed ~"'.'"
+    ) }}
+{% endif %}
+
+{% set partition_clause="partition by " ~ partition_by if partition_by else '' %}
+
+with window_functions as (
+    select
+        {% if partition_by %}
+        {{ partition_by }} as partition_by_col,
+        {% endif %}
+        {{ lower_bound_column }} as lower_bound,
+        {{ upper_bound_column }} as upper_bound,
+        lead({{ lower_bound_column }}) over (
+            {{ partition_clause }}
+            order by {{ lower_bound_column }}, {{ upper_bound_column }}
+        ) as next_lower_bound,
+        row_number() over (
+            {{ partition_clause }}
+            order by {{ lower_bound_column }} desc, {{ upper_bound_column }} desc
+        ) = 1 as is_last_record
+    from {{ node }}
+),
+calc as (
+    select
+        *,
+        coalesce(
+            lower_bound {{ allow_zero_length_operator }} upper_bound,
+            false
+        ) as lower_bound_{{ allow_zero_length_operator_in_words }}_upper_bound,
+        coalesce(
+            upper_bound {{ allow_gaps_operator }} next_lower_bound,
+            is_last_record,
+            false
+        ) as upper_bound_{{ allow_gaps_operator_in_words }}_next_lower_bound
+    from window_functions
+),
+validation_errors as (
+    select
+        *
+    from calc
+    where not(
+        lower_bound_{{ allow_zero_length_operator_in_words }}_upper_bound
+        and upper_bound_{{ allow_gaps_operator_in_words }}_next_lower_bound
+    )
+)
+select * from validation_errors
 
 {% endmacro %}
 ```
