@@ -10,6 +10,9 @@
 9. [cardinality_equality](#cardinality_equality)
 10. [not_null_proportion](#not_null_proportion)
 11. [not_accepted_values](#not_accepted_values)
+12. [relationships_where](#relationships_where)
+13. [recency](#recency)
+14. [recency](#recency)
 
 ---
 
@@ -729,6 +732,73 @@ validation_errors as (
 
 select *
 from validation_errors
+
+{% endmacro %}
+```
+
+</details>
+
+### [relationships_where](#relationships_where)
+
+#### Purpose
+
+The `relationships_where` macro asserts referential integrity between two relations, It includes an added benefit: the ability to filter out some rows from the test using predicates. This is particularly useful when needing to exclude records such as test entities or rows that may have been created recently, which could temporarily skew results due to ETL limitations or other factors.
+
+#### Syntax
+
+```jinja
+{{ relationships_where('<model>', '<column_name>', '<to>', '<field>', '<from_condition>', '<to_condition>') }}
+```
+📘 Parameters:
+- `<node>`: The source table you wish to evaluate.
+- `<column_name>`: The column in the source table to test.
+- `<to>`: The target table you wish to evaluate against.
+- `<field>`: The column in the target table to test.
+- `<from_condition>`: The SQL condition to filter rows in the source table.
+- `<to_condition>`: The SQL condition to filter rows in the target table.
+
+#### 🚀 Usage Example
+
+```jinja
+{{ relationships_where('"ANALYTICS"."COATEST"."STG_ORDERS"', '"O_ORDERKEY"', '"ANALYTICS"."COATEST"."STG_LINEITEM"', '"L_ORDERKEY"', 'O_ORDERSTATUS != \'F\'', 'L_SHIPDATE > current_timestamp() - interval \'1 day\'') }}
+```
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro relationships_where(node, column_name, to, field, from_condition="1=1", to_condition="1=1") %}
+
+{# Define the left table with conditions applied #}
+with left_table as (
+select
+    {{column_name}} as id
+from {{node}}
+where {{column_name}} is not null
+    and {{from_condition}}
+),
+
+{# Define the right (referenced) table with conditions applied #}
+right_table as (
+select
+    {{field}} as id
+from {{to}}
+where {{field}} is not null
+    and {{to_condition}}
+),
+
+{# Check for exceptions in the relationship between the tables #}
+exceptions as (
+select
+    left_table.id,
+    right_table.id as right_id
+from left_table
+left join right_table
+        on left_table.id = right_table.id
+where right_table.id is null
+)
+
+select * from exceptions
 
 {% endmacro %}
 ```
