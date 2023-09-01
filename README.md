@@ -13,6 +13,9 @@
 12. [relationships_where](#relationships_where)
 13. [mutually_exclusive_ranges](#mutually_exclusive_ranges)
 14. [sequential_values](#sequential_values)
+15. [unique_combination_of_columns](#unique_combination_of_columns)
+16. [recency](#recency)
+17. [recency](#recency)
 
 ---
 
@@ -981,3 +984,71 @@ from validation_errors
 
 </details>
 
+### [unique_combination_of_columns](#unique_combination_of_columns)
+
+#### Purpose:
+
+The `unique_combination_of_columns` macro checks for the uniqueness of a combination of columns within a given table or model. It is particularly useful when individual columns might contain duplicate values, but a combination of those columns should remain unique.
+
+#### Syntax
+
+```sql
+{{ unique_combination_of_columns(node, [list_of_columns], quote_columns=[True/False]) }}
+```
+
+
+📘 Parameters:
+- `<node>`: The name of the table or node you want to validate.
+- `list_of_columns:`: A list of column names that form the combination you want to check for uniqueness.
+- `quote_columns `: Optional): A boolean parameter to determine if the column names should be quoted. Defaults to `False`.
+
+#### 🚀 Usage Example
+
+```jinja
+{{ unique_combination_of_columns('"ANALYTICS"."COATEST"."STG_CUSTOMER"', ["C_CUSTKEY", "C_NAME"], quote_columns=true) }}
+```
+To verify the uniqueness of the combination of C_CUSTKEY and C_NAME in the STG_CUSTOMER table, use  
+- Opting for this macro provides a performance advantage over uniqueness checks using surrogate keys or concatenating columns, especially beneficial for larger datasets.
+- Use the quote_columns parameter when working with systems that mandate column quoting, like Postgres.
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro unique_combination_of_columns(node, combination_of_columns, quote_columns=false) %}
+
+{# A simple function to quote the column if needed #}
+{% macro quote_if_needed(column, condition) %}
+    {% if condition %}
+        "{{ column }}"
+    {% else %}
+        {{ column }}
+    {% endif %}
+{% endmacro %}
+
+{% if not quote_columns %}
+    {%- set column_list = combination_of_columns %}
+{% else %}
+    {%- set column_list = [] %}
+    {% for column in combination_of_columns -%}
+        {% set _ = column_list.append(quote_if_needed(column, quote_columns)) %}
+    {%- endfor %}
+{% endif %}
+
+{%- set columns_csv = column_list | join(', ') %}
+
+with validation_errors as (
+    select
+        {{ columns_csv }}
+    from {{ node }}
+    group by {{ columns_csv }}
+    having count(*) > 1
+)
+
+select *
+from validation_errors
+
+{% endmacro %}
+```
+
+</details>
