@@ -30,6 +30,11 @@ steps:
             name: cardinality_equality
             runOrder: After
             templateString: "{{ cardinality_equality('\"ANALYTICS\".\"COATEST\".\"STG_CUSTOMER\"', '\"C_CUSTKEY\"', '\"ANALYTICS\".\"COATEST\".\"STG_ORDERS\"', '\"O_ORDERKEY\"') }}"
+          - continueOnFailure: true
+            description: ""
+            name: relationships_where
+            runOrder: After
+            templateString: "{{ relationships_where('\"ANALYTICS\".\"COATEST\".\"STG_ORDERS\"', '\"O_ORDERKEY\"', '\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_ORDERKEY\"', 'O_ORDERSTATUS != \\'F\\'', 'L_SHIPDATE > current_timestamp() - interval \\'1 day\\'') }}"
         columns:
           - columnReference:
               columnCounter: b7129a4c-776b-4450-a135-b2ba05f50540
