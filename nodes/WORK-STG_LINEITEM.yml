@@ -40,6 +40,12 @@ steps:
             name: sequential_values
             runOrder: After
             templateString: "{{ sequential_values('\"ANALYTICS\".\"COATEST\".\"STG_LINEITEM\"', '\"L_RECEIPTDATE\"', interval=1, datepart='day') }}"
+          - continueOnFailure: true
+            description: ""
+            name: accepted_range
+            runOrder: After
+            templateString: |
+              {{ accepted_range('"ANALYTICS"."COATEST"."STG_LINEITEM"', '"L_EXTENDEDPRICE"', min_value=1000, max_value=100000) }}
         columns:
           - columnReference:
               columnCounter: 54c99a04-f5f8-4602-81ac-d150c65920ab

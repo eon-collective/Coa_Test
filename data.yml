@@ -21,6 +21,38 @@ macros:
   Macro-1:
     id: "1"
     macroString: ""
+  Macro-accepted_range:
+    id: accepted_range
+    macroString: |-
+      {% macro accepted_range(node, column_name, min_value=None, max_value=None, inclusive=True) %}
+
+      with meet_condition as(
+      select *
+      from {{ node }}
+      ),
+
+      validation_errors as (
+      select *
+      from meet_condition
+      where
+          -- never true, defaults to an empty result set. Exists to ensure any combo of the `or` clauses below succeeds
+          1 = 2
+
+      {%- if min_value is not none %}
+          -- records with a value >= min_value are permitted. The `not` flips this to find records that don't meet the rule.
+          or not {{ column_name }} > {{- "=" if inclusive }} {{ min_value }}
+      {%- endif %}
+
+      {%- if max_value is not none %}
+          -- records with a value <= max_value are permitted. The `not` flips this to find records that don't meet the rule.
+          or not {{ column_name }} < {{- "=" if inclusive }} {{ max_value }}
+      {%- endif %}
+      )
+
+      select *
+      from validation_errors
+
+      {% endmacro %}
   Macro-at_least_one:
     id: at_least_one
     macroString: |-
@@ -580,7 +612,7 @@ macros:
     id: unique_combination_of_columns
     macroString: |-
       {% macro unique_combination_of_columns(node, combination_of_columns, quote_columns=false) %}
-      
+
       {# A simple function to quote the column if needed #}
       {% macro quote_if_needed(column, condition) %}
           {% if condition %}
@@ -589,7 +621,7 @@ macros:
               {{ column }}
           {% endif %}
       {% endmacro %}
-      
+
       {% if not quote_columns %}
           {%- set column_list = combination_of_columns %}
       {% else %}
@@ -598,9 +630,9 @@ macros:
               {% set _ = column_list.append(quote_if_needed(column, quote_columns)) %}
           {%- endfor %}
       {% endif %}
-      
+
       {%- set columns_csv = column_list | join(', ') %}
-      
+
       with validation_errors as (
           select
               {{ columns_csv }}
@@ -608,10 +640,10 @@ macros:
           group by {{ columns_csv }}
           having count(*) > 1
       )
-      
+
       select *
       from validation_errors
-      
+
       {% endmacro %}
 packages: {}
 projects: {}
