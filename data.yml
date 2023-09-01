@@ -541,14 +541,14 @@ macros:
     id: sequential_values
     macroString: |-
       {% macro sequential_values(node, column_name, interval=1, datepart=None, group_by_columns = []) %}
-      
+
       {% set previous_column_name = 'previous_' ~ column_name.replace('"', '') %}
-      
+
       {% if group_by_columns|length() > 0 %}
       {% set select_gb_cols = group_by_columns|join(',') + ', ' %}
       {% set partition_gb_cols = 'partition by ' + group_by_columns|join(',') %}
       {% endif %}
-      
+
       with windowed as (
           select
               {{ select_gb_cols }}
@@ -559,7 +559,7 @@ macros:
               ) as "{{ previous_column_name }}"
           from {{ node }}
       ),
-      
+
       validation_errors as (
           select
               *
@@ -572,42 +572,47 @@ macros:
           where not({{ column_name }} = "{{ previous_column_name }}" + {{ interval }})
           {% endif %}
       )
-      
+
       select * from validation_errors
-      
+
       {% endmacro %}
   Macro-unique_combination_of_columns:
     id: unique_combination_of_columns
     macroString: |-
-        {% macro unique_combination_of_columns(node, combination_of_columns, quote_columns=false) %}
-
-        {% if not quote_columns %}
-            {%- set column_list = combination_of_columns %}
-        {% elif quote_columns %}
-            {%- set column_list = [] %}
-                {% for column in combination_of_columns -%}
-                    {% set column_list = column_list.append( adapter.quote(column) ) %}
-                {%- endfor %}
-        {% else %}
-            {{ exceptions.raise_compiler_error(
-                "`quote_columns` argument for unique_combination_of_columns test must be one of [True, False]. Got: '" ~ quote ~"'.'"
-            ) }}
-        {% endif %}
-
-        {%- set columns_csv = column_list | join(', ') %}
-
-        with validation_errors as (
-            select
-                {{ columns_csv }}
-            from {{ node }}
-            group by {{ columns_csv }}
-            having count(*) > 1
-        )
-
-        select *
-        from validation_errors
-
-        {% endmacro %}
+      {% macro unique_combination_of_columns(node, combination_of_columns, quote_columns=false) %}
+      
+      {# A simple function to quote the column if needed #}
+      {% macro quote_if_needed(column, condition) %}
+          {% if condition %}
+              "{{ column }}"
+          {% else %}
+              {{ column }}
+          {% endif %}
+      {% endmacro %}
+      
+      {% if not quote_columns %}
+          {%- set column_list = combination_of_columns %}
+      {% else %}
+          {%- set column_list = [] %}
+          {% for column in combination_of_columns -%}
+              {% set _ = column_list.append(quote_if_needed(column, quote_columns)) %}
+          {%- endfor %}
+      {% endif %}
+      
+      {%- set columns_csv = column_list | join(', ') %}
+      
+      with validation_errors as (
+          select
+              {{ columns_csv }}
+          from {{ node }}
+          group by {{ columns_csv }}
+          having count(*) > 1
+      )
+      
+      select *
+      from validation_errors
+      
+      {% endmacro %}
 packages: {}
 projects: {}
 stepTypes:

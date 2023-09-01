@@ -30,6 +30,12 @@ steps:
             name: mutually_exclusive_ranges
             runOrder: After
             templateString: "{{ mutually_exclusive_ranges('\"ANALYTICS\".\"COATEST\".\"STG_CUSTOMER\"', '\"C_ACCTBAL\"', '\"C_NATIONKEY\"') }}"
+          - continueOnFailure: true
+            description: ""
+            name: unique_combination_of_columns
+            runOrder: After
+            templateString: |
+              {{ unique_combination_of_columns('"ANALYTICS"."COATEST"."STG_CUSTOMER"', ["C_CUSTKEY", "C_NAME"], quote_columns=true) }}
         columns:
           - columnReference:
               columnCounter: 73c22c5f-3aba-40c3-900d-85ca39fd47fb
