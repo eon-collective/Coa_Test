@@ -25,6 +25,11 @@ steps:
             name: not_constant
             runOrder: After
             templateString: "{{ not_constant('\"ANALYTICS\".\"COATEST\".\"STG_CUSTOMER\"', '\"C_CUSTKEY\"') }}"
+          - continueOnFailure: true
+            description: ""
+            name: mutually_exclusive_ranges
+            runOrder: After
+            templateString: "{{ mutually_exclusive_ranges('\"ANALYTICS\".\"COATEST\".\"STG_CUSTOMER\"', '\"C_ACCTBAL\"', '\"C_NATIONKEY\"') }}"
         columns:
           - columnReference:
               columnCounter: 73c22c5f-3aba-40c3-900d-85ca39fd47fb
