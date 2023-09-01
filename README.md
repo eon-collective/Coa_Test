@@ -14,9 +14,7 @@
 13. [mutually_exclusive_ranges](#mutually_exclusive_ranges)
 14. [sequential_values](#sequential_values)
 15. [unique_combination_of_columns](#unique_combination_of_columns)
-16. [recency](#recency)
-17. [recency](#recency)
-
+16. [accepted_range](#accepted_range)
 ---
 
 ### [equal_rowcount](#equal_rowcount)
@@ -1043,6 +1041,68 @@ with validation_errors as (
     from {{ node }}
     group by {{ columns_csv }}
     having count(*) > 1
+)
+
+select *
+from validation_errors
+
+{% endmacro %}
+```
+
+</details>
+
+### [accepted_range](#accepted_range)
+
+#### Purpose:
+
+This macro asserts that values in a specified column fall within an expected range. The range can be inclusive or exclusive. It's applicable to any data type that supports the `>` or `<` operators.
+
+#### Syntax:
+
+```sql
+{{ accepted_range(node, column_name, min_value=None, max_value=None, inclusive=True) }}
+```
+
+📘 Parameters:
+- `<node>`: The table you wish to evaluate.
+- `column_name`: The column whose values you want to check.
+- `min_value`: (Optional) The minimum allowed value for the column.
+- `max_value`: (Optional) The maximum allowed value for the column.
+- `inclusive`: (Optional) Determines if the range is inclusive (default is True).
+
+#### 🚀 Usage Example
+
+```jinja
+{{ accepted_range('"ANALYTICS"."COATEST"."STG_LINEITEM"', '"L_EXTENDEDPRICE"', min_value=1000, max_value=100000) }}
+```
+
+<details>
+<summary>🌏 Source</summary>
+
+```sql
+{% macro accepted_range(node, column_name, min_value=None, max_value=None, inclusive=True) %}
+
+with meet_condition as(
+select *
+from {{ node }}
+),
+
+validation_errors as (
+select *
+from meet_condition
+where
+    -- never true, defaults to an empty result set. Exists to ensure any combo of the `or` clauses below succeeds
+    1 = 2
+
+{%- if min_value is not none %}
+    -- records with a value >= min_value are permitted. The `not` flips this to find records that don't meet the rule.
+    or not {{ column_name }} > {{- "=" if inclusive }} {{ min_value }}
+{%- endif %}
+
+{%- if max_value is not none %}
+    -- records with a value <= max_value are permitted. The `not` flips this to find records that don't meet the rule.
+    or not {{ column_name }} < {{- "=" if inclusive }} {{ max_value }}
+{%- endif %}
 )
 
 select *
