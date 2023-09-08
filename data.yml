@@ -1,5 +1,12 @@
 defaultStorageMapping: WORK
-jobs: {}
+jobs:
+  Job-1:
+    excludeSelector: ""
+    id: 1
+    includeSelector: "+{ location: WORK name: STG_ORDERS }"
+    name: Job1
+    steps: []
+    subgraphs: []
 locations:
   SCR:
     mappingDefinitions:
