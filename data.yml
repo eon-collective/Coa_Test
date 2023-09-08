@@ -4,16 +4,16 @@ locations:
   SCR:
     mappingDefinitions:
       "4":
-        database: ""
-        schema: ""
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
       "6":
         database: ""
         schema: ""
   WORK:
     mappingDefinitions:
       "4":
-        database: ""
-        schema: ""
+        database: ANALYTICS
+        schema: COATEST
       "6":
         database: ""
         schema: ""
