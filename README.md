@@ -1,3 +1,4 @@
+![image](https://github.com/aahmedomar/coa-test/assets/132437758/a427d085-d7b5-4797-8e3b-761e85b4bd24)
 ## Coalesce Reusable Tests
 1. [equal_rowcount](#equal_rowcount)
 2. [row_count_delta](#row_count_delta)
